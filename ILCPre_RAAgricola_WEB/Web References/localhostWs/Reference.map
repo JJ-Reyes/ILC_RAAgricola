@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.1.1.13/ILCRAAgricolaWS/WSRAAgricola.asmx?wsdl" filename="WSRAAgricola.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://10.1.1.13/ILCRAAgricolaWS/WSRAAgricola.asmx?disco" filename="WSRAAgricola.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.1.1.13/ILCRAAgricolaWS/WSRAAgricola.asmx?schema=DS_ILC_Campo" filename="DS_ILC_Campo.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

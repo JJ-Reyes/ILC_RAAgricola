@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ILC_PresupuestoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ILC_PresupuestoEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SP_ReintegroSelect" ReturnType="Collection(ILC_PresupuestoModel.SP_ReintegroSelect_Result)">
+      <Parameter Name="Id_Personal" Mode="In" Type="Int32" />
+      <Parameter Name="mes" Mode="In" Type="Int32" />
+      <Parameter Name="TipoGasto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SubirReintegroEmpresasDeta" ReturnType="Collection(ILC_PresupuestoModel.SP_SubirReintegroEmpresasDeta_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ReintegroSelect1" ReturnType="Collection(ILC_PresupuestoModel.SP_ReintegroSelect_Result)">
+      <Parameter Name="Id_Personal" Mode="In" Type="Int32" />
+      <Parameter Name="mes" Mode="In" Type="Int32" />
+      <Parameter Name="TipoGasto" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SP_ReintegroSelect_Result">
+    <Property Type="DateTime" Name="FechaDocumento" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="NumeroDocumento" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="monto" Nullable="true" />
+    <Property Type="Double" Name="cantidad" Nullable="true" />
+    <Property Type="String" Name="Proveedor" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="TipoGasto" Nullable="true" />
+    <Property Type="String" Name="CentroCosto" Nullable="true" MaxLength="10" />
+    <Property Type="Boolean" Name="Subido" Nullable="true" />
+    <Property Type="String" Name="usuario" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="TipoDocumento" Nullable="true" />
+    <Property Type="String" Name="FacturaNav" Nullable="false" MaxLength="25" />
+    <Property Type="Boolean" Name="Anulada" Nullable="true" />
+    <Property Type="Int32" Name="Mes" Nullable="true" />
+    <Property Type="Int32" Name="Id_personal" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_SubirReintegroEmpresasDeta_Result">
+    <Property Type="Int32" Name="Linea" Nullable="false" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Double" Name="Cantidad" Nullable="true" />
+    <Property Type="Double" Name="MontoLinea" Nullable="true" />
+    <Property Type="Double" Name="IVA" Nullable="true" />
+    <Property Type="String" Name="TipoIVA" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="DescripcionCuenta" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Cuenta" Nullable="true" MaxLength="15" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="InsertDetailsServices">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="pedidoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tipo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="codigo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="cantidad" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="bodega" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="productoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fase" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pFechaRegistro" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="pFechaEntregaPlanificada" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="plinea" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="pVariante" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertDetailsServices_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostShipment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="document" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="orderService" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="externalDocument" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostShipment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostResource">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderService" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostResource_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateAndPostJournalResource">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="pNo_Resource" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pDate_Post" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="pQuantity" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="pUnitMeasureCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pDocumentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateAndPostJournalResource_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertServiceOrderAllocation">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="pNumeroPedidoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pProductoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pLineaProductoServicio" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="pNoRecurso" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pFechaAsignacion" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="pHorasAsignadas" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="pHoraInicial" type="time" />
+            <element minOccurs="1" maxOccurs="1" name="pHoraFinal" type="time" />
+            <element minOccurs="1" maxOccurs="1" name="pNoLineaLIneasServicio" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertServiceOrderAllocation_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateDetailsServices">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="pPedidoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="plinea" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="pAvance" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateDetailsServices_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateOrderService">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="estado" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="prioridad" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="idUsuarioAsignado" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tipoPedidoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="productoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="estadoLanzamiento" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="codigoTransportista" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="codigoZonaServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fechaPedido" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="horaINicial" type="time" />
+            <element minOccurs="1" maxOccurs="1" name="fechaFinalizacion" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="horaFinalizacion" type="time" />
+            <element minOccurs="1" maxOccurs="1" name="numeroOrdenServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fechaInicializacion" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateOrderService_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="InsertDetailsServices">
+    <part name="parameters" element="tns:InsertDetailsServices" />
+  </message>
+  <message name="InsertDetailsServices_Result">
+    <part name="parameters" element="tns:InsertDetailsServices_Result" />
+  </message>
+  <message name="PostShipment">
+    <part name="parameters" element="tns:PostShipment" />
+  </message>
+  <message name="PostShipment_Result">
+    <part name="parameters" element="tns:PostShipment_Result" />
+  </message>
+  <message name="PostResource">
+    <part name="parameters" element="tns:PostResource" />
+  </message>
+  <message name="PostResource_Result">
+    <part name="parameters" element="tns:PostResource_Result" />
+  </message>
+  <message name="CreateAndPostJournalResource">
+    <part name="parameters" element="tns:CreateAndPostJournalResource" />
+  </message>
+  <message name="CreateAndPostJournalResource_Result">
+    <part name="parameters" element="tns:CreateAndPostJournalResource_Result" />
+  </message>
+  <message name="InsertServiceOrderAllocation">
+    <part name="parameters" element="tns:InsertServiceOrderAllocation" />
+  </message>
+  <message name="InsertServiceOrderAllocation_Result">
+    <part name="parameters" element="tns:InsertServiceOrderAllocation_Result" />
+  </message>
+  <message name="UpdateDetailsServices">
+    <part name="parameters" element="tns:UpdateDetailsServices" />
+  </message>
+  <message name="UpdateDetailsServices_Result">
+    <part name="parameters" element="tns:UpdateDetailsServices_Result" />
+  </message>
+  <message name="UpdateOrderService">
+    <part name="parameters" element="tns:UpdateOrderService" />
+  </message>
+  <message name="UpdateOrderService_Result">
+    <part name="parameters" element="tns:UpdateOrderService_Result" />
+  </message>
+  <portType name="InterfaceEAM_Port">
+    <operation name="InsertDetailsServices">
+      <input name="InsertDetailsServices" message="tns:InsertDetailsServices" />
+      <output name="InsertDetailsServices_Result" message="tns:InsertDetailsServices_Result" />
+    </operation>
+    <operation name="PostShipment">
+      <input name="PostShipment" message="tns:PostShipment" />
+      <output name="PostShipment_Result" message="tns:PostShipment_Result" />
+    </operation>
+    <operation name="PostResource">
+      <input name="PostResource" message="tns:PostResource" />
+      <output name="PostResource_Result" message="tns:PostResource_Result" />
+    </operation>
+    <operation name="CreateAndPostJournalResource">
+      <input name="CreateAndPostJournalResource" message="tns:CreateAndPostJournalResource" />
+      <output name="CreateAndPostJournalResource_Result" message="tns:CreateAndPostJournalResource_Result" />
+    </operation>
+    <operation name="InsertServiceOrderAllocation">
+      <input name="InsertServiceOrderAllocation" message="tns:InsertServiceOrderAllocation" />
+      <output name="InsertServiceOrderAllocation_Result" message="tns:InsertServiceOrderAllocation_Result" />
+    </operation>
+    <operation name="UpdateDetailsServices">
+      <input name="UpdateDetailsServices" message="tns:UpdateDetailsServices" />
+      <output name="UpdateDetailsServices_Result" message="tns:UpdateDetailsServices_Result" />
+    </operation>
+    <operation name="UpdateOrderService">
+      <input name="UpdateOrderService" message="tns:UpdateOrderService" />
+      <output name="UpdateOrderService_Result" message="tns:UpdateOrderService_Result" />
+    </operation>
+  </portType>
+  <binding name="InterfaceEAM_Binding" type="tns:InterfaceEAM_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="InsertDetailsServices">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:InsertDetailsServices" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertDetailsServices">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertDetailsServices_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostShipment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:PostShipment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostShipment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostShipment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostResource">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:PostResource" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostResource">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostResource_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateAndPostJournalResource">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:CreateAndPostJournalResource" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateAndPostJournalResource">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateAndPostJournalResource_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InsertServiceOrderAllocation">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:InsertServiceOrderAllocation" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertServiceOrderAllocation">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertServiceOrderAllocation_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateDetailsServices">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:UpdateDetailsServices" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateDetailsServices">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateDetailsServices_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateOrderService">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:UpdateOrderService" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateOrderService">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateOrderService_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="InterfaceEAM">
+    <port name="InterfaceEAM_Port" binding="tns:InterfaceEAM_Binding">
+      <address location="http://10.1.1.23:1047/CABANA2016/WS/LACABANA/Codeunit/InterfaceEAM" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

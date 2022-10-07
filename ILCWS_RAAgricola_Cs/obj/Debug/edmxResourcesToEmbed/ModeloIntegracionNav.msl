@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ILC_PresupuestoModelStoreContainer" CdmEntityContainer="ILC_PresupuestoEntities">
+    <FunctionImportMapping FunctionImportName="SP_ReintegroSelect" FunctionName="ILC_PresupuestoModel.Store.SP_ReintegroSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ILC_PresupuestoModel.SP_ReintegroSelect_Result">
+          <ScalarProperty Name="FechaDocumento" ColumnName="FechaDocumento" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="Proveedor" ColumnName="Proveedor" />
+          <ScalarProperty Name="TipoGasto" ColumnName="TipoGasto" />
+          <ScalarProperty Name="CentroCosto" ColumnName="CentroCosto" />
+          <ScalarProperty Name="Subido" ColumnName="Subido" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="FacturaNav" ColumnName="FacturaNav" />
+          <ScalarProperty Name="Anulada" ColumnName="Anulada" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Id_personal" ColumnName="Id_personal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SubirReintegroEmpresasDeta" FunctionName="ILC_PresupuestoModel.Store.SP_SubirReintegroEmpresasDeta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ILC_PresupuestoModel.SP_SubirReintegroEmpresasDeta_Result">
+          <ScalarProperty Name="Linea" ColumnName="Linea" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="MontoLinea" ColumnName="MontoLinea" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="TipoIVA" ColumnName="TipoIVA" />
+          <ScalarProperty Name="DescripcionCuenta" ColumnName="DescripcionCuenta" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ReintegroSelect1" FunctionName="ILC_PresupuestoModel.Store.SP_ReintegroSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ILC_PresupuestoModel.SP_ReintegroSelect_Result">
+          <ScalarProperty Name="FechaDocumento" ColumnName="FechaDocumento" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="Proveedor" ColumnName="Proveedor" />
+          <ScalarProperty Name="TipoGasto" ColumnName="TipoGasto" />
+          <ScalarProperty Name="CentroCosto" ColumnName="CentroCosto" />
+          <ScalarProperty Name="Subido" ColumnName="Subido" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="FacturaNav" ColumnName="FacturaNav" />
+          <ScalarProperty Name="Anulada" ColumnName="Anulada" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Id_personal" ColumnName="Id_personal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

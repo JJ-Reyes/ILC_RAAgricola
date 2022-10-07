@@ -1,0 +1,2254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/DS_ILC_Campo.xsd" />
+      <s:import schemaLocation="http://10.1.1.13/ILCRAAgricolaWS/WSRAAgricola.asmx?schema=DS_ILC_Campo" namespace="http://tempuri.org/DS_ILC_Campo.xsd" />
+      <s:element name="QuincenaGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QuinId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="QuinEstatus" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zafra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QuincenaGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QuincenaGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebQuincenasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QuincenaSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tabla">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebQuincenasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QuincenaSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QuincenaSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsumosGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idInsumo" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsumosGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsumosGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PL_InsumosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsumosSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tabla">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PL_InsumosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsumosSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsumosSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpleadoGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmpId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmpTipo" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmpFrente" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmpCuadrilla" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpNombres" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpEstatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpleadoGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmpleadoGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebEmpleadoDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpleadoSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tabla">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebEmpleadoDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpleadoSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmpleadoSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FincasLotesGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codLote" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codFinca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codProv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoConsulta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLote" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomProv" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FincasLotesGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FincasLotesGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="VPLwebLotesProveedorDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FrenteGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FrenteId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FrenteEstatus" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FrenteNombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FrenteGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FrenteGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebFrentesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FrenteSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tabla">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebFrentesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FrenteSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FrenteSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuadrillaGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FrenteId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CuaId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CuaEstatus" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuadrillaGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuadrillaGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebCuadrillasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuadrillaSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tabla">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebCuadrillasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuadrillaSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CuadrillaSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TareaGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TareaId" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TareaDesc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TareaEstatus" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TareaGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TareaGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebTareasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TareaSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tabla">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebTareasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TareaSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TareaSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoviPlaniGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MovId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LoteId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MovCierreDiario" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="QuincenaId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MovEstadoPlan" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmpId" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MovZafra" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TareaId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MovFecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="MovUsuarioIngresa" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CcostId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoviPlaniGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoviPlaniGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebMoviPlaniDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoviPlaniSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaMoviPlani">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebMoviPlaniDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoviPlaniSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MoviPlaniSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoEmpGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoEmpGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TipoEmpGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebTipoEmpleadoDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoEmpSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaTipoEmp">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebTipoEmpleadoDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoEmpSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoEmpSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuarioEmprGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsuId" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuPass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuEstatus" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuNivelAcceso" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuarioEmprGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioEmprGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebUsuariosEmprDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuarioEmprSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaUsuarioEmpr">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebUsuariosEmprDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuarioEmprSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsuarioEmprSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveedoresAdminGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gpId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FincaId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LoteId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveedoresAdminGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProveedoresAdminGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="VPLwebLotesProvDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveedoresUsuariosGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gpId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FincaId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LoteId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveedoresUsuariosGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProveedoresUsuariosGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="VPLwebLotesProvDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveedoresEmpresasGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gpId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FincaId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LoteId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveedoresEmpresasGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProveedoresEmpresasGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="VPLwebLotesProvDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoUsuFincasGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccUsuId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccEmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoUsuFincasGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccesoUsuFincasGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebAccesoUsuFincasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoUsuFincasSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaUsuariosByFincas">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebAccesoUsuFincasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoUsuFincasSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccesoUsuFincasSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoEmprFincasGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccEmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoEmprFincasGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccesoEmprFincasGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebAccesoEmprFincasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoEmprFincasSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaFincasByEmpr">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebAccesoEmprFincasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoEmprFincasSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccesoEmprFincasSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAllFincas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsuAdmIdCrea" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodProv" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAllFincasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertAllFincasResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpresasAdmGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpresasAdmGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmpresasAdmGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebEmprAdministrativasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpresasAdmSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaEmpresas">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebEmprAdministrativasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpresasAdmSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmpresasAdmSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccUsuCuadrillasGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AcCuaId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CuaId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccUsuCuadrillasGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccUsuCuadrillasGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebAccUsuCuadrillasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccUsuCuadrillasSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaUsuariosCuadrillas">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebAccUsuCuadrillasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccUsuCuadrillasSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccUsuCuadrillasSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PlanillaGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dato1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dato2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dato3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dato4" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PlanillaGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PlanillaGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="Sub_PLwebConsultaPlanillaDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CentroCostosGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CcId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CentroCostosGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CentroCostosGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebCentroCostoTareasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CentroCostosSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaCentroCostos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebCentroCostoTareasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CentroCostosSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CentroCostosSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebDescuentosEmpGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DescId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DescEmprId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DescQuinId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DescUsuIdIngresa" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DescEmpId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebDescuentosEmpGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PLwebDescuentosEmpGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebDescuentosEmpDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebDescuentosEmpSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaDescuentosEmp">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebDescuentosEmpDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebDescuentosEmpSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PLwebDescuentosEmpSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebEmpCuaEmpGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsuId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebEmpCuaEmpGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PLwebEmpCuaEmpGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebEmpCuaDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebEmpCuaEmpSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaEmpCua">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebEmpCuaDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebEmpCuaEmpSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PLwebEmpCuaEmpSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebCentroCostosEmprGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CcosId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CcEmprId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebCentroCostosEmprGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PLwebCentroCostosEmprGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebCentroCostosEmprDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebCentroCostosEmprSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablaPLwebCentroCostosEmpr">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ILC_Campo.xsd" name="namespace" />
+                <s:attribute fixed="PLwebCentroCostosEmprDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebCentroCostosEmprSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PLwebCentroCostosEmprSetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebEncFac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="factura" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebEncFacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PLwebEncFacResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebDetalleFac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cantidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="precioUnidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codArticulo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MovBodega" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CentroBeneficio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PLwebDetalleFacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PLwebDetalleFacResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="send">
+        <s:complexType />
+      </s:element>
+      <s:element name="sendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QuincenaGetSoapIn">
+    <wsdl:part name="parameters" element="tns:QuincenaGet" />
+  </wsdl:message>
+  <wsdl:message name="QuincenaGetSoapOut">
+    <wsdl:part name="parameters" element="tns:QuincenaGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuincenaSetSoapIn">
+    <wsdl:part name="parameters" element="tns:QuincenaSet" />
+  </wsdl:message>
+  <wsdl:message name="QuincenaSetSoapOut">
+    <wsdl:part name="parameters" element="tns:QuincenaSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsumosGetSoapIn">
+    <wsdl:part name="parameters" element="tns:InsumosGet" />
+  </wsdl:message>
+  <wsdl:message name="InsumosGetSoapOut">
+    <wsdl:part name="parameters" element="tns:InsumosGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsumosSetSoapIn">
+    <wsdl:part name="parameters" element="tns:InsumosSet" />
+  </wsdl:message>
+  <wsdl:message name="InsumosSetSoapOut">
+    <wsdl:part name="parameters" element="tns:InsumosSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmpleadoGetSoapIn">
+    <wsdl:part name="parameters" element="tns:EmpleadoGet" />
+  </wsdl:message>
+  <wsdl:message name="EmpleadoGetSoapOut">
+    <wsdl:part name="parameters" element="tns:EmpleadoGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmpleadoSetSoapIn">
+    <wsdl:part name="parameters" element="tns:EmpleadoSet" />
+  </wsdl:message>
+  <wsdl:message name="EmpleadoSetSoapOut">
+    <wsdl:part name="parameters" element="tns:EmpleadoSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="FincasLotesGetSoapIn">
+    <wsdl:part name="parameters" element="tns:FincasLotesGet" />
+  </wsdl:message>
+  <wsdl:message name="FincasLotesGetSoapOut">
+    <wsdl:part name="parameters" element="tns:FincasLotesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="FrenteGetSoapIn">
+    <wsdl:part name="parameters" element="tns:FrenteGet" />
+  </wsdl:message>
+  <wsdl:message name="FrenteGetSoapOut">
+    <wsdl:part name="parameters" element="tns:FrenteGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="FrenteSetSoapIn">
+    <wsdl:part name="parameters" element="tns:FrenteSet" />
+  </wsdl:message>
+  <wsdl:message name="FrenteSetSoapOut">
+    <wsdl:part name="parameters" element="tns:FrenteSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuadrillaGetSoapIn">
+    <wsdl:part name="parameters" element="tns:CuadrillaGet" />
+  </wsdl:message>
+  <wsdl:message name="CuadrillaGetSoapOut">
+    <wsdl:part name="parameters" element="tns:CuadrillaGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuadrillaSetSoapIn">
+    <wsdl:part name="parameters" element="tns:CuadrillaSet" />
+  </wsdl:message>
+  <wsdl:message name="CuadrillaSetSoapOut">
+    <wsdl:part name="parameters" element="tns:CuadrillaSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="TareaGetSoapIn">
+    <wsdl:part name="parameters" element="tns:TareaGet" />
+  </wsdl:message>
+  <wsdl:message name="TareaGetSoapOut">
+    <wsdl:part name="parameters" element="tns:TareaGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="TareaSetSoapIn">
+    <wsdl:part name="parameters" element="tns:TareaSet" />
+  </wsdl:message>
+  <wsdl:message name="TareaSetSoapOut">
+    <wsdl:part name="parameters" element="tns:TareaSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoviPlaniGetSoapIn">
+    <wsdl:part name="parameters" element="tns:MoviPlaniGet" />
+  </wsdl:message>
+  <wsdl:message name="MoviPlaniGetSoapOut">
+    <wsdl:part name="parameters" element="tns:MoviPlaniGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoviPlaniSetSoapIn">
+    <wsdl:part name="parameters" element="tns:MoviPlaniSet" />
+  </wsdl:message>
+  <wsdl:message name="MoviPlaniSetSoapOut">
+    <wsdl:part name="parameters" element="tns:MoviPlaniSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="TipoEmpGetSoapIn">
+    <wsdl:part name="parameters" element="tns:TipoEmpGet" />
+  </wsdl:message>
+  <wsdl:message name="TipoEmpGetSoapOut">
+    <wsdl:part name="parameters" element="tns:TipoEmpGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="TipoEmpSetSoapIn">
+    <wsdl:part name="parameters" element="tns:TipoEmpSet" />
+  </wsdl:message>
+  <wsdl:message name="TipoEmpSetSoapOut">
+    <wsdl:part name="parameters" element="tns:TipoEmpSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsuarioEmprGetSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuarioEmprGet" />
+  </wsdl:message>
+  <wsdl:message name="UsuarioEmprGetSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuarioEmprGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsuarioEmprSetSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuarioEmprSet" />
+  </wsdl:message>
+  <wsdl:message name="UsuarioEmprSetSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuarioEmprSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProveedoresAdminGetSoapIn">
+    <wsdl:part name="parameters" element="tns:ProveedoresAdminGet" />
+  </wsdl:message>
+  <wsdl:message name="ProveedoresAdminGetSoapOut">
+    <wsdl:part name="parameters" element="tns:ProveedoresAdminGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProveedoresUsuariosGetSoapIn">
+    <wsdl:part name="parameters" element="tns:ProveedoresUsuariosGet" />
+  </wsdl:message>
+  <wsdl:message name="ProveedoresUsuariosGetSoapOut">
+    <wsdl:part name="parameters" element="tns:ProveedoresUsuariosGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProveedoresEmpresasGetSoapIn">
+    <wsdl:part name="parameters" element="tns:ProveedoresEmpresasGet" />
+  </wsdl:message>
+  <wsdl:message name="ProveedoresEmpresasGetSoapOut">
+    <wsdl:part name="parameters" element="tns:ProveedoresEmpresasGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccesoUsuFincasGetSoapIn">
+    <wsdl:part name="parameters" element="tns:AccesoUsuFincasGet" />
+  </wsdl:message>
+  <wsdl:message name="AccesoUsuFincasGetSoapOut">
+    <wsdl:part name="parameters" element="tns:AccesoUsuFincasGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccesoUsuFincasSetSoapIn">
+    <wsdl:part name="parameters" element="tns:AccesoUsuFincasSet" />
+  </wsdl:message>
+  <wsdl:message name="AccesoUsuFincasSetSoapOut">
+    <wsdl:part name="parameters" element="tns:AccesoUsuFincasSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccesoEmprFincasGetSoapIn">
+    <wsdl:part name="parameters" element="tns:AccesoEmprFincasGet" />
+  </wsdl:message>
+  <wsdl:message name="AccesoEmprFincasGetSoapOut">
+    <wsdl:part name="parameters" element="tns:AccesoEmprFincasGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccesoEmprFincasSetSoapIn">
+    <wsdl:part name="parameters" element="tns:AccesoEmprFincasSet" />
+  </wsdl:message>
+  <wsdl:message name="AccesoEmprFincasSetSoapOut">
+    <wsdl:part name="parameters" element="tns:AccesoEmprFincasSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertAllFincasSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertAllFincas" />
+  </wsdl:message>
+  <wsdl:message name="InsertAllFincasSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertAllFincasResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmpresasAdmGetSoapIn">
+    <wsdl:part name="parameters" element="tns:EmpresasAdmGet" />
+  </wsdl:message>
+  <wsdl:message name="EmpresasAdmGetSoapOut">
+    <wsdl:part name="parameters" element="tns:EmpresasAdmGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmpresasAdmSetSoapIn">
+    <wsdl:part name="parameters" element="tns:EmpresasAdmSet" />
+  </wsdl:message>
+  <wsdl:message name="EmpresasAdmSetSoapOut">
+    <wsdl:part name="parameters" element="tns:EmpresasAdmSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccUsuCuadrillasGetSoapIn">
+    <wsdl:part name="parameters" element="tns:AccUsuCuadrillasGet" />
+  </wsdl:message>
+  <wsdl:message name="AccUsuCuadrillasGetSoapOut">
+    <wsdl:part name="parameters" element="tns:AccUsuCuadrillasGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccUsuCuadrillasSetSoapIn">
+    <wsdl:part name="parameters" element="tns:AccUsuCuadrillasSet" />
+  </wsdl:message>
+  <wsdl:message name="AccUsuCuadrillasSetSoapOut">
+    <wsdl:part name="parameters" element="tns:AccUsuCuadrillasSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PlanillaGetSoapIn">
+    <wsdl:part name="parameters" element="tns:PlanillaGet" />
+  </wsdl:message>
+  <wsdl:message name="PlanillaGetSoapOut">
+    <wsdl:part name="parameters" element="tns:PlanillaGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="CentroCostosGetSoapIn">
+    <wsdl:part name="parameters" element="tns:CentroCostosGet" />
+  </wsdl:message>
+  <wsdl:message name="CentroCostosGetSoapOut">
+    <wsdl:part name="parameters" element="tns:CentroCostosGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="CentroCostosSetSoapIn">
+    <wsdl:part name="parameters" element="tns:CentroCostosSet" />
+  </wsdl:message>
+  <wsdl:message name="CentroCostosSetSoapOut">
+    <wsdl:part name="parameters" element="tns:CentroCostosSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLwebDescuentosEmpGetSoapIn">
+    <wsdl:part name="parameters" element="tns:PLwebDescuentosEmpGet" />
+  </wsdl:message>
+  <wsdl:message name="PLwebDescuentosEmpGetSoapOut">
+    <wsdl:part name="parameters" element="tns:PLwebDescuentosEmpGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLwebDescuentosEmpSetSoapIn">
+    <wsdl:part name="parameters" element="tns:PLwebDescuentosEmpSet" />
+  </wsdl:message>
+  <wsdl:message name="PLwebDescuentosEmpSetSoapOut">
+    <wsdl:part name="parameters" element="tns:PLwebDescuentosEmpSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLwebEmpCuaEmpGetSoapIn">
+    <wsdl:part name="parameters" element="tns:PLwebEmpCuaEmpGet" />
+  </wsdl:message>
+  <wsdl:message name="PLwebEmpCuaEmpGetSoapOut">
+    <wsdl:part name="parameters" element="tns:PLwebEmpCuaEmpGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLwebEmpCuaEmpSetSoapIn">
+    <wsdl:part name="parameters" element="tns:PLwebEmpCuaEmpSet" />
+  </wsdl:message>
+  <wsdl:message name="PLwebEmpCuaEmpSetSoapOut">
+    <wsdl:part name="parameters" element="tns:PLwebEmpCuaEmpSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLwebCentroCostosEmprGetSoapIn">
+    <wsdl:part name="parameters" element="tns:PLwebCentroCostosEmprGet" />
+  </wsdl:message>
+  <wsdl:message name="PLwebCentroCostosEmprGetSoapOut">
+    <wsdl:part name="parameters" element="tns:PLwebCentroCostosEmprGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLwebCentroCostosEmprSetSoapIn">
+    <wsdl:part name="parameters" element="tns:PLwebCentroCostosEmprSet" />
+  </wsdl:message>
+  <wsdl:message name="PLwebCentroCostosEmprSetSoapOut">
+    <wsdl:part name="parameters" element="tns:PLwebCentroCostosEmprSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLwebEncFacSoapIn">
+    <wsdl:part name="parameters" element="tns:PLwebEncFac" />
+  </wsdl:message>
+  <wsdl:message name="PLwebEncFacSoapOut">
+    <wsdl:part name="parameters" element="tns:PLwebEncFacResponse" />
+  </wsdl:message>
+  <wsdl:message name="PLwebDetalleFacSoapIn">
+    <wsdl:part name="parameters" element="tns:PLwebDetalleFac" />
+  </wsdl:message>
+  <wsdl:message name="PLwebDetalleFacSoapOut">
+    <wsdl:part name="parameters" element="tns:PLwebDetalleFacResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendSoapIn">
+    <wsdl:part name="parameters" element="tns:send" />
+  </wsdl:message>
+  <wsdl:message name="sendSoapOut">
+    <wsdl:part name="parameters" element="tns:sendResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSRAAgricolaSoap">
+    <wsdl:operation name="QuincenaGet">
+      <wsdl:input message="tns:QuincenaGetSoapIn" />
+      <wsdl:output message="tns:QuincenaGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QuincenaSet">
+      <wsdl:input message="tns:QuincenaSetSoapIn" />
+      <wsdl:output message="tns:QuincenaSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsumosGet">
+      <wsdl:input message="tns:InsumosGetSoapIn" />
+      <wsdl:output message="tns:InsumosGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsumosSet">
+      <wsdl:input message="tns:InsumosSetSoapIn" />
+      <wsdl:output message="tns:InsumosSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpleadoGet">
+      <wsdl:input message="tns:EmpleadoGetSoapIn" />
+      <wsdl:output message="tns:EmpleadoGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpleadoSet">
+      <wsdl:input message="tns:EmpleadoSetSoapIn" />
+      <wsdl:output message="tns:EmpleadoSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FincasLotesGet">
+      <wsdl:input message="tns:FincasLotesGetSoapIn" />
+      <wsdl:output message="tns:FincasLotesGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FrenteGet">
+      <wsdl:input message="tns:FrenteGetSoapIn" />
+      <wsdl:output message="tns:FrenteGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FrenteSet">
+      <wsdl:input message="tns:FrenteSetSoapIn" />
+      <wsdl:output message="tns:FrenteSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuadrillaGet">
+      <wsdl:input message="tns:CuadrillaGetSoapIn" />
+      <wsdl:output message="tns:CuadrillaGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuadrillaSet">
+      <wsdl:input message="tns:CuadrillaSetSoapIn" />
+      <wsdl:output message="tns:CuadrillaSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaGet">
+      <wsdl:input message="tns:TareaGetSoapIn" />
+      <wsdl:output message="tns:TareaGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaSet">
+      <wsdl:input message="tns:TareaSetSoapIn" />
+      <wsdl:output message="tns:TareaSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoviPlaniGet">
+      <wsdl:input message="tns:MoviPlaniGetSoapIn" />
+      <wsdl:output message="tns:MoviPlaniGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoviPlaniSet">
+      <wsdl:input message="tns:MoviPlaniSetSoapIn" />
+      <wsdl:output message="tns:MoviPlaniSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoEmpGet">
+      <wsdl:input message="tns:TipoEmpGetSoapIn" />
+      <wsdl:output message="tns:TipoEmpGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoEmpSet">
+      <wsdl:input message="tns:TipoEmpSetSoapIn" />
+      <wsdl:output message="tns:TipoEmpSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioEmprGet">
+      <wsdl:input message="tns:UsuarioEmprGetSoapIn" />
+      <wsdl:output message="tns:UsuarioEmprGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioEmprSet">
+      <wsdl:input message="tns:UsuarioEmprSetSoapIn" />
+      <wsdl:output message="tns:UsuarioEmprSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresAdminGet">
+      <wsdl:input message="tns:ProveedoresAdminGetSoapIn" />
+      <wsdl:output message="tns:ProveedoresAdminGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresUsuariosGet">
+      <wsdl:input message="tns:ProveedoresUsuariosGetSoapIn" />
+      <wsdl:output message="tns:ProveedoresUsuariosGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresEmpresasGet">
+      <wsdl:input message="tns:ProveedoresEmpresasGetSoapIn" />
+      <wsdl:output message="tns:ProveedoresEmpresasGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccesoUsuFincasGet">
+      <wsdl:input message="tns:AccesoUsuFincasGetSoapIn" />
+      <wsdl:output message="tns:AccesoUsuFincasGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccesoUsuFincasSet">
+      <wsdl:input message="tns:AccesoUsuFincasSetSoapIn" />
+      <wsdl:output message="tns:AccesoUsuFincasSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccesoEmprFincasGet">
+      <wsdl:input message="tns:AccesoEmprFincasGetSoapIn" />
+      <wsdl:output message="tns:AccesoEmprFincasGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccesoEmprFincasSet">
+      <wsdl:input message="tns:AccesoEmprFincasSetSoapIn" />
+      <wsdl:output message="tns:AccesoEmprFincasSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAllFincas">
+      <wsdl:input message="tns:InsertAllFincasSoapIn" />
+      <wsdl:output message="tns:InsertAllFincasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasAdmGet">
+      <wsdl:input message="tns:EmpresasAdmGetSoapIn" />
+      <wsdl:output message="tns:EmpresasAdmGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasAdmSet">
+      <wsdl:input message="tns:EmpresasAdmSetSoapIn" />
+      <wsdl:output message="tns:EmpresasAdmSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccUsuCuadrillasGet">
+      <wsdl:input message="tns:AccUsuCuadrillasGetSoapIn" />
+      <wsdl:output message="tns:AccUsuCuadrillasGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccUsuCuadrillasSet">
+      <wsdl:input message="tns:AccUsuCuadrillasSetSoapIn" />
+      <wsdl:output message="tns:AccUsuCuadrillasSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PlanillaGet">
+      <wsdl:input message="tns:PlanillaGetSoapIn" />
+      <wsdl:output message="tns:PlanillaGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CentroCostosGet">
+      <wsdl:input message="tns:CentroCostosGetSoapIn" />
+      <wsdl:output message="tns:CentroCostosGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CentroCostosSet">
+      <wsdl:input message="tns:CentroCostosSetSoapIn" />
+      <wsdl:output message="tns:CentroCostosSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDescuentosEmpGet">
+      <wsdl:input message="tns:PLwebDescuentosEmpGetSoapIn" />
+      <wsdl:output message="tns:PLwebDescuentosEmpGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDescuentosEmpSet">
+      <wsdl:input message="tns:PLwebDescuentosEmpSetSoapIn" />
+      <wsdl:output message="tns:PLwebDescuentosEmpSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEmpCuaEmpGet">
+      <wsdl:input message="tns:PLwebEmpCuaEmpGetSoapIn" />
+      <wsdl:output message="tns:PLwebEmpCuaEmpGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEmpCuaEmpSet">
+      <wsdl:input message="tns:PLwebEmpCuaEmpSetSoapIn" />
+      <wsdl:output message="tns:PLwebEmpCuaEmpSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLwebCentroCostosEmprGet">
+      <wsdl:input message="tns:PLwebCentroCostosEmprGetSoapIn" />
+      <wsdl:output message="tns:PLwebCentroCostosEmprGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLwebCentroCostosEmprSet">
+      <wsdl:input message="tns:PLwebCentroCostosEmprSetSoapIn" />
+      <wsdl:output message="tns:PLwebCentroCostosEmprSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEncFac">
+      <wsdl:input message="tns:PLwebEncFacSoapIn" />
+      <wsdl:output message="tns:PLwebEncFacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDetalleFac">
+      <wsdl:input message="tns:PLwebDetalleFacSoapIn" />
+      <wsdl:output message="tns:PLwebDetalleFacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send">
+      <wsdl:input message="tns:sendSoapIn" />
+      <wsdl:output message="tns:sendSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSRAAgricolaSoap" type="tns:WSRAAgricolaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QuincenaGet">
+      <soap:operation soapAction="http://tempuri.org/QuincenaGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuincenaSet">
+      <soap:operation soapAction="http://tempuri.org/QuincenaSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsumosGet">
+      <soap:operation soapAction="http://tempuri.org/InsumosGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsumosSet">
+      <soap:operation soapAction="http://tempuri.org/InsumosSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpleadoGet">
+      <soap:operation soapAction="http://tempuri.org/EmpleadoGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpleadoSet">
+      <soap:operation soapAction="http://tempuri.org/EmpleadoSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FincasLotesGet">
+      <soap:operation soapAction="http://tempuri.org/FincasLotesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrenteGet">
+      <soap:operation soapAction="http://tempuri.org/FrenteGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrenteSet">
+      <soap:operation soapAction="http://tempuri.org/FrenteSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuadrillaGet">
+      <soap:operation soapAction="http://tempuri.org/CuadrillaGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuadrillaSet">
+      <soap:operation soapAction="http://tempuri.org/CuadrillaSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaGet">
+      <soap:operation soapAction="http://tempuri.org/TareaGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaSet">
+      <soap:operation soapAction="http://tempuri.org/TareaSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoviPlaniGet">
+      <soap:operation soapAction="http://tempuri.org/MoviPlaniGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoviPlaniSet">
+      <soap:operation soapAction="http://tempuri.org/MoviPlaniSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoEmpGet">
+      <soap:operation soapAction="http://tempuri.org/TipoEmpGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoEmpSet">
+      <soap:operation soapAction="http://tempuri.org/TipoEmpSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioEmprGet">
+      <soap:operation soapAction="http://tempuri.org/UsuarioEmprGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioEmprSet">
+      <soap:operation soapAction="http://tempuri.org/UsuarioEmprSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresAdminGet">
+      <soap:operation soapAction="http://tempuri.org/ProveedoresAdminGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresUsuariosGet">
+      <soap:operation soapAction="http://tempuri.org/ProveedoresUsuariosGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresEmpresasGet">
+      <soap:operation soapAction="http://tempuri.org/ProveedoresEmpresasGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoUsuFincasGet">
+      <soap:operation soapAction="http://tempuri.org/AccesoUsuFincasGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoUsuFincasSet">
+      <soap:operation soapAction="http://tempuri.org/AccesoUsuFincasSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoEmprFincasGet">
+      <soap:operation soapAction="http://tempuri.org/AccesoEmprFincasGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoEmprFincasSet">
+      <soap:operation soapAction="http://tempuri.org/AccesoEmprFincasSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAllFincas">
+      <soap:operation soapAction="http://tempuri.org/InsertAllFincas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasAdmGet">
+      <soap:operation soapAction="http://tempuri.org/EmpresasAdmGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasAdmSet">
+      <soap:operation soapAction="http://tempuri.org/EmpresasAdmSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccUsuCuadrillasGet">
+      <soap:operation soapAction="http://tempuri.org/AccUsuCuadrillasGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccUsuCuadrillasSet">
+      <soap:operation soapAction="http://tempuri.org/AccUsuCuadrillasSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlanillaGet">
+      <soap:operation soapAction="http://tempuri.org/PlanillaGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCostosGet">
+      <soap:operation soapAction="http://tempuri.org/CentroCostosGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCostosSet">
+      <soap:operation soapAction="http://tempuri.org/CentroCostosSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDescuentosEmpGet">
+      <soap:operation soapAction="http://tempuri.org/PLwebDescuentosEmpGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDescuentosEmpSet">
+      <soap:operation soapAction="http://tempuri.org/PLwebDescuentosEmpSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEmpCuaEmpGet">
+      <soap:operation soapAction="http://tempuri.org/PLwebEmpCuaEmpGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEmpCuaEmpSet">
+      <soap:operation soapAction="http://tempuri.org/PLwebEmpCuaEmpSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebCentroCostosEmprGet">
+      <soap:operation soapAction="http://tempuri.org/PLwebCentroCostosEmprGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebCentroCostosEmprSet">
+      <soap:operation soapAction="http://tempuri.org/PLwebCentroCostosEmprSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEncFac">
+      <soap:operation soapAction="http://tempuri.org/PLwebEncFac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDetalleFac">
+      <soap:operation soapAction="http://tempuri.org/PLwebDetalleFac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send">
+      <soap:operation soapAction="http://tempuri.org/send" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSRAAgricolaSoap12" type="tns:WSRAAgricolaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QuincenaGet">
+      <soap12:operation soapAction="http://tempuri.org/QuincenaGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuincenaSet">
+      <soap12:operation soapAction="http://tempuri.org/QuincenaSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsumosGet">
+      <soap12:operation soapAction="http://tempuri.org/InsumosGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsumosSet">
+      <soap12:operation soapAction="http://tempuri.org/InsumosSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpleadoGet">
+      <soap12:operation soapAction="http://tempuri.org/EmpleadoGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpleadoSet">
+      <soap12:operation soapAction="http://tempuri.org/EmpleadoSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FincasLotesGet">
+      <soap12:operation soapAction="http://tempuri.org/FincasLotesGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrenteGet">
+      <soap12:operation soapAction="http://tempuri.org/FrenteGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrenteSet">
+      <soap12:operation soapAction="http://tempuri.org/FrenteSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuadrillaGet">
+      <soap12:operation soapAction="http://tempuri.org/CuadrillaGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuadrillaSet">
+      <soap12:operation soapAction="http://tempuri.org/CuadrillaSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaGet">
+      <soap12:operation soapAction="http://tempuri.org/TareaGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaSet">
+      <soap12:operation soapAction="http://tempuri.org/TareaSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoviPlaniGet">
+      <soap12:operation soapAction="http://tempuri.org/MoviPlaniGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoviPlaniSet">
+      <soap12:operation soapAction="http://tempuri.org/MoviPlaniSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoEmpGet">
+      <soap12:operation soapAction="http://tempuri.org/TipoEmpGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoEmpSet">
+      <soap12:operation soapAction="http://tempuri.org/TipoEmpSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioEmprGet">
+      <soap12:operation soapAction="http://tempuri.org/UsuarioEmprGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioEmprSet">
+      <soap12:operation soapAction="http://tempuri.org/UsuarioEmprSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresAdminGet">
+      <soap12:operation soapAction="http://tempuri.org/ProveedoresAdminGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresUsuariosGet">
+      <soap12:operation soapAction="http://tempuri.org/ProveedoresUsuariosGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedoresEmpresasGet">
+      <soap12:operation soapAction="http://tempuri.org/ProveedoresEmpresasGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoUsuFincasGet">
+      <soap12:operation soapAction="http://tempuri.org/AccesoUsuFincasGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoUsuFincasSet">
+      <soap12:operation soapAction="http://tempuri.org/AccesoUsuFincasSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoEmprFincasGet">
+      <soap12:operation soapAction="http://tempuri.org/AccesoEmprFincasGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoEmprFincasSet">
+      <soap12:operation soapAction="http://tempuri.org/AccesoEmprFincasSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAllFincas">
+      <soap12:operation soapAction="http://tempuri.org/InsertAllFincas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasAdmGet">
+      <soap12:operation soapAction="http://tempuri.org/EmpresasAdmGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasAdmSet">
+      <soap12:operation soapAction="http://tempuri.org/EmpresasAdmSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccUsuCuadrillasGet">
+      <soap12:operation soapAction="http://tempuri.org/AccUsuCuadrillasGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccUsuCuadrillasSet">
+      <soap12:operation soapAction="http://tempuri.org/AccUsuCuadrillasSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlanillaGet">
+      <soap12:operation soapAction="http://tempuri.org/PlanillaGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCostosGet">
+      <soap12:operation soapAction="http://tempuri.org/CentroCostosGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCostosSet">
+      <soap12:operation soapAction="http://tempuri.org/CentroCostosSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDescuentosEmpGet">
+      <soap12:operation soapAction="http://tempuri.org/PLwebDescuentosEmpGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDescuentosEmpSet">
+      <soap12:operation soapAction="http://tempuri.org/PLwebDescuentosEmpSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEmpCuaEmpGet">
+      <soap12:operation soapAction="http://tempuri.org/PLwebEmpCuaEmpGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEmpCuaEmpSet">
+      <soap12:operation soapAction="http://tempuri.org/PLwebEmpCuaEmpSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebCentroCostosEmprGet">
+      <soap12:operation soapAction="http://tempuri.org/PLwebCentroCostosEmprGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebCentroCostosEmprSet">
+      <soap12:operation soapAction="http://tempuri.org/PLwebCentroCostosEmprSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebEncFac">
+      <soap12:operation soapAction="http://tempuri.org/PLwebEncFac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PLwebDetalleFac">
+      <soap12:operation soapAction="http://tempuri.org/PLwebDetalleFac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send">
+      <soap12:operation soapAction="http://tempuri.org/send" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSRAAgricola">
+    <wsdl:port name="WSRAAgricolaSoap" binding="tns:WSRAAgricolaSoap">
+      <soap:address location="http://10.1.1.13/ILCRAAgricolaWS/WSRAAgricola.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSRAAgricolaSoap12" binding="tns:WSRAAgricolaSoap12">
+      <soap12:address location="http://10.1.1.13/ILCRAAgricolaWS/WSRAAgricola.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LACABANAEntidadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SAI$Purchase Line">
+    <Key>
+      <PropertyRef Name="Document Type" />
+      <PropertyRef Name="Document No_" />
+      <PropertyRef Name="Line No_" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Document Type" Type="int" Nullable="false" />
+    <Property Name="Document No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Line No_" Type="int" Nullable="false" />
+    <Property Name="Buy-from Vendor No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Location Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Expected Receipt Date" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unit of Measure" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Outstanding Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ to Invoice" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ to Receive" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Direct Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit Cost (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="VAT _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Line Discount _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Line Discount Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Amount Including VAT" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit Price (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Allow Invoice Disc_" Type="tinyint" Nullable="false" />
+    <Property Name="Gross Weight" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Net Weight" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Units per Parcel" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit Volume" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Appl_-to Item Entry" Type="int" Nullable="false" />
+    <Property Name="Shortcut Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Shortcut Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Indirect Cost _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Recalculate Invoice Disc_" Type="tinyint" Nullable="false" />
+    <Property Name="Outstanding Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ Rcd_ Not Invoiced" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Amt_ Rcd_ Not Invoiced" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Quantity Received" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Quantity Invoiced" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Receipt No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Receipt Line No_" Type="int" Nullable="false" />
+    <Property Name="Profit _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Pay-to Vendor No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Inv_ Discount Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Vendor Item No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sales Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sales Order Line No_" Type="int" Nullable="false" />
+    <Property Name="Drop Shipment" Type="tinyint" Nullable="false" />
+    <Property Name="Gen_ Bus_ Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Gen_ Prod_ Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="VAT Calculation Type" Type="int" Nullable="false" />
+    <Property Name="Transaction Type" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Transport Method" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Attached to Line No_" Type="int" Nullable="false" />
+    <Property Name="Entry Point" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Area" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Transaction Specification" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tax Area Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Tax Liable" Type="tinyint" Nullable="false" />
+    <Property Name="Tax Group Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Use Tax" Type="tinyint" Nullable="false" />
+    <Property Name="VAT Bus_ Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="VAT Prod_ Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Currency Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Outstanding Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Amt_ Rcd_ Not Invoiced (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Blanket Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Blanket Order Line No_" Type="int" Nullable="false" />
+    <Property Name="VAT Base Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="System-Created Entry" Type="tinyint" Nullable="false" />
+    <Property Name="Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="VAT Difference" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Inv_ Disc_ Amount to Invoice" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="VAT Identifier" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="IC Partner Ref_ Type" Type="int" Nullable="false" />
+    <Property Name="IC Partner Reference" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Prepayment _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_ Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_ Amt_ Inv_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_ Amt_ Incl_ VAT" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepayment Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_ VAT Base Amt_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepayment VAT _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_ VAT Calc_ Type" Type="int" Nullable="false" />
+    <Property Name="Prepayment VAT Identifier" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Prepayment Tax Area Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Prepayment Tax Liable" Type="tinyint" Nullable="false" />
+    <Property Name="Prepayment Tax Group Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Prepmt Amt to Deduct" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt Amt Deducted" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepayment Line" Type="tinyint" Nullable="false" />
+    <Property Name="Prepmt_ Amount Inv_ Incl_ VAT" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_ Amount Inv_ (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="IC Partner Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Prepmt_ VAT Amount Inv_ (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepayment VAT Difference" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt VAT Diff_ to Deduct" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt VAT Diff_ Deducted" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Outstanding Amt_ Ex_ VAT (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="A_ Rcd_ Not Inv_ Ex_ VAT (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Dimension Set ID" Type="int" Nullable="false" />
+    <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Job Line Type" Type="int" Nullable="false" />
+    <Property Name="Job Unit Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Total Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Line Discount Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Line Discount _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Unit Price (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Total Price (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Line Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Line Disc_ Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Currency Factor" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Currency Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Job Planning Line No_" Type="int" Nullable="false" />
+    <Property Name="Job Remaining Qty_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job Remaining Qty_ (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Deferral Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Returns Deferral Start Date" Type="datetime" Nullable="false" />
+    <Property Name="Prod_ Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Variant Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Bin Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Qty_ per Unit of Measure" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit of Measure Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Quantity (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Outstanding Qty_ (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ to Invoice (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ to Receive (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ Rcd_ Not Invoiced (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ Received (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ Invoiced (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="FA Posting Date" Type="datetime" Nullable="false" />
+    <Property Name="FA Posting Type" Type="int" Nullable="false" />
+    <Property Name="Depreciation Book Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Salvage Value" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Depr_ until FA Posting Date" Type="tinyint" Nullable="false" />
+    <Property Name="Depr_ Acquisition Cost" Type="tinyint" Nullable="false" />
+    <Property Name="Maintenance Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Insurance No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Budgeted FA No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Duplicate in Depreciation Book" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Use Duplication List" Type="tinyint" Nullable="false" />
+    <Property Name="Responsibility Center" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cross-Reference No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Unit of Measure (Cross Ref_)" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cross-Reference Type" Type="int" Nullable="false" />
+    <Property Name="Cross-Reference Type No_" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Item Category Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nonstock" Type="tinyint" Nullable="false" />
+    <Property Name="Purchasing Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Product Group Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Special Order" Type="tinyint" Nullable="false" />
+    <Property Name="Special Order Sales No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Special Order Sales Line No_" Type="int" Nullable="false" />
+    <Property Name="Completely Received" Type="tinyint" Nullable="false" />
+    <Property Name="Requested Receipt Date" Type="datetime" Nullable="false" />
+    <Property Name="Promised Receipt Date" Type="datetime" Nullable="false" />
+    <Property Name="Lead Time Calculation" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Inbound Whse_ Handling Time" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Planned Receipt Date" Type="datetime" Nullable="false" />
+    <Property Name="Order Date" Type="datetime" Nullable="false" />
+    <Property Name="Allow Item Charge Assignment" Type="tinyint" Nullable="false" />
+    <Property Name="Return Qty_ to Ship" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Qty_ to Ship (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Qty_ Shipped Not Invd_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Ret_ Qty_ Shpd Not Invd_(Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Shpd_ Not Invd_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Shpd_ Not Invd_ (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Qty_ Shipped" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Qty_ Shipped (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Shipment No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Return Shipment Line No_" Type="int" Nullable="false" />
+    <Property Name="Return Reason Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tax To Be Expensed" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Provincial Tax Area Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="IRS 1099 Liable" Type="tinyint" Nullable="false" />
+    <Property Name="GST_HST" Type="int" Nullable="false" />
+    <Property Name="SubSource" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Transport Cost Entry No" Type="int" Nullable="false" />
+    <Property Name="Document Line No_" Type="int" Nullable="false" />
+    <Property Name="Original Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Allow Quantity Change" Type="tinyint" Nullable="false" />
+    <Property Name="Supply Chain Group Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lot No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Creation Date" Type="datetime" Nullable="false" />
+    <Property Name="Supplier Lot No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Alt_ Qty_ Transaction No_" Type="int" Nullable="false" />
+    <Property Name="Quantity (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ to Receive (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ Received (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ to Invoice (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty_ Invoiced (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Qty_ to Ship (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return Qty_ Shipped (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Alt_ Qty_ Update Required" Type="tinyint" Nullable="false" />
+    <Property Name="Accrual Amount (Cost)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Accrual Plan Type" Type="int" Nullable="false" />
+    <Property Name="Accrual Source No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Accrual Source Doc_ Type" Type="int" Nullable="false" />
+    <Property Name="Accrual Source Doc_ No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Accrual Source Doc_ Line No_" Type="int" Nullable="false" />
+    <Property Name="Scheduled Accrual No_" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Qty_ to Ship_Recv_ (Cont_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Receiving Reason Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Farm" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Country_Region of Origin Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Commodity Manifest No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Commodity Manifest Line No_" Type="int" Nullable="false" />
+    <Property Name="Commodity Received Date" Type="datetime" Nullable="false" />
+    <Property Name="Comm_ Payment Class Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Commodity Cost Calculated" Type="tinyint" Nullable="false" />
+    <Property Name="Commodity Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Commodity Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Commodity Received Lot No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Commodity P_O_ Type" Type="int" Nullable="false" />
+    <Property Name="Producer Zone Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Rejection Action" Type="int" Nullable="false" />
+    <Property Name="Label Unit of Measure Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Work Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Maintenance Entry Type" Type="int" Nullable="false" />
+    <Property Name="Maintenance Trade Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hours" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Part No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Routing No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Operation No_" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Work Center No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Finished" Type="tinyint" Nullable="false" />
+    <Property Name="Prod_ Order Line No_" Type="int" Nullable="false" />
+    <Property Name="Overhead Rate" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="MPS Order" Type="tinyint" Nullable="false" />
+    <Property Name="Planning Flexibility" Type="int" Nullable="false" />
+    <Property Name="Safety Lead Time" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Routing Reference No_" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="LACABANAEntidadModelStoreContainer">
+    <EntitySet Name="SAI$Purchase Line" EntityType="Self.SAI$Purchase Line" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

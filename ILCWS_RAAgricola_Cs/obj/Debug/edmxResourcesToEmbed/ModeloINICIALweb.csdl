@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LACABANAEntidadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SAI_Purchase_Line">
+    <Key>
+      <PropertyRef Name="Document_Type" />
+      <PropertyRef Name="Document_No_" />
+      <PropertyRef Name="Line_No_" />
+    </Key>
+    <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Document_Type" Type="Int32" Nullable="false" />
+    <Property Name="Document_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Buy_from_Vendor_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Location_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Expected_Receipt_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Unit_of_Measure" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Quantity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Outstanding_Quantity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__to_Invoice" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__to_Receive" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Direct_Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit_Cost__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="VAT__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Line_Discount__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Line_Discount_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Amount_Including_VAT" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit_Price__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Allow_Invoice_Disc_" Type="Byte" Nullable="false" />
+    <Property Name="Gross_Weight" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Net_Weight" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Units_per_Parcel" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit_Volume" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Appl__to_Item_Entry" Type="Int32" Nullable="false" />
+    <Property Name="Shortcut_Dimension_1_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Shortcut_Dimension_2_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Job_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Indirect_Cost__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Recalculate_Invoice_Disc_" Type="Byte" Nullable="false" />
+    <Property Name="Outstanding_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__Rcd__Not_Invoiced" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Amt__Rcd__Not_Invoiced" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Quantity_Received" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Quantity_Invoiced" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Receipt_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Receipt_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Profit__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Pay_to_Vendor_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Inv__Discount_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Vendor_Item_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sales_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sales_Order_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Drop_Shipment" Type="Byte" Nullable="false" />
+    <Property Name="Gen__Bus__Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gen__Prod__Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VAT_Calculation_Type" Type="Int32" Nullable="false" />
+    <Property Name="Transaction_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Transport_Method" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Attached_to_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Entry_Point" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Area" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Transaction_Specification" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tax_Area_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tax_Liable" Type="Byte" Nullable="false" />
+    <Property Name="Tax_Group_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Use_Tax" Type="Byte" Nullable="false" />
+    <Property Name="VAT_Bus__Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VAT_Prod__Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Currency_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Outstanding_Amount__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Amt__Rcd__Not_Invoiced__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Blanket_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Blanket_Order_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="VAT_Base_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="System_Created_Entry" Type="Byte" Nullable="false" />
+    <Property Name="Line_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="VAT_Difference" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Inv__Disc__Amount_to_Invoice" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="VAT_Identifier" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IC_Partner_Ref__Type" Type="Int32" Nullable="false" />
+    <Property Name="IC_Partner_Reference" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prepayment__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt__Line_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt__Amt__Inv_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt__Amt__Incl__VAT" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepayment_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt__VAT_Base_Amt_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepayment_VAT__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt__VAT_Calc__Type" Type="Int32" Nullable="false" />
+    <Property Name="Prepayment_VAT_Identifier" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prepayment_Tax_Area_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prepayment_Tax_Liable" Type="Byte" Nullable="false" />
+    <Property Name="Prepayment_Tax_Group_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prepmt_Amt_to_Deduct" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_Amt_Deducted" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepayment_Line" Type="Byte" Nullable="false" />
+    <Property Name="Prepmt__Amount_Inv__Incl__VAT" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt__Amount_Inv___LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="IC_Partner_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prepmt__VAT_Amount_Inv___LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepayment_VAT_Difference" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_VAT_Diff__to_Deduct" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Prepmt_VAT_Diff__Deducted" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Outstanding_Amt__Ex__VAT__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="A__Rcd__Not_Inv__Ex__VAT__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Dimension_Set_ID" Type="Int32" Nullable="false" />
+    <Property Name="Job_Task_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Job_Line_Type" Type="Int32" Nullable="false" />
+    <Property Name="Job_Unit_Price" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Total_Price" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Line_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Line_Discount_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Line_Discount__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Unit_Price__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Total_Price__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Line_Amount__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Line_Disc__Amount__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Currency_Factor" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Currency_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Job_Planning_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Job_Remaining_Qty_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Job_Remaining_Qty___Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Deferral_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Returns_Deferral_Start_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Prod__Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Variant_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Bin_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Qty__per_Unit_of_Measure" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Unit_of_Measure_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Quantity__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Outstanding_Qty___Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__to_Invoice__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__to_Receive__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__Rcd__Not_Invoiced__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__Received__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__Invoiced__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="FA_Posting_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FA_Posting_Type" Type="Int32" Nullable="false" />
+    <Property Name="Depreciation_Book_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Salvage_Value" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Depr__until_FA_Posting_Date" Type="Byte" Nullable="false" />
+    <Property Name="Depr__Acquisition_Cost" Type="Byte" Nullable="false" />
+    <Property Name="Maintenance_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Insurance_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Budgeted_FA_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Duplicate_in_Depreciation_Book" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Use_Duplication_List" Type="Byte" Nullable="false" />
+    <Property Name="Responsibility_Center" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Cross_Reference_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Unit_of_Measure__Cross_Ref__" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Cross_Reference_Type" Type="Int32" Nullable="false" />
+    <Property Name="Cross_Reference_Type_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Item_Category_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nonstock" Type="Byte" Nullable="false" />
+    <Property Name="Purchasing_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Product_Group_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Special_Order" Type="Byte" Nullable="false" />
+    <Property Name="Special_Order_Sales_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Special_Order_Sales_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Completely_Received" Type="Byte" Nullable="false" />
+    <Property Name="Requested_Receipt_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Promised_Receipt_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Lead_Time_Calculation" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Inbound_Whse__Handling_Time" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Planned_Receipt_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Order_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Allow_Item_Charge_Assignment" Type="Byte" Nullable="false" />
+    <Property Name="Return_Qty__to_Ship" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Qty__to_Ship__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Qty__Shipped_Not_Invd_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Ret__Qty__Shpd_Not_Invd__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Shpd__Not_Invd_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Shpd__Not_Invd___LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Qty__Shipped" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Qty__Shipped__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Shipment_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Return_Shipment_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Return_Reason_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tax_To_Be_Expensed" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Provincial_Tax_Area_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IRS_1099_Liable" Type="Byte" Nullable="false" />
+    <Property Name="GST_HST" Type="Int32" Nullable="false" />
+    <Property Name="SubSource" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Transport_Cost_Entry_No" Type="Int32" Nullable="false" />
+    <Property Name="Document_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Original_Quantity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Allow_Quantity_Change" Type="Byte" Nullable="false" />
+    <Property Name="Supply_Chain_Group_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Lot_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Creation_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Supplier_Lot_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Alt__Qty__Transaction_No_" Type="Int32" Nullable="false" />
+    <Property Name="Quantity__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__to_Receive__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__Received__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__to_Invoice__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Qty__Invoiced__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Qty__to_Ship__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Return_Qty__Shipped__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Alt__Qty__Update_Required" Type="Byte" Nullable="false" />
+    <Property Name="Accrual_Amount__Cost_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Accrual_Plan_Type" Type="Int32" Nullable="false" />
+    <Property Name="Accrual_Source_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Accrual_Source_Doc__Type" Type="Int32" Nullable="false" />
+    <Property Name="Accrual_Source_Doc__No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Accrual_Source_Doc__Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Scheduled_Accrual_No_" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Qty__to_Ship_Recv___Cont__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Receiving_Reason_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Farm" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Brand" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Country_Region_of_Origin_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Commodity_Manifest_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Commodity_Manifest_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Commodity_Received_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comm__Payment_Class_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Commodity_Cost_Calculated" Type="Byte" Nullable="false" />
+    <Property Name="Commodity_Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Commodity_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Commodity_Received_Lot_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Commodity_P_O__Type" Type="Int32" Nullable="false" />
+    <Property Name="Producer_Zone_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Rejection_Action" Type="Int32" Nullable="false" />
+    <Property Name="Label_Unit_of_Measure_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Work_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Maintenance_Entry_Type" Type="Int32" Nullable="false" />
+    <Property Name="Maintenance_Trade_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Hours" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Part_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Routing_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Operation_No_" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Work_Center_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Finished" Type="Byte" Nullable="false" />
+    <Property Name="Prod__Order_Line_No_" Type="Int32" Nullable="false" />
+    <Property Name="Overhead_Rate" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="MPS_Order" Type="Byte" Nullable="false" />
+    <Property Name="Planning_Flexibility" Type="Int32" Nullable="false" />
+    <Property Name="Safety_Lead_Time" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Routing_Reference_No_" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="LACABANAEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SAI_Purchase_Line" EntityType="Self.SAI_Purchase_Line" />
+  </EntityContainer>
+</Schema>

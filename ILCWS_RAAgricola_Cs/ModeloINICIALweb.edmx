@@ -1,0 +1,779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LACABANAEntidadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SAI$Purchase Line">
+          <Key>
+            <PropertyRef Name="Document Type" />
+            <PropertyRef Name="Document No_" />
+            <PropertyRef Name="Line No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Document Type" Type="int" Nullable="false" />
+          <Property Name="Document No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Line No_" Type="int" Nullable="false" />
+          <Property Name="Buy-from Vendor No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Location Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Expected Receipt Date" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Unit of Measure" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Outstanding Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Invoice" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Receive" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Direct Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Cost (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Line Discount _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Line Discount Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Amount Including VAT" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Price (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Allow Invoice Disc_" Type="tinyint" Nullable="false" />
+          <Property Name="Gross Weight" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Net Weight" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Units per Parcel" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Volume" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Appl_-to Item Entry" Type="int" Nullable="false" />
+          <Property Name="Shortcut Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Shortcut Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Indirect Cost _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Recalculate Invoice Disc_" Type="tinyint" Nullable="false" />
+          <Property Name="Outstanding Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ Rcd_ Not Invoiced" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Amt_ Rcd_ Not Invoiced" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Quantity Received" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Quantity Invoiced" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Receipt No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Receipt Line No_" Type="int" Nullable="false" />
+          <Property Name="Profit _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Pay-to Vendor No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Inv_ Discount Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Vendor Item No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Sales Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Sales Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Drop Shipment" Type="tinyint" Nullable="false" />
+          <Property Name="Gen_ Bus_ Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Gen_ Prod_ Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="VAT Calculation Type" Type="int" Nullable="false" />
+          <Property Name="Transaction Type" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Transport Method" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Attached to Line No_" Type="int" Nullable="false" />
+          <Property Name="Entry Point" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Area" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Transaction Specification" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tax Area Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tax Liable" Type="tinyint" Nullable="false" />
+          <Property Name="Tax Group Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Use Tax" Type="tinyint" Nullable="false" />
+          <Property Name="VAT Bus_ Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="VAT Prod_ Posting Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Currency Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Outstanding Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Amt_ Rcd_ Not Invoiced (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Blanket Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Blanket Order Line No_" Type="int" Nullable="false" />
+          <Property Name="VAT Base Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="System-Created Entry" Type="tinyint" Nullable="false" />
+          <Property Name="Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT Difference" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Inv_ Disc_ Amount to Invoice" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT Identifier" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="IC Partner Ref_ Type" Type="int" Nullable="false" />
+          <Property Name="IC Partner Reference" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Prepayment _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_ Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_ Amt_ Inv_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_ Amt_ Incl_ VAT" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepayment Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_ VAT Base Amt_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepayment VAT _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_ VAT Calc_ Type" Type="int" Nullable="false" />
+          <Property Name="Prepayment VAT Identifier" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Prepayment Tax Area Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Prepayment Tax Liable" Type="tinyint" Nullable="false" />
+          <Property Name="Prepayment Tax Group Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Prepmt Amt to Deduct" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt Amt Deducted" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepayment Line" Type="tinyint" Nullable="false" />
+          <Property Name="Prepmt_ Amount Inv_ Incl_ VAT" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_ Amount Inv_ (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="IC Partner Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Prepmt_ VAT Amount Inv_ (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepayment VAT Difference" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt VAT Diff_ to Deduct" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt VAT Diff_ Deducted" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Outstanding Amt_ Ex_ VAT (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="A_ Rcd_ Not Inv_ Ex_ VAT (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Dimension Set ID" Type="int" Nullable="false" />
+          <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Line Type" Type="int" Nullable="false" />
+          <Property Name="Job Unit Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Total Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Line Discount Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Line Discount _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Unit Price (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Total Price (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Line Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Line Disc_ Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Currency Factor" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Currency Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Planning Line No_" Type="int" Nullable="false" />
+          <Property Name="Job Remaining Qty_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Remaining Qty_ (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Deferral Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Returns Deferral Start Date" Type="datetime" Nullable="false" />
+          <Property Name="Prod_ Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Variant Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Bin Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Qty_ per Unit of Measure" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit of Measure Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Quantity (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Outstanding Qty_ (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Invoice (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Receive (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ Rcd_ Not Invoiced (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ Received (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ Invoiced (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="FA Posting Date" Type="datetime" Nullable="false" />
+          <Property Name="FA Posting Type" Type="int" Nullable="false" />
+          <Property Name="Depreciation Book Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Salvage Value" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Depr_ until FA Posting Date" Type="tinyint" Nullable="false" />
+          <Property Name="Depr_ Acquisition Cost" Type="tinyint" Nullable="false" />
+          <Property Name="Maintenance Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Insurance No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Budgeted FA No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Duplicate in Depreciation Book" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Use Duplication List" Type="tinyint" Nullable="false" />
+          <Property Name="Responsibility Center" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Cross-Reference No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Unit of Measure (Cross Ref_)" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Cross-Reference Type" Type="int" Nullable="false" />
+          <Property Name="Cross-Reference Type No_" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Item Category Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nonstock" Type="tinyint" Nullable="false" />
+          <Property Name="Purchasing Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Product Group Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Special Order" Type="tinyint" Nullable="false" />
+          <Property Name="Special Order Sales No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Special Order Sales Line No_" Type="int" Nullable="false" />
+          <Property Name="Completely Received" Type="tinyint" Nullable="false" />
+          <Property Name="Requested Receipt Date" Type="datetime" Nullable="false" />
+          <Property Name="Promised Receipt Date" Type="datetime" Nullable="false" />
+          <Property Name="Lead Time Calculation" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="Inbound Whse_ Handling Time" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="Planned Receipt Date" Type="datetime" Nullable="false" />
+          <Property Name="Order Date" Type="datetime" Nullable="false" />
+          <Property Name="Allow Item Charge Assignment" Type="tinyint" Nullable="false" />
+          <Property Name="Return Qty_ to Ship" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Qty_ to Ship (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Qty_ Shipped Not Invd_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Ret_ Qty_ Shpd Not Invd_(Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Shpd_ Not Invd_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Shpd_ Not Invd_ (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Qty_ Shipped" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Qty_ Shipped (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Shipment No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Return Shipment Line No_" Type="int" Nullable="false" />
+          <Property Name="Return Reason Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tax To Be Expensed" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Provincial Tax Area Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="IRS 1099 Liable" Type="tinyint" Nullable="false" />
+          <Property Name="GST_HST" Type="int" Nullable="false" />
+          <Property Name="SubSource" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Transport Cost Entry No" Type="int" Nullable="false" />
+          <Property Name="Document Line No_" Type="int" Nullable="false" />
+          <Property Name="Original Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Allow Quantity Change" Type="tinyint" Nullable="false" />
+          <Property Name="Supply Chain Group Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lot No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Creation Date" Type="datetime" Nullable="false" />
+          <Property Name="Supplier Lot No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Alt_ Qty_ Transaction No_" Type="int" Nullable="false" />
+          <Property Name="Quantity (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Receive (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ Received (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Invoice (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ Invoiced (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Qty_ to Ship (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return Qty_ Shipped (Alt_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Alt_ Qty_ Update Required" Type="tinyint" Nullable="false" />
+          <Property Name="Accrual Amount (Cost)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Accrual Plan Type" Type="int" Nullable="false" />
+          <Property Name="Accrual Source No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Accrual Source Doc_ Type" Type="int" Nullable="false" />
+          <Property Name="Accrual Source Doc_ No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Accrual Source Doc_ Line No_" Type="int" Nullable="false" />
+          <Property Name="Scheduled Accrual No_" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Qty_ to Ship_Recv_ (Cont_)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Receiving Reason Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Farm" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Country_Region of Origin Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Commodity Manifest No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Commodity Manifest Line No_" Type="int" Nullable="false" />
+          <Property Name="Commodity Received Date" Type="datetime" Nullable="false" />
+          <Property Name="Comm_ Payment Class Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Commodity Cost Calculated" Type="tinyint" Nullable="false" />
+          <Property Name="Commodity Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Commodity Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Commodity Received Lot No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Commodity P_O_ Type" Type="int" Nullable="false" />
+          <Property Name="Producer Zone Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Rejection Action" Type="int" Nullable="false" />
+          <Property Name="Label Unit of Measure Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Work Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Maintenance Entry Type" Type="int" Nullable="false" />
+          <Property Name="Maintenance Trade Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Hours" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Part No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Routing No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Operation No_" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Work Center No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Finished" Type="tinyint" Nullable="false" />
+          <Property Name="Prod_ Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Overhead Rate" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="MPS Order" Type="tinyint" Nullable="false" />
+          <Property Name="Planning Flexibility" Type="int" Nullable="false" />
+          <Property Name="Safety Lead Time" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="Routing Reference No_" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LACABANAEntidadModelStoreContainer">
+          <EntitySet Name="SAI$Purchase Line" EntityType="Self.SAI$Purchase Line" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LACABANAEntidadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SAI_Purchase_Line">
+          <Key>
+            <PropertyRef Name="Document_Type" />
+            <PropertyRef Name="Document_No_" />
+            <PropertyRef Name="Line_No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Document_Type" Type="Int32" Nullable="false" />
+          <Property Name="Document_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Buy_from_Vendor_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Location_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Expected_Receipt_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unit_of_Measure" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Outstanding_Quantity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__to_Invoice" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__to_Receive" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Direct_Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_Cost__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Line_Discount__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Line_Discount_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Amount_Including_VAT" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_Price__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Allow_Invoice_Disc_" Type="Byte" Nullable="false" />
+          <Property Name="Gross_Weight" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Net_Weight" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Units_per_Parcel" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_Volume" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Appl__to_Item_Entry" Type="Int32" Nullable="false" />
+          <Property Name="Shortcut_Dimension_1_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Shortcut_Dimension_2_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Indirect_Cost__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Recalculate_Invoice_Disc_" Type="Byte" Nullable="false" />
+          <Property Name="Outstanding_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__Rcd__Not_Invoiced" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Amt__Rcd__Not_Invoiced" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Quantity_Received" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Quantity_Invoiced" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Receipt_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Receipt_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Profit__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Pay_to_Vendor_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Inv__Discount_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Vendor_Item_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sales_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sales_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Drop_Shipment" Type="Byte" Nullable="false" />
+          <Property Name="Gen__Bus__Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gen__Prod__Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VAT_Calculation_Type" Type="Int32" Nullable="false" />
+          <Property Name="Transaction_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Transport_Method" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Attached_to_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Entry_Point" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Area" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Transaction_Specification" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tax_Area_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tax_Liable" Type="Byte" Nullable="false" />
+          <Property Name="Tax_Group_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Use_Tax" Type="Byte" Nullable="false" />
+          <Property Name="VAT_Bus__Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VAT_Prod__Posting_Group" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Currency_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Outstanding_Amount__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Amt__Rcd__Not_Invoiced__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Blanket_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Blanket_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="VAT_Base_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="System_Created_Entry" Type="Byte" Nullable="false" />
+          <Property Name="Line_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT_Difference" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Inv__Disc__Amount_to_Invoice" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT_Identifier" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IC_Partner_Ref__Type" Type="Int32" Nullable="false" />
+          <Property Name="IC_Partner_Reference" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prepayment__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt__Line_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt__Amt__Inv_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt__Amt__Incl__VAT" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepayment_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt__VAT_Base_Amt_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepayment_VAT__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt__VAT_Calc__Type" Type="Int32" Nullable="false" />
+          <Property Name="Prepayment_VAT_Identifier" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prepayment_Tax_Area_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prepayment_Tax_Liable" Type="Byte" Nullable="false" />
+          <Property Name="Prepayment_Tax_Group_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prepmt_Amt_to_Deduct" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_Amt_Deducted" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepayment_Line" Type="Byte" Nullable="false" />
+          <Property Name="Prepmt__Amount_Inv__Incl__VAT" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt__Amount_Inv___LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="IC_Partner_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prepmt__VAT_Amount_Inv___LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepayment_VAT_Difference" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_VAT_Diff__to_Deduct" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Prepmt_VAT_Diff__Deducted" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Outstanding_Amt__Ex__VAT__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="A__Rcd__Not_Inv__Ex__VAT__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Dimension_Set_ID" Type="Int32" Nullable="false" />
+          <Property Name="Job_Task_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_Line_Type" Type="Int32" Nullable="false" />
+          <Property Name="Job_Unit_Price" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Total_Price" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Line_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Line_Discount_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Line_Discount__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Unit_Price__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Total_Price__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Line_Amount__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Line_Disc__Amount__LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Currency_Factor" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Currency_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_Planning_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Job_Remaining_Qty_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Remaining_Qty___Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Deferral_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Returns_Deferral_Start_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Prod__Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Variant_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Bin_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Qty__per_Unit_of_Measure" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_of_Measure_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Outstanding_Qty___Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__to_Invoice__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__to_Receive__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__Rcd__Not_Invoiced__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__Received__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__Invoiced__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="FA_Posting_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FA_Posting_Type" Type="Int32" Nullable="false" />
+          <Property Name="Depreciation_Book_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Salvage_Value" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Depr__until_FA_Posting_Date" Type="Byte" Nullable="false" />
+          <Property Name="Depr__Acquisition_Cost" Type="Byte" Nullable="false" />
+          <Property Name="Maintenance_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Insurance_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Budgeted_FA_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Duplicate_in_Depreciation_Book" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Use_Duplication_List" Type="Byte" Nullable="false" />
+          <Property Name="Responsibility_Center" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cross_Reference_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unit_of_Measure__Cross_Ref__" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cross_Reference_Type" Type="Int32" Nullable="false" />
+          <Property Name="Cross_Reference_Type_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Item_Category_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nonstock" Type="Byte" Nullable="false" />
+          <Property Name="Purchasing_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_Group_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Special_Order" Type="Byte" Nullable="false" />
+          <Property Name="Special_Order_Sales_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Special_Order_Sales_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Completely_Received" Type="Byte" Nullable="false" />
+          <Property Name="Requested_Receipt_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Promised_Receipt_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Lead_Time_Calculation" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Inbound_Whse__Handling_Time" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Planned_Receipt_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Order_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Allow_Item_Charge_Assignment" Type="Byte" Nullable="false" />
+          <Property Name="Return_Qty__to_Ship" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Qty__to_Ship__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Qty__Shipped_Not_Invd_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Ret__Qty__Shpd_Not_Invd__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Shpd__Not_Invd_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Shpd__Not_Invd___LCY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Qty__Shipped" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Qty__Shipped__Base_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Shipment_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Return_Shipment_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Return_Reason_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tax_To_Be_Expensed" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Provincial_Tax_Area_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IRS_1099_Liable" Type="Byte" Nullable="false" />
+          <Property Name="GST_HST" Type="Int32" Nullable="false" />
+          <Property Name="SubSource" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Transport_Cost_Entry_No" Type="Int32" Nullable="false" />
+          <Property Name="Document_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Original_Quantity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Allow_Quantity_Change" Type="Byte" Nullable="false" />
+          <Property Name="Supply_Chain_Group_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lot_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Creation_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Supplier_Lot_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Alt__Qty__Transaction_No_" Type="Int32" Nullable="false" />
+          <Property Name="Quantity__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__to_Receive__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__Received__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__to_Invoice__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty__Invoiced__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Qty__to_Ship__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Return_Qty__Shipped__Alt__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Alt__Qty__Update_Required" Type="Byte" Nullable="false" />
+          <Property Name="Accrual_Amount__Cost_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Accrual_Plan_Type" Type="Int32" Nullable="false" />
+          <Property Name="Accrual_Source_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Accrual_Source_Doc__Type" Type="Int32" Nullable="false" />
+          <Property Name="Accrual_Source_Doc__No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Accrual_Source_Doc__Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Scheduled_Accrual_No_" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Qty__to_Ship_Recv___Cont__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Receiving_Reason_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Farm" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Brand" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Country_Region_of_Origin_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Commodity_Manifest_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Commodity_Manifest_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Commodity_Received_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Comm__Payment_Class_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Commodity_Cost_Calculated" Type="Byte" Nullable="false" />
+          <Property Name="Commodity_Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Commodity_Amount" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Commodity_Received_Lot_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Commodity_P_O__Type" Type="Int32" Nullable="false" />
+          <Property Name="Producer_Zone_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Rejection_Action" Type="Int32" Nullable="false" />
+          <Property Name="Label_Unit_of_Measure_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Work_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Maintenance_Entry_Type" Type="Int32" Nullable="false" />
+          <Property Name="Maintenance_Trade_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Hours" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Part_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Routing_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Operation_No_" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Work_Center_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Finished" Type="Byte" Nullable="false" />
+          <Property Name="Prod__Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Overhead_Rate" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="MPS_Order" Type="Byte" Nullable="false" />
+          <Property Name="Planning_Flexibility" Type="Int32" Nullable="false" />
+          <Property Name="Safety_Lead_Time" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Routing_Reference_No_" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LACABANAEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SAI_Purchase_Line" EntityType="Self.SAI_Purchase_Line" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LACABANAEntidadModelStoreContainer" CdmEntityContainer="LACABANAEntities2">
+          <EntitySetMapping Name="SAI_Purchase_Line">
+            <EntityTypeMapping TypeName="LACABANAEntidadModel.SAI_Purchase_Line">
+              <MappingFragment StoreEntitySet="SAI$Purchase Line">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="Document_Type" ColumnName="Document Type" />
+                <ScalarProperty Name="Document_No_" ColumnName="Document No_" />
+                <ScalarProperty Name="Line_No_" ColumnName="Line No_" />
+                <ScalarProperty Name="Buy_from_Vendor_No_" ColumnName="Buy-from Vendor No_" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="Location_Code" ColumnName="Location Code" />
+                <ScalarProperty Name="Posting_Group" ColumnName="Posting Group" />
+                <ScalarProperty Name="Expected_Receipt_Date" ColumnName="Expected Receipt Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Description_2" ColumnName="Description 2" />
+                <ScalarProperty Name="Unit_of_Measure" ColumnName="Unit of Measure" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Outstanding_Quantity" ColumnName="Outstanding Quantity" />
+                <ScalarProperty Name="Qty__to_Invoice" ColumnName="Qty_ to Invoice" />
+                <ScalarProperty Name="Qty__to_Receive" ColumnName="Qty_ to Receive" />
+                <ScalarProperty Name="Direct_Unit_Cost" ColumnName="Direct Unit Cost" />
+                <ScalarProperty Name="Unit_Cost__LCY_" ColumnName="Unit Cost (LCY)" />
+                <ScalarProperty Name="VAT__" ColumnName="VAT _" />
+                <ScalarProperty Name="Line_Discount__" ColumnName="Line Discount _" />
+                <ScalarProperty Name="Line_Discount_Amount" ColumnName="Line Discount Amount" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Amount_Including_VAT" ColumnName="Amount Including VAT" />
+                <ScalarProperty Name="Unit_Price__LCY_" ColumnName="Unit Price (LCY)" />
+                <ScalarProperty Name="Allow_Invoice_Disc_" ColumnName="Allow Invoice Disc_" />
+                <ScalarProperty Name="Gross_Weight" ColumnName="Gross Weight" />
+                <ScalarProperty Name="Net_Weight" ColumnName="Net Weight" />
+                <ScalarProperty Name="Units_per_Parcel" ColumnName="Units per Parcel" />
+                <ScalarProperty Name="Unit_Volume" ColumnName="Unit Volume" />
+                <ScalarProperty Name="Appl__to_Item_Entry" ColumnName="Appl_-to Item Entry" />
+                <ScalarProperty Name="Shortcut_Dimension_1_Code" ColumnName="Shortcut Dimension 1 Code" />
+                <ScalarProperty Name="Shortcut_Dimension_2_Code" ColumnName="Shortcut Dimension 2 Code" />
+                <ScalarProperty Name="Job_No_" ColumnName="Job No_" />
+                <ScalarProperty Name="Indirect_Cost__" ColumnName="Indirect Cost _" />
+                <ScalarProperty Name="Recalculate_Invoice_Disc_" ColumnName="Recalculate Invoice Disc_" />
+                <ScalarProperty Name="Outstanding_Amount" ColumnName="Outstanding Amount" />
+                <ScalarProperty Name="Qty__Rcd__Not_Invoiced" ColumnName="Qty_ Rcd_ Not Invoiced" />
+                <ScalarProperty Name="Amt__Rcd__Not_Invoiced" ColumnName="Amt_ Rcd_ Not Invoiced" />
+                <ScalarProperty Name="Quantity_Received" ColumnName="Quantity Received" />
+                <ScalarProperty Name="Quantity_Invoiced" ColumnName="Quantity Invoiced" />
+                <ScalarProperty Name="Receipt_No_" ColumnName="Receipt No_" />
+                <ScalarProperty Name="Receipt_Line_No_" ColumnName="Receipt Line No_" />
+                <ScalarProperty Name="Profit__" ColumnName="Profit _" />
+                <ScalarProperty Name="Pay_to_Vendor_No_" ColumnName="Pay-to Vendor No_" />
+                <ScalarProperty Name="Inv__Discount_Amount" ColumnName="Inv_ Discount Amount" />
+                <ScalarProperty Name="Vendor_Item_No_" ColumnName="Vendor Item No_" />
+                <ScalarProperty Name="Sales_Order_No_" ColumnName="Sales Order No_" />
+                <ScalarProperty Name="Sales_Order_Line_No_" ColumnName="Sales Order Line No_" />
+                <ScalarProperty Name="Drop_Shipment" ColumnName="Drop Shipment" />
+                <ScalarProperty Name="Gen__Bus__Posting_Group" ColumnName="Gen_ Bus_ Posting Group" />
+                <ScalarProperty Name="Gen__Prod__Posting_Group" ColumnName="Gen_ Prod_ Posting Group" />
+                <ScalarProperty Name="VAT_Calculation_Type" ColumnName="VAT Calculation Type" />
+                <ScalarProperty Name="Transaction_Type" ColumnName="Transaction Type" />
+                <ScalarProperty Name="Transport_Method" ColumnName="Transport Method" />
+                <ScalarProperty Name="Attached_to_Line_No_" ColumnName="Attached to Line No_" />
+                <ScalarProperty Name="Entry_Point" ColumnName="Entry Point" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Transaction_Specification" ColumnName="Transaction Specification" />
+                <ScalarProperty Name="Tax_Area_Code" ColumnName="Tax Area Code" />
+                <ScalarProperty Name="Tax_Liable" ColumnName="Tax Liable" />
+                <ScalarProperty Name="Tax_Group_Code" ColumnName="Tax Group Code" />
+                <ScalarProperty Name="Use_Tax" ColumnName="Use Tax" />
+                <ScalarProperty Name="VAT_Bus__Posting_Group" ColumnName="VAT Bus_ Posting Group" />
+                <ScalarProperty Name="VAT_Prod__Posting_Group" ColumnName="VAT Prod_ Posting Group" />
+                <ScalarProperty Name="Currency_Code" ColumnName="Currency Code" />
+                <ScalarProperty Name="Outstanding_Amount__LCY_" ColumnName="Outstanding Amount (LCY)" />
+                <ScalarProperty Name="Amt__Rcd__Not_Invoiced__LCY_" ColumnName="Amt_ Rcd_ Not Invoiced (LCY)" />
+                <ScalarProperty Name="Blanket_Order_No_" ColumnName="Blanket Order No_" />
+                <ScalarProperty Name="Blanket_Order_Line_No_" ColumnName="Blanket Order Line No_" />
+                <ScalarProperty Name="VAT_Base_Amount" ColumnName="VAT Base Amount" />
+                <ScalarProperty Name="Unit_Cost" ColumnName="Unit Cost" />
+                <ScalarProperty Name="System_Created_Entry" ColumnName="System-Created Entry" />
+                <ScalarProperty Name="Line_Amount" ColumnName="Line Amount" />
+                <ScalarProperty Name="VAT_Difference" ColumnName="VAT Difference" />
+                <ScalarProperty Name="Inv__Disc__Amount_to_Invoice" ColumnName="Inv_ Disc_ Amount to Invoice" />
+                <ScalarProperty Name="VAT_Identifier" ColumnName="VAT Identifier" />
+                <ScalarProperty Name="IC_Partner_Ref__Type" ColumnName="IC Partner Ref_ Type" />
+                <ScalarProperty Name="IC_Partner_Reference" ColumnName="IC Partner Reference" />
+                <ScalarProperty Name="Prepayment__" ColumnName="Prepayment _" />
+                <ScalarProperty Name="Prepmt__Line_Amount" ColumnName="Prepmt_ Line Amount" />
+                <ScalarProperty Name="Prepmt__Amt__Inv_" ColumnName="Prepmt_ Amt_ Inv_" />
+                <ScalarProperty Name="Prepmt__Amt__Incl__VAT" ColumnName="Prepmt_ Amt_ Incl_ VAT" />
+                <ScalarProperty Name="Prepayment_Amount" ColumnName="Prepayment Amount" />
+                <ScalarProperty Name="Prepmt__VAT_Base_Amt_" ColumnName="Prepmt_ VAT Base Amt_" />
+                <ScalarProperty Name="Prepayment_VAT__" ColumnName="Prepayment VAT _" />
+                <ScalarProperty Name="Prepmt__VAT_Calc__Type" ColumnName="Prepmt_ VAT Calc_ Type" />
+                <ScalarProperty Name="Prepayment_VAT_Identifier" ColumnName="Prepayment VAT Identifier" />
+                <ScalarProperty Name="Prepayment_Tax_Area_Code" ColumnName="Prepayment Tax Area Code" />
+                <ScalarProperty Name="Prepayment_Tax_Liable" ColumnName="Prepayment Tax Liable" />
+                <ScalarProperty Name="Prepayment_Tax_Group_Code" ColumnName="Prepayment Tax Group Code" />
+                <ScalarProperty Name="Prepmt_Amt_to_Deduct" ColumnName="Prepmt Amt to Deduct" />
+                <ScalarProperty Name="Prepmt_Amt_Deducted" ColumnName="Prepmt Amt Deducted" />
+                <ScalarProperty Name="Prepayment_Line" ColumnName="Prepayment Line" />
+                <ScalarProperty Name="Prepmt__Amount_Inv__Incl__VAT" ColumnName="Prepmt_ Amount Inv_ Incl_ VAT" />
+                <ScalarProperty Name="Prepmt__Amount_Inv___LCY_" ColumnName="Prepmt_ Amount Inv_ (LCY)" />
+                <ScalarProperty Name="IC_Partner_Code" ColumnName="IC Partner Code" />
+                <ScalarProperty Name="Prepmt__VAT_Amount_Inv___LCY_" ColumnName="Prepmt_ VAT Amount Inv_ (LCY)" />
+                <ScalarProperty Name="Prepayment_VAT_Difference" ColumnName="Prepayment VAT Difference" />
+                <ScalarProperty Name="Prepmt_VAT_Diff__to_Deduct" ColumnName="Prepmt VAT Diff_ to Deduct" />
+                <ScalarProperty Name="Prepmt_VAT_Diff__Deducted" ColumnName="Prepmt VAT Diff_ Deducted" />
+                <ScalarProperty Name="Outstanding_Amt__Ex__VAT__LCY_" ColumnName="Outstanding Amt_ Ex_ VAT (LCY)" />
+                <ScalarProperty Name="A__Rcd__Not_Inv__Ex__VAT__LCY_" ColumnName="A_ Rcd_ Not Inv_ Ex_ VAT (LCY)" />
+                <ScalarProperty Name="Dimension_Set_ID" ColumnName="Dimension Set ID" />
+                <ScalarProperty Name="Job_Task_No_" ColumnName="Job Task No_" />
+                <ScalarProperty Name="Job_Line_Type" ColumnName="Job Line Type" />
+                <ScalarProperty Name="Job_Unit_Price" ColumnName="Job Unit Price" />
+                <ScalarProperty Name="Job_Total_Price" ColumnName="Job Total Price" />
+                <ScalarProperty Name="Job_Line_Amount" ColumnName="Job Line Amount" />
+                <ScalarProperty Name="Job_Line_Discount_Amount" ColumnName="Job Line Discount Amount" />
+                <ScalarProperty Name="Job_Line_Discount__" ColumnName="Job Line Discount _" />
+                <ScalarProperty Name="Job_Unit_Price__LCY_" ColumnName="Job Unit Price (LCY)" />
+                <ScalarProperty Name="Job_Total_Price__LCY_" ColumnName="Job Total Price (LCY)" />
+                <ScalarProperty Name="Job_Line_Amount__LCY_" ColumnName="Job Line Amount (LCY)" />
+                <ScalarProperty Name="Job_Line_Disc__Amount__LCY_" ColumnName="Job Line Disc_ Amount (LCY)" />
+                <ScalarProperty Name="Job_Currency_Factor" ColumnName="Job Currency Factor" />
+                <ScalarProperty Name="Job_Currency_Code" ColumnName="Job Currency Code" />
+                <ScalarProperty Name="Job_Planning_Line_No_" ColumnName="Job Planning Line No_" />
+                <ScalarProperty Name="Job_Remaining_Qty_" ColumnName="Job Remaining Qty_" />
+                <ScalarProperty Name="Job_Remaining_Qty___Base_" ColumnName="Job Remaining Qty_ (Base)" />
+                <ScalarProperty Name="Deferral_Code" ColumnName="Deferral Code" />
+                <ScalarProperty Name="Returns_Deferral_Start_Date" ColumnName="Returns Deferral Start Date" />
+                <ScalarProperty Name="Prod__Order_No_" ColumnName="Prod_ Order No_" />
+                <ScalarProperty Name="Variant_Code" ColumnName="Variant Code" />
+                <ScalarProperty Name="Bin_Code" ColumnName="Bin Code" />
+                <ScalarProperty Name="Qty__per_Unit_of_Measure" ColumnName="Qty_ per Unit of Measure" />
+                <ScalarProperty Name="Unit_of_Measure_Code" ColumnName="Unit of Measure Code" />
+                <ScalarProperty Name="Quantity__Base_" ColumnName="Quantity (Base)" />
+                <ScalarProperty Name="Outstanding_Qty___Base_" ColumnName="Outstanding Qty_ (Base)" />
+                <ScalarProperty Name="Qty__to_Invoice__Base_" ColumnName="Qty_ to Invoice (Base)" />
+                <ScalarProperty Name="Qty__to_Receive__Base_" ColumnName="Qty_ to Receive (Base)" />
+                <ScalarProperty Name="Qty__Rcd__Not_Invoiced__Base_" ColumnName="Qty_ Rcd_ Not Invoiced (Base)" />
+                <ScalarProperty Name="Qty__Received__Base_" ColumnName="Qty_ Received (Base)" />
+                <ScalarProperty Name="Qty__Invoiced__Base_" ColumnName="Qty_ Invoiced (Base)" />
+                <ScalarProperty Name="FA_Posting_Date" ColumnName="FA Posting Date" />
+                <ScalarProperty Name="FA_Posting_Type" ColumnName="FA Posting Type" />
+                <ScalarProperty Name="Depreciation_Book_Code" ColumnName="Depreciation Book Code" />
+                <ScalarProperty Name="Salvage_Value" ColumnName="Salvage Value" />
+                <ScalarProperty Name="Depr__until_FA_Posting_Date" ColumnName="Depr_ until FA Posting Date" />
+                <ScalarProperty Name="Depr__Acquisition_Cost" ColumnName="Depr_ Acquisition Cost" />
+                <ScalarProperty Name="Maintenance_Code" ColumnName="Maintenance Code" />
+                <ScalarProperty Name="Insurance_No_" ColumnName="Insurance No_" />
+                <ScalarProperty Name="Budgeted_FA_No_" ColumnName="Budgeted FA No_" />
+                <ScalarProperty Name="Duplicate_in_Depreciation_Book" ColumnName="Duplicate in Depreciation Book" />
+                <ScalarProperty Name="Use_Duplication_List" ColumnName="Use Duplication List" />
+                <ScalarProperty Name="Responsibility_Center" ColumnName="Responsibility Center" />
+                <ScalarProperty Name="Cross_Reference_No_" ColumnName="Cross-Reference No_" />
+                <ScalarProperty Name="Unit_of_Measure__Cross_Ref__" ColumnName="Unit of Measure (Cross Ref_)" />
+                <ScalarProperty Name="Cross_Reference_Type" ColumnName="Cross-Reference Type" />
+                <ScalarProperty Name="Cross_Reference_Type_No_" ColumnName="Cross-Reference Type No_" />
+                <ScalarProperty Name="Item_Category_Code" ColumnName="Item Category Code" />
+                <ScalarProperty Name="Nonstock" ColumnName="Nonstock" />
+                <ScalarProperty Name="Purchasing_Code" ColumnName="Purchasing Code" />
+                <ScalarProperty Name="Product_Group_Code" ColumnName="Product Group Code" />
+                <ScalarProperty Name="Special_Order" ColumnName="Special Order" />
+                <ScalarProperty Name="Special_Order_Sales_No_" ColumnName="Special Order Sales No_" />
+                <ScalarProperty Name="Special_Order_Sales_Line_No_" ColumnName="Special Order Sales Line No_" />
+                <ScalarProperty Name="Completely_Received" ColumnName="Completely Received" />
+                <ScalarProperty Name="Requested_Receipt_Date" ColumnName="Requested Receipt Date" />
+                <ScalarProperty Name="Promised_Receipt_Date" ColumnName="Promised Receipt Date" />
+                <ScalarProperty Name="Lead_Time_Calculation" ColumnName="Lead Time Calculation" />
+                <ScalarProperty Name="Inbound_Whse__Handling_Time" ColumnName="Inbound Whse_ Handling Time" />
+                <ScalarProperty Name="Planned_Receipt_Date" ColumnName="Planned Receipt Date" />
+                <ScalarProperty Name="Order_Date" ColumnName="Order Date" />
+                <ScalarProperty Name="Allow_Item_Charge_Assignment" ColumnName="Allow Item Charge Assignment" />
+                <ScalarProperty Name="Return_Qty__to_Ship" ColumnName="Return Qty_ to Ship" />
+                <ScalarProperty Name="Return_Qty__to_Ship__Base_" ColumnName="Return Qty_ to Ship (Base)" />
+                <ScalarProperty Name="Return_Qty__Shipped_Not_Invd_" ColumnName="Return Qty_ Shipped Not Invd_" />
+                <ScalarProperty Name="Ret__Qty__Shpd_Not_Invd__Base_" ColumnName="Ret_ Qty_ Shpd Not Invd_(Base)" />
+                <ScalarProperty Name="Return_Shpd__Not_Invd_" ColumnName="Return Shpd_ Not Invd_" />
+                <ScalarProperty Name="Return_Shpd__Not_Invd___LCY_" ColumnName="Return Shpd_ Not Invd_ (LCY)" />
+                <ScalarProperty Name="Return_Qty__Shipped" ColumnName="Return Qty_ Shipped" />
+                <ScalarProperty Name="Return_Qty__Shipped__Base_" ColumnName="Return Qty_ Shipped (Base)" />
+                <ScalarProperty Name="Return_Shipment_No_" ColumnName="Return Shipment No_" />
+                <ScalarProperty Name="Return_Shipment_Line_No_" ColumnName="Return Shipment Line No_" />
+                <ScalarProperty Name="Return_Reason_Code" ColumnName="Return Reason Code" />
+                <ScalarProperty Name="Tax_To_Be_Expensed" ColumnName="Tax To Be Expensed" />
+                <ScalarProperty Name="Provincial_Tax_Area_Code" ColumnName="Provincial Tax Area Code" />
+                <ScalarProperty Name="IRS_1099_Liable" ColumnName="IRS 1099 Liable" />
+                <ScalarProperty Name="GST_HST" ColumnName="GST_HST" />
+                <ScalarProperty Name="SubSource" ColumnName="SubSource" />
+                <ScalarProperty Name="Transport_Cost_Entry_No" ColumnName="Transport Cost Entry No" />
+                <ScalarProperty Name="Document_Line_No_" ColumnName="Document Line No_" />
+                <ScalarProperty Name="Original_Quantity" ColumnName="Original Quantity" />
+                <ScalarProperty Name="Allow_Quantity_Change" ColumnName="Allow Quantity Change" />
+                <ScalarProperty Name="Supply_Chain_Group_Code" ColumnName="Supply Chain Group Code" />
+                <ScalarProperty Name="Lot_No_" ColumnName="Lot No_" />
+                <ScalarProperty Name="Creation_Date" ColumnName="Creation Date" />
+                <ScalarProperty Name="Supplier_Lot_No_" ColumnName="Supplier Lot No_" />
+                <ScalarProperty Name="Alt__Qty__Transaction_No_" ColumnName="Alt_ Qty_ Transaction No_" />
+                <ScalarProperty Name="Quantity__Alt__" ColumnName="Quantity (Alt_)" />
+                <ScalarProperty Name="Qty__to_Receive__Alt__" ColumnName="Qty_ to Receive (Alt_)" />
+                <ScalarProperty Name="Qty__Received__Alt__" ColumnName="Qty_ Received (Alt_)" />
+                <ScalarProperty Name="Qty__to_Invoice__Alt__" ColumnName="Qty_ to Invoice (Alt_)" />
+                <ScalarProperty Name="Qty__Invoiced__Alt__" ColumnName="Qty_ Invoiced (Alt_)" />
+                <ScalarProperty Name="Return_Qty__to_Ship__Alt__" ColumnName="Return Qty_ to Ship (Alt_)" />
+                <ScalarProperty Name="Return_Qty__Shipped__Alt__" ColumnName="Return Qty_ Shipped (Alt_)" />
+                <ScalarProperty Name="Alt__Qty__Update_Required" ColumnName="Alt_ Qty_ Update Required" />
+                <ScalarProperty Name="Accrual_Amount__Cost_" ColumnName="Accrual Amount (Cost)" />
+                <ScalarProperty Name="Accrual_Plan_Type" ColumnName="Accrual Plan Type" />
+                <ScalarProperty Name="Accrual_Source_No_" ColumnName="Accrual Source No_" />
+                <ScalarProperty Name="Accrual_Source_Doc__Type" ColumnName="Accrual Source Doc_ Type" />
+                <ScalarProperty Name="Accrual_Source_Doc__No_" ColumnName="Accrual Source Doc_ No_" />
+                <ScalarProperty Name="Accrual_Source_Doc__Line_No_" ColumnName="Accrual Source Doc_ Line No_" />
+                <ScalarProperty Name="Scheduled_Accrual_No_" ColumnName="Scheduled Accrual No_" />
+                <ScalarProperty Name="Qty__to_Ship_Recv___Cont__" ColumnName="Qty_ to Ship_Recv_ (Cont_)" />
+                <ScalarProperty Name="Receiving_Reason_Code" ColumnName="Receiving Reason Code" />
+                <ScalarProperty Name="Farm" ColumnName="Farm" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="Country_Region_of_Origin_Code" ColumnName="Country_Region of Origin Code" />
+                <ScalarProperty Name="Commodity_Manifest_No_" ColumnName="Commodity Manifest No_" />
+                <ScalarProperty Name="Commodity_Manifest_Line_No_" ColumnName="Commodity Manifest Line No_" />
+                <ScalarProperty Name="Commodity_Received_Date" ColumnName="Commodity Received Date" />
+                <ScalarProperty Name="Comm__Payment_Class_Code" ColumnName="Comm_ Payment Class Code" />
+                <ScalarProperty Name="Commodity_Cost_Calculated" ColumnName="Commodity Cost Calculated" />
+                <ScalarProperty Name="Commodity_Unit_Cost" ColumnName="Commodity Unit Cost" />
+                <ScalarProperty Name="Commodity_Amount" ColumnName="Commodity Amount" />
+                <ScalarProperty Name="Commodity_Received_Lot_No_" ColumnName="Commodity Received Lot No_" />
+                <ScalarProperty Name="Commodity_P_O__Type" ColumnName="Commodity P_O_ Type" />
+                <ScalarProperty Name="Producer_Zone_Code" ColumnName="Producer Zone Code" />
+                <ScalarProperty Name="Rejection_Action" ColumnName="Rejection Action" />
+                <ScalarProperty Name="Label_Unit_of_Measure_Code" ColumnName="Label Unit of Measure Code" />
+                <ScalarProperty Name="Work_Order_No_" ColumnName="Work Order No_" />
+                <ScalarProperty Name="Maintenance_Entry_Type" ColumnName="Maintenance Entry Type" />
+                <ScalarProperty Name="Maintenance_Trade_Code" ColumnName="Maintenance Trade Code" />
+                <ScalarProperty Name="Hours" ColumnName="Hours" />
+                <ScalarProperty Name="Part_No_" ColumnName="Part No_" />
+                <ScalarProperty Name="Routing_No_" ColumnName="Routing No_" />
+                <ScalarProperty Name="Operation_No_" ColumnName="Operation No_" />
+                <ScalarProperty Name="Work_Center_No_" ColumnName="Work Center No_" />
+                <ScalarProperty Name="Finished" ColumnName="Finished" />
+                <ScalarProperty Name="Prod__Order_Line_No_" ColumnName="Prod_ Order Line No_" />
+                <ScalarProperty Name="Overhead_Rate" ColumnName="Overhead Rate" />
+                <ScalarProperty Name="MPS_Order" ColumnName="MPS Order" />
+                <ScalarProperty Name="Planning_Flexibility" ColumnName="Planning Flexibility" />
+                <ScalarProperty Name="Safety_Lead_Time" ColumnName="Safety Lead Time" />
+                <ScalarProperty Name="Routing_Reference_No_" ColumnName="Routing Reference No_" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

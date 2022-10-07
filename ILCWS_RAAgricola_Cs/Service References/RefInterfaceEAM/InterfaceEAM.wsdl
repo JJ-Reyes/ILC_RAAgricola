@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="InsertDetailsServices">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="pedidoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tipo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="codigo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="cantidad" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="bodega" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="productoServicio" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fase" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertDetailsServices_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostShipment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="document" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="orderService" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="externalDocument" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostShipment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostResource">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderService" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostResource_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="InsertDetailsServices">
+    <part name="parameters" element="tns:InsertDetailsServices" />
+  </message>
+  <message name="InsertDetailsServices_Result">
+    <part name="parameters" element="tns:InsertDetailsServices_Result" />
+  </message>
+  <message name="PostShipment">
+    <part name="parameters" element="tns:PostShipment" />
+  </message>
+  <message name="PostShipment_Result">
+    <part name="parameters" element="tns:PostShipment_Result" />
+  </message>
+  <message name="PostResource">
+    <part name="parameters" element="tns:PostResource" />
+  </message>
+  <message name="PostResource_Result">
+    <part name="parameters" element="tns:PostResource_Result" />
+  </message>
+  <portType name="InterfaceEAM_Port">
+    <operation name="InsertDetailsServices">
+      <input name="InsertDetailsServices" message="tns:InsertDetailsServices" />
+      <output name="InsertDetailsServices_Result" message="tns:InsertDetailsServices_Result" />
+    </operation>
+    <operation name="PostShipment">
+      <input name="PostShipment" message="tns:PostShipment" />
+      <output name="PostShipment_Result" message="tns:PostShipment_Result" />
+    </operation>
+    <operation name="PostResource">
+      <input name="PostResource" message="tns:PostResource" />
+      <output name="PostResource_Result" message="tns:PostResource_Result" />
+    </operation>
+  </portType>
+  <binding name="InterfaceEAM_Binding" type="tns:InterfaceEAM_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="InsertDetailsServices">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:InsertDetailsServices" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertDetailsServices">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertDetailsServices_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostShipment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:PostShipment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostShipment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostShipment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostResource">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InterfaceEAM:PostResource" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostResource">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostResource_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="InterfaceEAM">
+    <port name="InterfaceEAM_Port" binding="tns:InterfaceEAM_Binding">
+      <address location="http://10.1.1.23:3047/MANTENIMIENTO/WS/TALLER-PRESUPUESTO/Codeunit/InterfaceEAM" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILCDAL_RAAgricola_DS_Cs", "ILCDAL_RAAgricola_DS_Cs\ILCDAL_RAAgricola_DS_Cs.csproj", "{41A944CF-9734-4D77-BA4E-BE5CF554F14F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILCDAL_RAAgricola_Identity_Cs", "ILCDAL_RAAgricola_Identity_Cs\ILCDAL_RAAgricola_Identity_Cs.csproj", "{43D761B7-59DA-4D97-AC3D-0892959E8E95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILCBLL_RAAgricola_Cs", "ILCBLL_RAAgricola_Cs\ILCBLL_RAAgricola_Cs.csproj", "{8C9B123E-786C-455E-92BD-A11E3A305DB8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{43D761B7-59DA-4D97-AC3D-0892959E8E95} = {43D761B7-59DA-4D97-AC3D-0892959E8E95}
+		{41A944CF-9734-4D77-BA4E-BE5CF554F14F} = {41A944CF-9734-4D77-BA4E-BE5CF554F14F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILCWS_RAAgricola_Cs", "ILCWS_RAAgricola_Cs\ILCWS_RAAgricola_Cs.csproj", "{2E2D0CB6-B982-475F-B27E-653354E76004}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILCPre_RAAgricola_WEB", "ILCPre_RAAgricola_WEB\ILCPre_RAAgricola_WEB.csproj", "{F4F21402-410D-43BB-819B-46DB3727AC2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41A944CF-9734-4D77-BA4E-BE5CF554F14F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A944CF-9734-4D77-BA4E-BE5CF554F14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A944CF-9734-4D77-BA4E-BE5CF554F14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A944CF-9734-4D77-BA4E-BE5CF554F14F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D761B7-59DA-4D97-AC3D-0892959E8E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D761B7-59DA-4D97-AC3D-0892959E8E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D761B7-59DA-4D97-AC3D-0892959E8E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D761B7-59DA-4D97-AC3D-0892959E8E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C9B123E-786C-455E-92BD-A11E3A305DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C9B123E-786C-455E-92BD-A11E3A305DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C9B123E-786C-455E-92BD-A11E3A305DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C9B123E-786C-455E-92BD-A11E3A305DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2D0CB6-B982-475F-B27E-653354E76004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2D0CB6-B982-475F-B27E-653354E76004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2D0CB6-B982-475F-B27E-653354E76004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2D0CB6-B982-475F-B27E-653354E76004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F21402-410D-43BB-819B-46DB3727AC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F21402-410D-43BB-819B-46DB3727AC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F21402-410D-43BB-819B-46DB3727AC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F21402-410D-43BB-819B-46DB3727AC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.1.7:8080/tfs/logistica%20de%20cosecha
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ILCBLL_RAAgricola_Cs\\ILCBLL_RAAgricola_Cs.csproj
+		SccProjectName1 = ILCBLL_RAAgricola_Cs
+		SccLocalPath1 = ILCBLL_RAAgricola_Cs
+		SccProjectUniqueName2 = ILCDAL_RAAgricola_DS_Cs\\ILCDAL_RAAgricola_DS_Cs.csproj
+		SccProjectName2 = ILCDAL_RAAgricola_DS_Cs
+		SccLocalPath2 = ILCDAL_RAAgricola_DS_Cs
+		SccProjectUniqueName3 = ILCDAL_RAAgricola_Identity_Cs\\ILCDAL_RAAgricola_Identity_Cs.csproj
+		SccProjectName3 = ILCDAL_RAAgricola_Identity_Cs
+		SccLocalPath3 = ILCDAL_RAAgricola_Identity_Cs
+		SccProjectUniqueName4 = ILCPre_RAAgricola_WEB\\ILCPre_RAAgricola_WEB.csproj
+		SccProjectName4 = ILCPre_RAAgricola_WEB
+		SccLocalPath4 = ILCPre_RAAgricola_WEB
+		SccProjectUniqueName5 = ILCWS_RAAgricola_Cs\\ILCWS_RAAgricola_Cs.csproj
+		SccProjectName5 = ILCWS_RAAgricola_Cs
+		SccLocalPath5 = ILCWS_RAAgricola_Cs
+	EndGlobalSection
+EndGlobal

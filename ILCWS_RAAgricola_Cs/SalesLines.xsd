@@ -1,0 +1,1349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SalesLines" targetNamespace="http://tempuri.org/SalesLines.xsd" xmlns:mstns="http://tempuri.org/SalesLines.xsd" xmlns="http://tempuri.org/SalesLines.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="LACABANAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LACABANAConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.LACABANAConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SalesLinesTableAdapter" GeneratorDataComponentClassName="SalesLinesTableAdapter" Name="SalesLines" UserDataComponentName="SalesLinesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LACABANAConnectionString (Web.config)" DbObjectName="LACABANA.dbo.[LACABANA$Sales Invoice Line]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        I.timestamp, I.[Document No_], I.[Line No_], I.[Sell-to Customer No_], I.Type, I.No_, I.[Location Code], I.[Posting Group], I.[Shipment Date], I.Description, I.[Description 2], I.[Unit of Measure], I.Quantity, I.[Unit Price], 
+                         I.[Unit Cost (LCY)], I.[VAT _], I.[Line Discount _], I.[Line Discount Amount], I.Amount, I.[Amount Including VAT], I.[Allow Invoice Disc_], I.[Gross Weight], I.[Net Weight], I.[Units per Parcel], I.[Unit Volume], I.[Appl_-to Item Entry], 
+                         I.[Shortcut Dimension 1 Code], I.[Shortcut Dimension 2 Code], I.[Customer Price Group], I.[Job No_], I.[Work Type Code], I.[Shipment No_], I.[Shipment Line No_], I.[Bill-to Customer No_], I.[Inv_ Discount Amount], 
+                         I.[Drop Shipment], I.[Gen_ Bus_ Posting Group], I.[Gen_ Prod_ Posting Group], I.[VAT Calculation Type], I.[Transaction Type], I.[Transport Method], I.[Attached to Line No_], I.[Exit Point], I.Area, I.[Transaction Specification], 
+                         I.[Tax Category], I.[Tax Area Code], I.[Tax Liable], I.[Tax Group Code], I.[VAT Clause Code], I.[VAT Bus_ Posting Group], I.[VAT Prod_ Posting Group], I.[Blanket Order No_], I.[Blanket Order Line No_], I.[VAT Base Amount], 
+                         I.[Unit Cost], I.[System-Created Entry], I.[Line Amount], I.[VAT Difference], I.[VAT Identifier], I.[IC Partner Ref_ Type], I.[IC Partner Reference], I.[Prepayment Line], I.[IC Partner Code], I.[Posting Date], I.[Dimension Set ID], 
+                         I.[Job Task No_], I.[Job Contract Entry No_], I.[Deferral Code], I.[Variant Code], I.[Bin Code], I.[Qty_ per Unit of Measure], I.[Unit of Measure Code], I.[Quantity (Base)], I.[FA Posting Date], I.[Depreciation Book Code], 
+                         I.[Depr_ until FA Posting Date], I.[Duplicate in Depreciation Book], I.[Use Duplication List], I.[Responsibility Center], I.[Cross-Reference No_], I.[Unit of Measure (Cross Ref_)], I.[Cross-Reference Type], 
+                         I.[Cross-Reference Type No_], I.[Item Category Code], I.Nonstock, I.[Purchasing Code], I.[Product Group Code], I.[Appl_-from Item Entry], I.[Return Reason Code], I.[Allow Line Disc_], I.[Customer Disc_ Group], 
+                         I.[Package Tracking No_], I.[Document Line No_], I.[Line Discount Calculation], I.[Price description]
+FROM            [LACABANA$Sales Invoice Header] AS H LEFT OUTER JOIN
+                         [LACABANA$Sales Invoice Line] AS I ON H.No_ = I.[Document No_]
+WHERE        (H.[External Document No_] = @Documento)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Documento" ColumnName="External Document No_" DataSourceName="LACABANA.dbo.[LACABANA$Sales Invoice Header]" DataTypeServer="nvarchar(35)" DbType="String" Direction="Input" ParameterName="@Documento" Precision="0" ProviderType="NVarChar" Scale="0" Size="35" SourceColumn="External Document No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="timestamp" DataSetColumn="timestamp" />
+              <Mapping SourceColumn="No_" DataSetColumn="No_" />
+              <Mapping SourceColumn="Sell-to Customer No_" DataSetColumn="Sell-to Customer No_" />
+              <Mapping SourceColumn="Bill-to Customer No_" DataSetColumn="Bill-to Customer No_" />
+              <Mapping SourceColumn="Posting Date" DataSetColumn="Posting Date" />
+              <Mapping SourceColumn="Shipment Date" DataSetColumn="Shipment Date" />
+              <Mapping SourceColumn="Location Code" DataSetColumn="Location Code" />
+              <Mapping SourceColumn="Shortcut Dimension 1 Code" DataSetColumn="Shortcut Dimension 1 Code" />
+              <Mapping SourceColumn="Shortcut Dimension 2 Code" DataSetColumn="Shortcut Dimension 2 Code" />
+              <Mapping SourceColumn="Customer Price Group" DataSetColumn="Customer Price Group" />
+              <Mapping SourceColumn="Customer Disc_ Group" DataSetColumn="Customer Disc_ Group" />
+              <Mapping SourceColumn="Gen_ Bus_ Posting Group" DataSetColumn="Gen_ Bus_ Posting Group" />
+              <Mapping SourceColumn="Transaction Type" DataSetColumn="Transaction Type" />
+              <Mapping SourceColumn="Transport Method" DataSetColumn="Transport Method" />
+              <Mapping SourceColumn="Exit Point" DataSetColumn="Exit Point" />
+              <Mapping SourceColumn="Area" DataSetColumn="Area" />
+              <Mapping SourceColumn="Transaction Specification" DataSetColumn="Transaction Specification" />
+              <Mapping SourceColumn="Package Tracking No_" DataSetColumn="Package Tracking No_" />
+              <Mapping SourceColumn="Tax Area Code" DataSetColumn="Tax Area Code" />
+              <Mapping SourceColumn="Tax Liable" DataSetColumn="Tax Liable" />
+              <Mapping SourceColumn="VAT Bus_ Posting Group" DataSetColumn="VAT Bus_ Posting Group" />
+              <Mapping SourceColumn="Dimension Set ID" DataSetColumn="Dimension Set ID" />
+              <Mapping SourceColumn="Responsibility Center" DataSetColumn="Responsibility Center" />
+              <Mapping SourceColumn="Allow Line Disc_" DataSetColumn="Allow Line Disc_" />
+              <Mapping SourceColumn="Document No_" DataSetColumn="Document No_" />
+              <Mapping SourceColumn="Line No_" DataSetColumn="Line No_" />
+              <Mapping SourceColumn="Type" DataSetColumn="Type" />
+              <Mapping SourceColumn="Posting Group" DataSetColumn="Posting Group" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Description 2" DataSetColumn="Description 2" />
+              <Mapping SourceColumn="Unit of Measure" DataSetColumn="Unit of Measure" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Unit Price" DataSetColumn="Unit Price" />
+              <Mapping SourceColumn="Unit Cost (LCY)" DataSetColumn="Unit Cost (LCY)" />
+              <Mapping SourceColumn="VAT _" DataSetColumn="VAT _" />
+              <Mapping SourceColumn="Line Discount _" DataSetColumn="Line Discount _" />
+              <Mapping SourceColumn="Line Discount Amount" DataSetColumn="Line Discount Amount" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="Amount Including VAT" DataSetColumn="Amount Including VAT" />
+              <Mapping SourceColumn="Allow Invoice Disc_" DataSetColumn="Allow Invoice Disc_" />
+              <Mapping SourceColumn="Gross Weight" DataSetColumn="Gross Weight" />
+              <Mapping SourceColumn="Net Weight" DataSetColumn="Net Weight" />
+              <Mapping SourceColumn="Units per Parcel" DataSetColumn="Units per Parcel" />
+              <Mapping SourceColumn="Unit Volume" DataSetColumn="Unit Volume" />
+              <Mapping SourceColumn="Appl_-to Item Entry" DataSetColumn="Appl_-to Item Entry" />
+              <Mapping SourceColumn="Job No_" DataSetColumn="Job No_" />
+              <Mapping SourceColumn="Work Type Code" DataSetColumn="Work Type Code" />
+              <Mapping SourceColumn="Shipment No_" DataSetColumn="Shipment No_" />
+              <Mapping SourceColumn="Shipment Line No_" DataSetColumn="Shipment Line No_" />
+              <Mapping SourceColumn="Inv_ Discount Amount" DataSetColumn="Inv_ Discount Amount" />
+              <Mapping SourceColumn="Drop Shipment" DataSetColumn="Drop Shipment" />
+              <Mapping SourceColumn="Gen_ Prod_ Posting Group" DataSetColumn="Gen_ Prod_ Posting Group" />
+              <Mapping SourceColumn="VAT Calculation Type" DataSetColumn="VAT Calculation Type" />
+              <Mapping SourceColumn="Attached to Line No_" DataSetColumn="Attached to Line No_" />
+              <Mapping SourceColumn="Tax Category" DataSetColumn="Tax Category" />
+              <Mapping SourceColumn="Tax Group Code" DataSetColumn="Tax Group Code" />
+              <Mapping SourceColumn="VAT Clause Code" DataSetColumn="VAT Clause Code" />
+              <Mapping SourceColumn="VAT Prod_ Posting Group" DataSetColumn="VAT Prod_ Posting Group" />
+              <Mapping SourceColumn="Blanket Order No_" DataSetColumn="Blanket Order No_" />
+              <Mapping SourceColumn="Blanket Order Line No_" DataSetColumn="Blanket Order Line No_" />
+              <Mapping SourceColumn="VAT Base Amount" DataSetColumn="VAT Base Amount" />
+              <Mapping SourceColumn="Unit Cost" DataSetColumn="Unit Cost" />
+              <Mapping SourceColumn="System-Created Entry" DataSetColumn="System-Created Entry" />
+              <Mapping SourceColumn="Line Amount" DataSetColumn="Line Amount" />
+              <Mapping SourceColumn="VAT Difference" DataSetColumn="VAT Difference" />
+              <Mapping SourceColumn="VAT Identifier" DataSetColumn="VAT Identifier" />
+              <Mapping SourceColumn="IC Partner Ref_ Type" DataSetColumn="IC Partner Ref_ Type" />
+              <Mapping SourceColumn="IC Partner Reference" DataSetColumn="IC Partner Reference" />
+              <Mapping SourceColumn="Prepayment Line" DataSetColumn="Prepayment Line" />
+              <Mapping SourceColumn="IC Partner Code" DataSetColumn="IC Partner Code" />
+              <Mapping SourceColumn="Job Task No_" DataSetColumn="Job Task No_" />
+              <Mapping SourceColumn="Job Contract Entry No_" DataSetColumn="Job Contract Entry No_" />
+              <Mapping SourceColumn="Deferral Code" DataSetColumn="Deferral Code" />
+              <Mapping SourceColumn="Variant Code" DataSetColumn="Variant Code" />
+              <Mapping SourceColumn="Bin Code" DataSetColumn="Bin Code" />
+              <Mapping SourceColumn="Qty_ per Unit of Measure" DataSetColumn="Qty_ per Unit of Measure" />
+              <Mapping SourceColumn="Unit of Measure Code" DataSetColumn="Unit of Measure Code" />
+              <Mapping SourceColumn="Quantity (Base)" DataSetColumn="Quantity (Base)" />
+              <Mapping SourceColumn="FA Posting Date" DataSetColumn="FA Posting Date" />
+              <Mapping SourceColumn="Depreciation Book Code" DataSetColumn="Depreciation Book Code" />
+              <Mapping SourceColumn="Depr_ until FA Posting Date" DataSetColumn="Depr_ until FA Posting Date" />
+              <Mapping SourceColumn="Duplicate in Depreciation Book" DataSetColumn="Duplicate in Depreciation Book" />
+              <Mapping SourceColumn="Use Duplication List" DataSetColumn="Use Duplication List" />
+              <Mapping SourceColumn="Cross-Reference No_" DataSetColumn="Cross-Reference No_" />
+              <Mapping SourceColumn="Unit of Measure (Cross Ref_)" DataSetColumn="Unit of Measure (Cross Ref_)" />
+              <Mapping SourceColumn="Cross-Reference Type" DataSetColumn="Cross-Reference Type" />
+              <Mapping SourceColumn="Cross-Reference Type No_" DataSetColumn="Cross-Reference Type No_" />
+              <Mapping SourceColumn="Item Category Code" DataSetColumn="Item Category Code" />
+              <Mapping SourceColumn="Nonstock" DataSetColumn="Nonstock" />
+              <Mapping SourceColumn="Purchasing Code" DataSetColumn="Purchasing Code" />
+              <Mapping SourceColumn="Product Group Code" DataSetColumn="Product Group Code" />
+              <Mapping SourceColumn="Appl_-from Item Entry" DataSetColumn="Appl_-from Item Entry" />
+              <Mapping SourceColumn="Return Reason Code" DataSetColumn="Return Reason Code" />
+              <Mapping SourceColumn="Document Line No_" DataSetColumn="Document Line No_" />
+              <Mapping SourceColumn="Line Discount Calculation" DataSetColumn="Line Discount Calculation" />
+              <Mapping SourceColumn="Price description" DataSetColumn="Price description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InfoSAIPlusEmpresaTableAdapter" GeneratorDataComponentClassName="InfoSAIPlusEmpresaTableAdapter" Name="InfoSAIPlusEmpresa" UserDataComponentName="InfoSAIPlusEmpresaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LACABANAConnectionString (Web.config)" DbObjectName="LCMAESTROZAF.dbo.SAIPLUS_EmpresaNav" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        E.EmpresaNav, E.CodClie, E.CABANA, E.ClieCABANA, E.CodEmpresa
+FROM            [LACABANA$Sales Invoice Header] AS H INNER JOIN
+                         LCMAESTROZAF.dbo.SAIPLUS_EmpresaNav AS E ON H.[Sell-to Customer No_] COLLATE Modern_Spanish_CI_AS = E.CodClie
+WHERE        (H.[External Document No_] = @DocumentoExterna)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DocumentoExterna" ColumnName="External Document No_" DataSourceName="LACABANA.dbo.[LACABANA$Sales Invoice Header]" DataTypeServer="nvarchar(35)" DbType="String" Direction="Input" ParameterName="@DocumentoExterna" Precision="0" ProviderType="NVarChar" Scale="0" Size="35" SourceColumn="External Document No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmpresaNav" DataSetColumn="EmpresaNav" />
+              <Mapping SourceColumn="CodClie" DataSetColumn="CodClie" />
+              <Mapping SourceColumn="CABANA" DataSetColumn="CABANA" />
+              <Mapping SourceColumn="ClieCABANA" DataSetColumn="ClieCABANA" />
+              <Mapping SourceColumn="CodEmpresa" DataSetColumn="CodEmpresa" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LACABANAVendorTableAdapter" GeneratorDataComponentClassName="LACABANAVendorTableAdapter" Name="LACABANAVendor" UserDataComponentName="LACABANAVendorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LACABANAConnectionString (Web.config)" DbObjectName="LACABANA.dbo.LACABANA$Vendor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [LACABANA$Vendor] WHERE (([No_] = @Original_No_))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="No_" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [LACABANA$Vendor] ([No_], [Name], [Search Name], [Name 2], [Address], [Address 2], [City], [Contact], [Phone No_], [Telex No_], [Our Account No_], [Territory Code], [Global Dimension 1 Code], [Global Dimension 2 Code], [Budgeted Amount], [Vendor Posting Group], [Currency Code], [Language Code], [Statistics Group], [Payment Terms Code], [Fin_ Charge Terms Code], [Purchaser Code], [Shipment Method Code], [Shipping Agent Code], [Invoice Disc_ Code], [Country_Region Code], [Blocked], [Pay-to Vendor No_], [Priority], [Payment Method Code], [Last Modified Date Time], [Last Date Modified], [Application Method], [Prices Including VAT], [Fax No_], [Telex Answer Back], [VAT Registration No_], [Gen_ Bus_ Posting Group], [Picture], [GLN], [Post Code], [County], [E-Mail], [Home Page], [No_ Series], [Tax Area Code], [Tax Liable], [VAT Bus_ Posting Group], [Block Payment Tolerance], [IC Partner Code], [Prepayment _], [Partner Type], [Image], [Privacy Blocked], [Creditor No_], [Preferred Bank Account], [Cash Flow Payment Terms Code], [Primary Contact No_], [Responsibility Center], [Location Code], [Lead Time Calculation], [Base Calendar Code], [Document Sending Profile], [Validate EU Vat Reg_ No_], [Id], [Currency Id], [Payment Terms Id], [Payment Method Id], [UPS Zone], [Federal ID No_], [Bank Communication], [Check Date Format], [Check Date Separator], [IRS 1099 Code], [RFC No_], [CURP No_], [State Inscription], [FATCA filing requirement], [Withholding Tax Code], [Tax Identification Type], [Contributor Type], [Favorite Doc], [GIRO], [Other Doc]) VALUES (@No_, @Name, @Search_Name, @Name_2, @Address, @Address_2, @City, @Contact, @Phone_No_, @Telex_No_, @Our_Account_No_, @Territory_Code, @Global_Dimension_1_Code, @Global_Dimension_2_Code, @Budgeted_Amount, @Vendor_Posting_Group, @Currency_Code, @Language_Code, @Statistics_Group, @Payment_Terms_Code, @Fin__Charge_Terms_Code, @Purchaser_Code, @Shipment_Method_Code, @Shipping_Agent_Code, @Invoice_Disc__Code, @Country_Region_Code, @Blocked, @p1, @Priority, @Payment_Method_Code, @Last_Modified_Date_Time, @Last_Date_Modified, @Application_Method, @Prices_Including_VAT, @Fax_No_, @Telex_Answer_Back, @VAT_Registration_No_, @Gen__Bus__Posting_Group, @Picture, @GLN, @Post_Code, @County, @p3, @Home_Page, @No__Series, @Tax_Area_Code, @Tax_Liable, @VAT_Bus__Posting_Group, @Block_Payment_Tolerance, @IC_Partner_Code, @Prepayment__, @Partner_Type, @Image, @Privacy_Blocked, @Creditor_No_, @Preferred_Bank_Account, @Cash_Flow_Payment_Terms_Code, @Primary_Contact_No_, @Responsibility_Center, @Location_Code, @Lead_Time_Calculation, @Base_Calendar_Code, @Document_Sending_Profile, @Validate_EU_Vat_Reg__No_, @Id, @Currency_Id, @Payment_Terms_Id, @Payment_Method_Id, @UPS_Zone, @Federal_ID_No_, @Bank_Communication, @Check_Date_Format, @Check_Date_Separator, @IRS_1099_Code, @RFC_No_, @CURP_No_, @State_Inscription, @FATCA_filing_requirement, @Withholding_Tax_Code, @Tax_Identification_Type, @Contributor_Type, @Favorite_Doc, @GIRO, @Other_Doc)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Search_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Search Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name_2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name 2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Address_2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address 2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@City" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Contact" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Phone_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Phone No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Telex_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telex No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Our_Account_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Our Account No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Territory_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Territory Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Global_Dimension_1_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Global Dimension 1 Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Global_Dimension_2_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Global Dimension 2 Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Budgeted_Amount" Precision="38" ProviderType="Decimal" Scale="20" Size="0" SourceColumn="Budgeted Amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Vendor_Posting_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Vendor Posting Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Currency_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Currency Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Language_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Language Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Statistics_Group" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Statistics Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Payment_Terms_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Payment Terms Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Fin__Charge_Terms_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fin_ Charge Terms Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Purchaser_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Purchaser Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Shipment_Method_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Shipment Method Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Shipping_Agent_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Shipping Agent Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Invoice_Disc__Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Invoice Disc_ Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Country_Region_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Country_Region Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Blocked" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Blocked" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Pay-to Vendor No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Priority" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Priority" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Payment_Method_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Payment Method Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Last_Modified_Date_Time" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Last Modified Date Time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Last_Date_Modified" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Last Date Modified" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Application_Method" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Application Method" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Prices_Including_VAT" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Prices Including VAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Fax_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fax No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Telex_Answer_Back" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telex Answer Back" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@VAT_Registration_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="VAT Registration No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Gen__Bus__Posting_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Gen_ Bus_ Posting Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Picture" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Picture" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GLN" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GLN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Post_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Post Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@County" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="County" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="E-Mail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Home_Page" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Home Page" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@No__Series" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="No_ Series" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Tax_Area_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Tax Area Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Tax_Liable" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Tax Liable" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@VAT_Bus__Posting_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="VAT Bus_ Posting Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Block_Payment_Tolerance" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Block Payment Tolerance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IC_Partner_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IC Partner Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Prepayment__" Precision="38" ProviderType="Decimal" Scale="20" Size="0" SourceColumn="Prepayment _" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Partner_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Partner Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Image" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Image" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Privacy_Blocked" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Privacy Blocked" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Creditor_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Creditor No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Preferred_Bank_Account" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Preferred Bank Account" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cash_Flow_Payment_Terms_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cash Flow Payment Terms Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Primary_Contact_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Primary Contact No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Responsibility_Center" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Responsibility Center" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Location_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Location Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Lead_Time_Calculation" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Lead Time Calculation" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Base_Calendar_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Base Calendar Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Document_Sending_Profile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Document Sending Profile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Validate_EU_Vat_Reg__No_" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Validate EU Vat Reg_ No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Currency_Id" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Currency Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Payment_Terms_Id" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Payment Terms Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Payment_Method_Id" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Payment Method Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UPS_Zone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UPS Zone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Federal_ID_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Federal ID No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Bank_Communication" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Bank Communication" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Check_Date_Format" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Check Date Format" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Check_Date_Separator" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Check Date Separator" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IRS_1099_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IRS 1099 Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RFC_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RFC No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CURP_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CURP No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@State_Inscription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="State Inscription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@FATCA_filing_requirement" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="FATCA filing requirement" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Withholding_Tax_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Withholding Tax Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tax_Identification_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tax Identification Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Contributor_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Contributor Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Favorite_Doc" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Favorite Doc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GIRO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GIRO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Other_Doc" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Other Doc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT * FROM LACABANA..[LACABANA$Vendor]
+  WHERE No_ = @No</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="No" ColumnName="No_" DataSourceName="LACABANA.dbo.LACABANA$Vendor" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@No" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [LACABANA$Vendor] SET [No_] = @No_, [Name] = @Name, [Search Name] = @Search_Name, [Name 2] = @Name_2, [Address] = @Address, [Address 2] = @Address_2, [City] = @City, [Contact] = @Contact, [Phone No_] = @Phone_No_, [Telex No_] = @Telex_No_, [Our Account No_] = @Our_Account_No_, [Territory Code] = @Territory_Code, [Global Dimension 1 Code] = @Global_Dimension_1_Code, [Global Dimension 2 Code] = @Global_Dimension_2_Code, [Budgeted Amount] = @Budgeted_Amount, [Vendor Posting Group] = @Vendor_Posting_Group, [Currency Code] = @Currency_Code, [Language Code] = @Language_Code, [Statistics Group] = @Statistics_Group, [Payment Terms Code] = @Payment_Terms_Code, [Fin_ Charge Terms Code] = @Fin__Charge_Terms_Code, [Purchaser Code] = @Purchaser_Code, [Shipment Method Code] = @Shipment_Method_Code, [Shipping Agent Code] = @Shipping_Agent_Code, [Invoice Disc_ Code] = @Invoice_Disc__Code, [Country_Region Code] = @Country_Region_Code, [Blocked] = @Blocked, [Pay-to Vendor No_] = @p1, [Priority] = @Priority, [Payment Method Code] = @Payment_Method_Code, [Last Modified Date Time] = @Last_Modified_Date_Time, [Last Date Modified] = @Last_Date_Modified, [Application Method] = @Application_Method, [Prices Including VAT] = @Prices_Including_VAT, [Fax No_] = @Fax_No_, [Telex Answer Back] = @Telex_Answer_Back, [VAT Registration No_] = @VAT_Registration_No_, [Gen_ Bus_ Posting Group] = @Gen__Bus__Posting_Group, [Picture] = @Picture, [GLN] = @GLN, [Post Code] = @Post_Code, [County] = @County, [E-Mail] = @p3, [Home Page] = @Home_Page, [No_ Series] = @No__Series, [Tax Area Code] = @Tax_Area_Code, [Tax Liable] = @Tax_Liable, [VAT Bus_ Posting Group] = @VAT_Bus__Posting_Group, [Block Payment Tolerance] = @Block_Payment_Tolerance, [IC Partner Code] = @IC_Partner_Code, [Prepayment _] = @Prepayment__, [Partner Type] = @Partner_Type, [Image] = @Image, [Privacy Blocked] = @Privacy_Blocked, [Creditor No_] = @Creditor_No_, [Preferred Bank Account] = @Preferred_Bank_Account, [Cash Flow Payment Terms Code] = @Cash_Flow_Payment_Terms_Code, [Primary Contact No_] = @Primary_Contact_No_, [Responsibility Center] = @Responsibility_Center, [Location Code] = @Location_Code, [Lead Time Calculation] = @Lead_Time_Calculation, [Base Calendar Code] = @Base_Calendar_Code, [Document Sending Profile] = @Document_Sending_Profile, [Validate EU Vat Reg_ No_] = @Validate_EU_Vat_Reg__No_, [Id] = @Id, [Currency Id] = @Currency_Id, [Payment Terms Id] = @Payment_Terms_Id, [Payment Method Id] = @Payment_Method_Id, [UPS Zone] = @UPS_Zone, [Federal ID No_] = @Federal_ID_No_, [Bank Communication] = @Bank_Communication, [Check Date Format] = @Check_Date_Format, [Check Date Separator] = @Check_Date_Separator, [IRS 1099 Code] = @IRS_1099_Code, [RFC No_] = @RFC_No_, [CURP No_] = @CURP_No_, [State Inscription] = @State_Inscription, [FATCA filing requirement] = @FATCA_filing_requirement, [Withholding Tax Code] = @Withholding_Tax_Code, [Tax Identification Type] = @Tax_Identification_Type, [Contributor Type] = @Contributor_Type, [Favorite Doc] = @Favorite_Doc, [GIRO] = @GIRO, [Other Doc] = @Other_Doc WHERE (([No_] = @Original_No_))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Search_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Search Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name_2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name 2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Address_2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address 2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@City" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Contact" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Phone_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Phone No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Telex_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telex No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Our_Account_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Our Account No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Territory_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Territory Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Global_Dimension_1_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Global Dimension 1 Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Global_Dimension_2_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Global Dimension 2 Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Budgeted_Amount" Precision="38" ProviderType="Decimal" Scale="20" Size="0" SourceColumn="Budgeted Amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Vendor_Posting_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Vendor Posting Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Currency_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Currency Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Language_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Language Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Statistics_Group" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Statistics Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Payment_Terms_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Payment Terms Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Fin__Charge_Terms_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fin_ Charge Terms Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Purchaser_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Purchaser Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Shipment_Method_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Shipment Method Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Shipping_Agent_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Shipping Agent Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Invoice_Disc__Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Invoice Disc_ Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Country_Region_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Country_Region Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Blocked" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Blocked" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Pay-to Vendor No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Priority" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Priority" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Payment_Method_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Payment Method Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Last_Modified_Date_Time" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Last Modified Date Time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Last_Date_Modified" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Last Date Modified" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Application_Method" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Application Method" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Prices_Including_VAT" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Prices Including VAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Fax_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fax No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Telex_Answer_Back" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telex Answer Back" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@VAT_Registration_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="VAT Registration No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Gen__Bus__Posting_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Gen_ Bus_ Posting Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Picture" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Picture" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GLN" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GLN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Post_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Post Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@County" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="County" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="E-Mail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Home_Page" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Home Page" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@No__Series" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="No_ Series" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Tax_Area_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Tax Area Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Tax_Liable" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Tax Liable" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@VAT_Bus__Posting_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="VAT Bus_ Posting Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Block_Payment_Tolerance" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Block Payment Tolerance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IC_Partner_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IC Partner Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Prepayment__" Precision="38" ProviderType="Decimal" Scale="20" Size="0" SourceColumn="Prepayment _" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Partner_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Partner Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Image" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Image" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Privacy_Blocked" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Privacy Blocked" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Creditor_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Creditor No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Preferred_Bank_Account" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Preferred Bank Account" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cash_Flow_Payment_Terms_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cash Flow Payment Terms Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Primary_Contact_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Primary Contact No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Responsibility_Center" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Responsibility Center" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Location_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Location Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Lead_Time_Calculation" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Lead Time Calculation" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Base_Calendar_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Base Calendar Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Document_Sending_Profile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Document Sending Profile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Validate_EU_Vat_Reg__No_" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Validate EU Vat Reg_ No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Currency_Id" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Currency Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Payment_Terms_Id" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Payment Terms Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Payment_Method_Id" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Payment Method Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UPS_Zone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UPS Zone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Federal_ID_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Federal ID No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Bank_Communication" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Bank Communication" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Check_Date_Format" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Check Date Format" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Check_Date_Separator" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Check Date Separator" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IRS_1099_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IRS 1099 Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RFC_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RFC No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CURP_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CURP No_" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@State_Inscription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="State Inscription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@FATCA_filing_requirement" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="FATCA filing requirement" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Withholding_Tax_Code" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Withholding Tax Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tax_Identification_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tax Identification Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Contributor_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Contributor Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Favorite_Doc" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Favorite Doc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GIRO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GIRO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Other_Doc" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Other Doc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_No_" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="No_" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="timestamp" DataSetColumn="timestamp" />
+              <Mapping SourceColumn="No_" DataSetColumn="No_" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Search Name" DataSetColumn="Search Name" />
+              <Mapping SourceColumn="Name 2" DataSetColumn="Name 2" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="Address 2" DataSetColumn="Address 2" />
+              <Mapping SourceColumn="City" DataSetColumn="City" />
+              <Mapping SourceColumn="Contact" DataSetColumn="Contact" />
+              <Mapping SourceColumn="Phone No_" DataSetColumn="Phone No_" />
+              <Mapping SourceColumn="Telex No_" DataSetColumn="Telex No_" />
+              <Mapping SourceColumn="Our Account No_" DataSetColumn="Our Account No_" />
+              <Mapping SourceColumn="Territory Code" DataSetColumn="Territory Code" />
+              <Mapping SourceColumn="Global Dimension 1 Code" DataSetColumn="Global Dimension 1 Code" />
+              <Mapping SourceColumn="Global Dimension 2 Code" DataSetColumn="Global Dimension 2 Code" />
+              <Mapping SourceColumn="Budgeted Amount" DataSetColumn="Budgeted Amount" />
+              <Mapping SourceColumn="Vendor Posting Group" DataSetColumn="Vendor Posting Group" />
+              <Mapping SourceColumn="Currency Code" DataSetColumn="Currency Code" />
+              <Mapping SourceColumn="Language Code" DataSetColumn="Language Code" />
+              <Mapping SourceColumn="Statistics Group" DataSetColumn="Statistics Group" />
+              <Mapping SourceColumn="Payment Terms Code" DataSetColumn="Payment Terms Code" />
+              <Mapping SourceColumn="Fin_ Charge Terms Code" DataSetColumn="Fin_ Charge Terms Code" />
+              <Mapping SourceColumn="Purchaser Code" DataSetColumn="Purchaser Code" />
+              <Mapping SourceColumn="Shipment Method Code" DataSetColumn="Shipment Method Code" />
+              <Mapping SourceColumn="Shipping Agent Code" DataSetColumn="Shipping Agent Code" />
+              <Mapping SourceColumn="Invoice Disc_ Code" DataSetColumn="Invoice Disc_ Code" />
+              <Mapping SourceColumn="Country_Region Code" DataSetColumn="Country_Region Code" />
+              <Mapping SourceColumn="Blocked" DataSetColumn="Blocked" />
+              <Mapping SourceColumn="Pay-to Vendor No_" DataSetColumn="Pay-to Vendor No_" />
+              <Mapping SourceColumn="Priority" DataSetColumn="Priority" />
+              <Mapping SourceColumn="Payment Method Code" DataSetColumn="Payment Method Code" />
+              <Mapping SourceColumn="Last Modified Date Time" DataSetColumn="Last Modified Date Time" />
+              <Mapping SourceColumn="Last Date Modified" DataSetColumn="Last Date Modified" />
+              <Mapping SourceColumn="Application Method" DataSetColumn="Application Method" />
+              <Mapping SourceColumn="Prices Including VAT" DataSetColumn="Prices Including VAT" />
+              <Mapping SourceColumn="Fax No_" DataSetColumn="Fax No_" />
+              <Mapping SourceColumn="Telex Answer Back" DataSetColumn="Telex Answer Back" />
+              <Mapping SourceColumn="VAT Registration No_" DataSetColumn="VAT Registration No_" />
+              <Mapping SourceColumn="Gen_ Bus_ Posting Group" DataSetColumn="Gen_ Bus_ Posting Group" />
+              <Mapping SourceColumn="Picture" DataSetColumn="Picture" />
+              <Mapping SourceColumn="GLN" DataSetColumn="GLN" />
+              <Mapping SourceColumn="Post Code" DataSetColumn="Post Code" />
+              <Mapping SourceColumn="County" DataSetColumn="County" />
+              <Mapping SourceColumn="E-Mail" DataSetColumn="E-Mail" />
+              <Mapping SourceColumn="Home Page" DataSetColumn="Home Page" />
+              <Mapping SourceColumn="No_ Series" DataSetColumn="No_ Series" />
+              <Mapping SourceColumn="Tax Area Code" DataSetColumn="Tax Area Code" />
+              <Mapping SourceColumn="Tax Liable" DataSetColumn="Tax Liable" />
+              <Mapping SourceColumn="VAT Bus_ Posting Group" DataSetColumn="VAT Bus_ Posting Group" />
+              <Mapping SourceColumn="Block Payment Tolerance" DataSetColumn="Block Payment Tolerance" />
+              <Mapping SourceColumn="IC Partner Code" DataSetColumn="IC Partner Code" />
+              <Mapping SourceColumn="Prepayment _" DataSetColumn="Prepayment _" />
+              <Mapping SourceColumn="Partner Type" DataSetColumn="Partner Type" />
+              <Mapping SourceColumn="Image" DataSetColumn="Image" />
+              <Mapping SourceColumn="Privacy Blocked" DataSetColumn="Privacy Blocked" />
+              <Mapping SourceColumn="Creditor No_" DataSetColumn="Creditor No_" />
+              <Mapping SourceColumn="Preferred Bank Account" DataSetColumn="Preferred Bank Account" />
+              <Mapping SourceColumn="Cash Flow Payment Terms Code" DataSetColumn="Cash Flow Payment Terms Code" />
+              <Mapping SourceColumn="Primary Contact No_" DataSetColumn="Primary Contact No_" />
+              <Mapping SourceColumn="Responsibility Center" DataSetColumn="Responsibility Center" />
+              <Mapping SourceColumn="Location Code" DataSetColumn="Location Code" />
+              <Mapping SourceColumn="Lead Time Calculation" DataSetColumn="Lead Time Calculation" />
+              <Mapping SourceColumn="Base Calendar Code" DataSetColumn="Base Calendar Code" />
+              <Mapping SourceColumn="Document Sending Profile" DataSetColumn="Document Sending Profile" />
+              <Mapping SourceColumn="Validate EU Vat Reg_ No_" DataSetColumn="Validate EU Vat Reg_ No_" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Currency Id" DataSetColumn="Currency Id" />
+              <Mapping SourceColumn="Payment Terms Id" DataSetColumn="Payment Terms Id" />
+              <Mapping SourceColumn="Payment Method Id" DataSetColumn="Payment Method Id" />
+              <Mapping SourceColumn="UPS Zone" DataSetColumn="UPS Zone" />
+              <Mapping SourceColumn="Federal ID No_" DataSetColumn="Federal ID No_" />
+              <Mapping SourceColumn="Bank Communication" DataSetColumn="Bank Communication" />
+              <Mapping SourceColumn="Check Date Format" DataSetColumn="Check Date Format" />
+              <Mapping SourceColumn="Check Date Separator" DataSetColumn="Check Date Separator" />
+              <Mapping SourceColumn="IRS 1099 Code" DataSetColumn="IRS 1099 Code" />
+              <Mapping SourceColumn="RFC No_" DataSetColumn="RFC No_" />
+              <Mapping SourceColumn="CURP No_" DataSetColumn="CURP No_" />
+              <Mapping SourceColumn="State Inscription" DataSetColumn="State Inscription" />
+              <Mapping SourceColumn="FATCA filing requirement" DataSetColumn="FATCA filing requirement" />
+              <Mapping SourceColumn="Withholding Tax Code" DataSetColumn="Withholding Tax Code" />
+              <Mapping SourceColumn="Tax Identification Type" DataSetColumn="Tax Identification Type" />
+              <Mapping SourceColumn="Contributor Type" DataSetColumn="Contributor Type" />
+              <Mapping SourceColumn="Favorite Doc" DataSetColumn="Favorite Doc" />
+              <Mapping SourceColumn="GIRO" DataSetColumn="GIRO" />
+              <Mapping SourceColumn="Other Doc" DataSetColumn="Other Doc" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SalesLines" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SalesLines" msprop:Generator_UserDSName="SalesLines">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SalesLines" msprop:Generator_TableClassName="SalesLinesDataTable" msprop:Generator_TableVarName="tableSalesLines" msprop:Generator_TablePropName="_SalesLines" msprop:Generator_RowDeletingName="SalesLinesRowDeleting" msprop:Generator_RowChangingName="SalesLinesRowChanging" msprop:Generator_RowEvHandlerName="SalesLinesRowChangeEventHandler" msprop:Generator_RowDeletedName="SalesLinesRowDeleted" msprop:Generator_UserTableName="SalesLines" msprop:Generator_RowChangedName="SalesLinesRowChanged" msprop:Generator_RowEvArgName="SalesLinesRowChangeEvent" msprop:Generator_RowClassName="SalesLinesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="timestamp" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntimestamp" msprop:Generator_ColumnPropNameInRow="timestamp" msprop:Generator_ColumnPropNameInTable="timestampColumn" msprop:Generator_UserColumnName="timestamp" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="No_" msprop:Generator_ColumnVarNameInTable="columnNo_" msprop:Generator_ColumnPropNameInRow="No_" msprop:Generator_ColumnPropNameInTable="No_Column" msprop:Generator_UserColumnName="No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sell-to_x0020_Customer_x0020_No_" msprop:Generator_ColumnVarNameInTable="_columnSell_to_Customer_No_" msprop:Generator_ColumnPropNameInRow="_Sell_to_Customer_No_" msprop:Generator_ColumnPropNameInTable="_Sell_to_Customer_No_Column" msprop:Generator_UserColumnName="Sell-to Customer No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bill-to_x0020_Customer_x0020_No_" msprop:Generator_ColumnVarNameInTable="_columnBill_to_Customer_No_" msprop:Generator_ColumnPropNameInRow="_Bill_to_Customer_No_" msprop:Generator_ColumnPropNameInTable="_Bill_to_Customer_No_Column" msprop:Generator_UserColumnName="Bill-to Customer No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Posting_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnPosting_Date" msprop:Generator_ColumnPropNameInRow="Posting_Date" msprop:Generator_ColumnPropNameInTable="Posting_DateColumn" msprop:Generator_UserColumnName="Posting Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Shipment_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnShipment_Date" msprop:Generator_ColumnPropNameInRow="Shipment_Date" msprop:Generator_ColumnPropNameInTable="Shipment_DateColumn" msprop:Generator_UserColumnName="Shipment Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Location_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnLocation_Code" msprop:Generator_ColumnPropNameInRow="Location_Code" msprop:Generator_ColumnPropNameInTable="Location_CodeColumn" msprop:Generator_UserColumnName="Location Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shortcut_x0020_Dimension_x0020_1_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnShortcut_Dimension_1_Code" msprop:Generator_ColumnPropNameInRow="Shortcut_Dimension_1_Code" msprop:Generator_ColumnPropNameInTable="Shortcut_Dimension_1_CodeColumn" msprop:Generator_UserColumnName="Shortcut Dimension 1 Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shortcut_x0020_Dimension_x0020_2_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnShortcut_Dimension_2_Code" msprop:Generator_ColumnPropNameInRow="Shortcut_Dimension_2_Code" msprop:Generator_ColumnPropNameInTable="Shortcut_Dimension_2_CodeColumn" msprop:Generator_UserColumnName="Shortcut Dimension 2 Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer_x0020_Price_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnCustomer_Price_Group" msprop:Generator_ColumnPropNameInRow="Customer_Price_Group" msprop:Generator_ColumnPropNameInTable="Customer_Price_GroupColumn" msprop:Generator_UserColumnName="Customer Price Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer_x0020_Disc__x0020_Group" msprop:Generator_ColumnVarNameInTable="columnCustomer_Disc__Group" msprop:Generator_ColumnPropNameInRow="Customer_Disc__Group" msprop:Generator_ColumnPropNameInTable="Customer_Disc__GroupColumn" msprop:Generator_UserColumnName="Customer Disc_ Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gen__x0020_Bus__x0020_Posting_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnGen__Bus__Posting_Group" msprop:Generator_ColumnPropNameInRow="Gen__Bus__Posting_Group" msprop:Generator_ColumnPropNameInTable="Gen__Bus__Posting_GroupColumn" msprop:Generator_UserColumnName="Gen_ Bus_ Posting Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Transaction_x0020_Type" msprop:Generator_ColumnVarNameInTable="columnTransaction_Type" msprop:Generator_ColumnPropNameInRow="Transaction_Type" msprop:Generator_ColumnPropNameInTable="Transaction_TypeColumn" msprop:Generator_UserColumnName="Transaction Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Transport_x0020_Method" msprop:Generator_ColumnVarNameInTable="columnTransport_Method" msprop:Generator_ColumnPropNameInRow="Transport_Method" msprop:Generator_ColumnPropNameInTable="Transport_MethodColumn" msprop:Generator_UserColumnName="Transport Method" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Exit_x0020_Point" msprop:Generator_ColumnVarNameInTable="columnExit_Point" msprop:Generator_ColumnPropNameInRow="Exit_Point" msprop:Generator_ColumnPropNameInTable="Exit_PointColumn" msprop:Generator_UserColumnName="Exit Point" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Area" msprop:Generator_ColumnVarNameInTable="columnArea" msprop:Generator_ColumnPropNameInRow="Area" msprop:Generator_ColumnPropNameInTable="AreaColumn" msprop:Generator_UserColumnName="Area" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Transaction_x0020_Specification" msprop:Generator_ColumnVarNameInTable="columnTransaction_Specification" msprop:Generator_ColumnPropNameInRow="Transaction_Specification" msprop:Generator_ColumnPropNameInTable="Transaction_SpecificationColumn" msprop:Generator_UserColumnName="Transaction Specification" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Package_x0020_Tracking_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnPackage_Tracking_No_" msprop:Generator_ColumnPropNameInRow="Package_Tracking_No_" msprop:Generator_ColumnPropNameInTable="Package_Tracking_No_Column" msprop:Generator_UserColumnName="Package Tracking No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tax_x0020_Area_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnTax_Area_Code" msprop:Generator_ColumnPropNameInRow="Tax_Area_Code" msprop:Generator_ColumnPropNameInTable="Tax_Area_CodeColumn" msprop:Generator_UserColumnName="Tax Area Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tax_x0020_Liable" msprop:Generator_ColumnVarNameInTable="columnTax_Liable" msprop:Generator_ColumnPropNameInRow="Tax_Liable" msprop:Generator_ColumnPropNameInTable="Tax_LiableColumn" msprop:Generator_UserColumnName="Tax Liable" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="VAT_x0020_Bus__x0020_Posting_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnVAT_Bus__Posting_Group" msprop:Generator_ColumnPropNameInRow="VAT_Bus__Posting_Group" msprop:Generator_ColumnPropNameInTable="VAT_Bus__Posting_GroupColumn" msprop:Generator_UserColumnName="VAT Bus_ Posting Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dimension_x0020_Set_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnDimension_Set_ID" msprop:Generator_ColumnPropNameInRow="Dimension_Set_ID" msprop:Generator_ColumnPropNameInTable="Dimension_Set_IDColumn" msprop:Generator_UserColumnName="Dimension Set ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Responsibility_x0020_Center" msprop:Generator_ColumnVarNameInTable="columnResponsibility_Center" msprop:Generator_ColumnPropNameInRow="Responsibility_Center" msprop:Generator_ColumnPropNameInTable="Responsibility_CenterColumn" msprop:Generator_UserColumnName="Responsibility Center" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Allow_x0020_Line_x0020_Disc_" msprop:Generator_ColumnVarNameInTable="columnAllow_Line_Disc_" msprop:Generator_ColumnPropNameInRow="Allow_Line_Disc_" msprop:Generator_ColumnPropNameInTable="Allow_Line_Disc_Column" msprop:Generator_UserColumnName="Allow Line Disc_" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Document_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnDocument_No_" msprop:Generator_ColumnPropNameInRow="Document_No_" msprop:Generator_ColumnPropNameInTable="Document_No_Column" msprop:Generator_UserColumnName="Document No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Line_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnLine_No_" msprop:Generator_ColumnPropNameInRow="Line_No_" msprop:Generator_ColumnPropNameInTable="Line_No_Column" msprop:Generator_UserColumnName="Line No_" type="xs:int" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:int" minOccurs="0" />
+              <xs:element name="Posting_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnPosting_Group" msprop:Generator_ColumnPropNameInRow="Posting_Group" msprop:Generator_ColumnPropNameInTable="Posting_GroupColumn" msprop:Generator_UserColumnName="Posting Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description_x0020_2" msprop:Generator_ColumnVarNameInTable="columnDescription_2" msprop:Generator_ColumnPropNameInRow="Description_2" msprop:Generator_ColumnPropNameInTable="Description_2Column" msprop:Generator_UserColumnName="Description 2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_x0020_of_x0020_Measure" msprop:Generator_ColumnVarNameInTable="columnUnit_of_Measure" msprop:Generator_ColumnPropNameInRow="Unit_of_Measure" msprop:Generator_ColumnPropNameInTable="Unit_of_MeasureColumn" msprop:Generator_UserColumnName="Unit of Measure" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Unit_x0020_Price" msprop:Generator_ColumnVarNameInTable="columnUnit_Price" msprop:Generator_ColumnPropNameInRow="Unit_Price" msprop:Generator_ColumnPropNameInTable="Unit_PriceColumn" msprop:Generator_UserColumnName="Unit Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Unit_x0020_Cost_x0020__x0028_LCY_x0029_" msprop:Generator_ColumnVarNameInTable="_columnUnit_Cost__LCY_" msprop:Generator_ColumnPropNameInRow="_Unit_Cost__LCY_" msprop:Generator_ColumnPropNameInTable="_Unit_Cost__LCY_Column" msprop:Generator_UserColumnName="Unit Cost (LCY)" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VAT_x0020__" msprop:Generator_ColumnVarNameInTable="columnVAT__" msprop:Generator_ColumnPropNameInRow="VAT__" msprop:Generator_ColumnPropNameInTable="VAT__Column" msprop:Generator_UserColumnName="VAT _" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Line_x0020_Discount_x0020__" msprop:Generator_ColumnVarNameInTable="columnLine_Discount__" msprop:Generator_ColumnPropNameInRow="Line_Discount__" msprop:Generator_ColumnPropNameInTable="Line_Discount__Column" msprop:Generator_UserColumnName="Line Discount _" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Line_x0020_Discount_x0020_Amount" msprop:Generator_ColumnVarNameInTable="columnLine_Discount_Amount" msprop:Generator_ColumnPropNameInRow="Line_Discount_Amount" msprop:Generator_ColumnPropNameInTable="Line_Discount_AmountColumn" msprop:Generator_UserColumnName="Line Discount Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amount_x0020_Including_x0020_VAT" msprop:Generator_ColumnVarNameInTable="columnAmount_Including_VAT" msprop:Generator_ColumnPropNameInRow="Amount_Including_VAT" msprop:Generator_ColumnPropNameInTable="Amount_Including_VATColumn" msprop:Generator_UserColumnName="Amount Including VAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Allow_x0020_Invoice_x0020_Disc_" msprop:Generator_ColumnVarNameInTable="columnAllow_Invoice_Disc_" msprop:Generator_ColumnPropNameInRow="Allow_Invoice_Disc_" msprop:Generator_ColumnPropNameInTable="Allow_Invoice_Disc_Column" msprop:Generator_UserColumnName="Allow Invoice Disc_" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Gross_x0020_Weight" msprop:Generator_ColumnVarNameInTable="columnGross_Weight" msprop:Generator_ColumnPropNameInRow="Gross_Weight" msprop:Generator_ColumnPropNameInTable="Gross_WeightColumn" msprop:Generator_UserColumnName="Gross Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_x0020_Weight" msprop:Generator_ColumnVarNameInTable="columnNet_Weight" msprop:Generator_ColumnPropNameInRow="Net_Weight" msprop:Generator_ColumnPropNameInTable="Net_WeightColumn" msprop:Generator_UserColumnName="Net Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Units_x0020_per_x0020_Parcel" msprop:Generator_ColumnVarNameInTable="columnUnits_per_Parcel" msprop:Generator_ColumnPropNameInRow="Units_per_Parcel" msprop:Generator_ColumnPropNameInTable="Units_per_ParcelColumn" msprop:Generator_UserColumnName="Units per Parcel" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Unit_x0020_Volume" msprop:Generator_ColumnVarNameInTable="columnUnit_Volume" msprop:Generator_ColumnPropNameInRow="Unit_Volume" msprop:Generator_ColumnPropNameInTable="Unit_VolumeColumn" msprop:Generator_UserColumnName="Unit Volume" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Appl_-to_x0020_Item_x0020_Entry" msprop:Generator_ColumnVarNameInTable="_columnAppl__to_Item_Entry" msprop:Generator_ColumnPropNameInRow="_Appl__to_Item_Entry" msprop:Generator_ColumnPropNameInTable="_Appl__to_Item_EntryColumn" msprop:Generator_UserColumnName="Appl_-to Item Entry" type="xs:int" minOccurs="0" />
+              <xs:element name="Job_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnJob_No_" msprop:Generator_ColumnPropNameInRow="Job_No_" msprop:Generator_ColumnPropNameInTable="Job_No_Column" msprop:Generator_UserColumnName="Job No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Work_x0020_Type_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnWork_Type_Code" msprop:Generator_ColumnPropNameInRow="Work_Type_Code" msprop:Generator_ColumnPropNameInTable="Work_Type_CodeColumn" msprop:Generator_UserColumnName="Work Type Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shipment_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnShipment_No_" msprop:Generator_ColumnPropNameInRow="Shipment_No_" msprop:Generator_ColumnPropNameInTable="Shipment_No_Column" msprop:Generator_UserColumnName="Shipment No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shipment_x0020_Line_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnShipment_Line_No_" msprop:Generator_ColumnPropNameInRow="Shipment_Line_No_" msprop:Generator_ColumnPropNameInTable="Shipment_Line_No_Column" msprop:Generator_UserColumnName="Shipment Line No_" type="xs:int" minOccurs="0" />
+              <xs:element name="Inv__x0020_Discount_x0020_Amount" msprop:Generator_ColumnVarNameInTable="columnInv__Discount_Amount" msprop:Generator_ColumnPropNameInRow="Inv__Discount_Amount" msprop:Generator_ColumnPropNameInTable="Inv__Discount_AmountColumn" msprop:Generator_UserColumnName="Inv_ Discount Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Drop_x0020_Shipment" msprop:Generator_ColumnVarNameInTable="columnDrop_Shipment" msprop:Generator_ColumnPropNameInRow="Drop_Shipment" msprop:Generator_ColumnPropNameInTable="Drop_ShipmentColumn" msprop:Generator_UserColumnName="Drop Shipment" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Gen__x0020_Prod__x0020_Posting_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnGen__Prod__Posting_Group" msprop:Generator_ColumnPropNameInRow="Gen__Prod__Posting_Group" msprop:Generator_ColumnPropNameInTable="Gen__Prod__Posting_GroupColumn" msprop:Generator_UserColumnName="Gen_ Prod_ Posting Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VAT_x0020_Calculation_x0020_Type" msprop:Generator_ColumnVarNameInTable="columnVAT_Calculation_Type" msprop:Generator_ColumnPropNameInRow="VAT_Calculation_Type" msprop:Generator_ColumnPropNameInTable="VAT_Calculation_TypeColumn" msprop:Generator_UserColumnName="VAT Calculation Type" type="xs:int" minOccurs="0" />
+              <xs:element name="Attached_x0020_to_x0020_Line_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnAttached_to_Line_No_" msprop:Generator_ColumnPropNameInRow="Attached_to_Line_No_" msprop:Generator_ColumnPropNameInTable="Attached_to_Line_No_Column" msprop:Generator_UserColumnName="Attached to Line No_" type="xs:int" minOccurs="0" />
+              <xs:element name="Tax_x0020_Category" msprop:Generator_ColumnVarNameInTable="columnTax_Category" msprop:Generator_ColumnPropNameInRow="Tax_Category" msprop:Generator_ColumnPropNameInTable="Tax_CategoryColumn" msprop:Generator_UserColumnName="Tax Category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tax_x0020_Group_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnTax_Group_Code" msprop:Generator_ColumnPropNameInRow="Tax_Group_Code" msprop:Generator_ColumnPropNameInTable="Tax_Group_CodeColumn" msprop:Generator_UserColumnName="Tax Group Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VAT_x0020_Clause_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnVAT_Clause_Code" msprop:Generator_ColumnPropNameInRow="VAT_Clause_Code" msprop:Generator_ColumnPropNameInTable="VAT_Clause_CodeColumn" msprop:Generator_UserColumnName="VAT Clause Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VAT_x0020_Prod__x0020_Posting_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnVAT_Prod__Posting_Group" msprop:Generator_ColumnPropNameInRow="VAT_Prod__Posting_Group" msprop:Generator_ColumnPropNameInTable="VAT_Prod__Posting_GroupColumn" msprop:Generator_UserColumnName="VAT Prod_ Posting Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Blanket_x0020_Order_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnBlanket_Order_No_" msprop:Generator_ColumnPropNameInRow="Blanket_Order_No_" msprop:Generator_ColumnPropNameInTable="Blanket_Order_No_Column" msprop:Generator_UserColumnName="Blanket Order No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Blanket_x0020_Order_x0020_Line_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnBlanket_Order_Line_No_" msprop:Generator_ColumnPropNameInRow="Blanket_Order_Line_No_" msprop:Generator_ColumnPropNameInTable="Blanket_Order_Line_No_Column" msprop:Generator_UserColumnName="Blanket Order Line No_" type="xs:int" minOccurs="0" />
+              <xs:element name="VAT_x0020_Base_x0020_Amount" msprop:Generator_ColumnVarNameInTable="columnVAT_Base_Amount" msprop:Generator_ColumnPropNameInRow="VAT_Base_Amount" msprop:Generator_ColumnPropNameInTable="VAT_Base_AmountColumn" msprop:Generator_UserColumnName="VAT Base Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Unit_x0020_Cost" msprop:Generator_ColumnVarNameInTable="columnUnit_Cost" msprop:Generator_ColumnPropNameInRow="Unit_Cost" msprop:Generator_ColumnPropNameInTable="Unit_CostColumn" msprop:Generator_UserColumnName="Unit Cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="System-Created_x0020_Entry" msprop:Generator_ColumnVarNameInTable="_columnSystem_Created_Entry" msprop:Generator_ColumnPropNameInRow="_System_Created_Entry" msprop:Generator_ColumnPropNameInTable="_System_Created_EntryColumn" msprop:Generator_UserColumnName="System-Created Entry" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Line_x0020_Amount" msprop:Generator_ColumnVarNameInTable="columnLine_Amount" msprop:Generator_ColumnPropNameInRow="Line_Amount" msprop:Generator_ColumnPropNameInTable="Line_AmountColumn" msprop:Generator_UserColumnName="Line Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VAT_x0020_Difference" msprop:Generator_ColumnVarNameInTable="columnVAT_Difference" msprop:Generator_ColumnPropNameInRow="VAT_Difference" msprop:Generator_ColumnPropNameInTable="VAT_DifferenceColumn" msprop:Generator_UserColumnName="VAT Difference" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VAT_x0020_Identifier" msprop:Generator_ColumnVarNameInTable="columnVAT_Identifier" msprop:Generator_ColumnPropNameInRow="VAT_Identifier" msprop:Generator_ColumnPropNameInTable="VAT_IdentifierColumn" msprop:Generator_UserColumnName="VAT Identifier" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IC_x0020_Partner_x0020_Ref__x0020_Type" msprop:Generator_ColumnVarNameInTable="columnIC_Partner_Ref__Type" msprop:Generator_ColumnPropNameInRow="IC_Partner_Ref__Type" msprop:Generator_ColumnPropNameInTable="IC_Partner_Ref__TypeColumn" msprop:Generator_UserColumnName="IC Partner Ref_ Type" type="xs:int" minOccurs="0" />
+              <xs:element name="IC_x0020_Partner_x0020_Reference" msprop:Generator_ColumnVarNameInTable="columnIC_Partner_Reference" msprop:Generator_ColumnPropNameInRow="IC_Partner_Reference" msprop:Generator_ColumnPropNameInTable="IC_Partner_ReferenceColumn" msprop:Generator_UserColumnName="IC Partner Reference" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prepayment_x0020_Line" msprop:Generator_ColumnVarNameInTable="columnPrepayment_Line" msprop:Generator_ColumnPropNameInRow="Prepayment_Line" msprop:Generator_ColumnPropNameInTable="Prepayment_LineColumn" msprop:Generator_UserColumnName="Prepayment Line" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="IC_x0020_Partner_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnIC_Partner_Code" msprop:Generator_ColumnPropNameInRow="IC_Partner_Code" msprop:Generator_ColumnPropNameInTable="IC_Partner_CodeColumn" msprop:Generator_UserColumnName="IC Partner Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job_x0020_Task_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnJob_Task_No_" msprop:Generator_ColumnPropNameInRow="Job_Task_No_" msprop:Generator_ColumnPropNameInTable="Job_Task_No_Column" msprop:Generator_UserColumnName="Job Task No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job_x0020_Contract_x0020_Entry_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnJob_Contract_Entry_No_" msprop:Generator_ColumnPropNameInRow="Job_Contract_Entry_No_" msprop:Generator_ColumnPropNameInTable="Job_Contract_Entry_No_Column" msprop:Generator_UserColumnName="Job Contract Entry No_" type="xs:int" minOccurs="0" />
+              <xs:element name="Deferral_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnDeferral_Code" msprop:Generator_ColumnPropNameInRow="Deferral_Code" msprop:Generator_ColumnPropNameInTable="Deferral_CodeColumn" msprop:Generator_UserColumnName="Deferral Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Variant_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnVariant_Code" msprop:Generator_ColumnPropNameInRow="Variant_Code" msprop:Generator_ColumnPropNameInTable="Variant_CodeColumn" msprop:Generator_UserColumnName="Variant Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bin_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnBin_Code" msprop:Generator_ColumnPropNameInRow="Bin_Code" msprop:Generator_ColumnPropNameInTable="Bin_CodeColumn" msprop:Generator_UserColumnName="Bin Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qty__x0020_per_x0020_Unit_x0020_of_x0020_Measure" msprop:Generator_ColumnVarNameInTable="columnQty__per_Unit_of_Measure" msprop:Generator_ColumnPropNameInRow="Qty__per_Unit_of_Measure" msprop:Generator_ColumnPropNameInTable="Qty__per_Unit_of_MeasureColumn" msprop:Generator_UserColumnName="Qty_ per Unit of Measure" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Unit_x0020_of_x0020_Measure_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnUnit_of_Measure_Code" msprop:Generator_ColumnPropNameInRow="Unit_of_Measure_Code" msprop:Generator_ColumnPropNameInTable="Unit_of_Measure_CodeColumn" msprop:Generator_UserColumnName="Unit of Measure Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity_x0020__x0028_Base_x0029_" msprop:Generator_ColumnVarNameInTable="_columnQuantity__Base_" msprop:Generator_ColumnPropNameInRow="_Quantity__Base_" msprop:Generator_ColumnPropNameInTable="_Quantity__Base_Column" msprop:Generator_UserColumnName="Quantity (Base)" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FA_x0020_Posting_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnFA_Posting_Date" msprop:Generator_ColumnPropNameInRow="FA_Posting_Date" msprop:Generator_ColumnPropNameInTable="FA_Posting_DateColumn" msprop:Generator_UserColumnName="FA Posting Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Depreciation_x0020_Book_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnDepreciation_Book_Code" msprop:Generator_ColumnPropNameInRow="Depreciation_Book_Code" msprop:Generator_ColumnPropNameInTable="Depreciation_Book_CodeColumn" msprop:Generator_UserColumnName="Depreciation Book Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Depr__x0020_until_x0020_FA_x0020_Posting_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnDepr__until_FA_Posting_Date" msprop:Generator_ColumnPropNameInRow="Depr__until_FA_Posting_Date" msprop:Generator_ColumnPropNameInTable="Depr__until_FA_Posting_DateColumn" msprop:Generator_UserColumnName="Depr_ until FA Posting Date" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Duplicate_x0020_in_x0020_Depreciation_x0020_Book" msprop:Generator_ColumnVarNameInTable="columnDuplicate_in_Depreciation_Book" msprop:Generator_ColumnPropNameInRow="Duplicate_in_Depreciation_Book" msprop:Generator_ColumnPropNameInTable="Duplicate_in_Depreciation_BookColumn" msprop:Generator_UserColumnName="Duplicate in Depreciation Book" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Use_x0020_Duplication_x0020_List" msprop:Generator_ColumnVarNameInTable="columnUse_Duplication_List" msprop:Generator_ColumnPropNameInRow="Use_Duplication_List" msprop:Generator_ColumnPropNameInTable="Use_Duplication_ListColumn" msprop:Generator_UserColumnName="Use Duplication List" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Cross-Reference_x0020_No_" msprop:Generator_ColumnVarNameInTable="_columnCross_Reference_No_" msprop:Generator_ColumnPropNameInRow="_Cross_Reference_No_" msprop:Generator_ColumnPropNameInTable="_Cross_Reference_No_Column" msprop:Generator_UserColumnName="Cross-Reference No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_x0020_of_x0020_Measure_x0020__x0028_Cross_x0020_Ref__x0029_" msprop:Generator_ColumnVarNameInTable="_columnUnit_of_Measure__Cross_Ref__" msprop:Generator_ColumnPropNameInRow="_Unit_of_Measure__Cross_Ref__" msprop:Generator_ColumnPropNameInTable="_Unit_of_Measure__Cross_Ref__Column" msprop:Generator_UserColumnName="Unit of Measure (Cross Ref_)" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cross-Reference_x0020_Type" msprop:Generator_ColumnVarNameInTable="_columnCross_Reference_Type" msprop:Generator_ColumnPropNameInRow="_Cross_Reference_Type" msprop:Generator_ColumnPropNameInTable="_Cross_Reference_TypeColumn" msprop:Generator_UserColumnName="Cross-Reference Type" type="xs:int" minOccurs="0" />
+              <xs:element name="Cross-Reference_x0020_Type_x0020_No_" msprop:Generator_ColumnVarNameInTable="_columnCross_Reference_Type_No_" msprop:Generator_ColumnPropNameInRow="_Cross_Reference_Type_No_" msprop:Generator_ColumnPropNameInTable="_Cross_Reference_Type_No_Column" msprop:Generator_UserColumnName="Cross-Reference Type No_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_x0020_Category_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnItem_Category_Code" msprop:Generator_ColumnPropNameInRow="Item_Category_Code" msprop:Generator_ColumnPropNameInTable="Item_Category_CodeColumn" msprop:Generator_UserColumnName="Item Category Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nonstock" msprop:Generator_ColumnVarNameInTable="columnNonstock" msprop:Generator_ColumnPropNameInRow="Nonstock" msprop:Generator_ColumnPropNameInTable="NonstockColumn" msprop:Generator_UserColumnName="Nonstock" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Purchasing_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnPurchasing_Code" msprop:Generator_ColumnPropNameInRow="Purchasing_Code" msprop:Generator_ColumnPropNameInTable="Purchasing_CodeColumn" msprop:Generator_UserColumnName="Purchasing Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_x0020_Group_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnProduct_Group_Code" msprop:Generator_ColumnPropNameInRow="Product_Group_Code" msprop:Generator_ColumnPropNameInTable="Product_Group_CodeColumn" msprop:Generator_UserColumnName="Product Group Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Appl_-from_x0020_Item_x0020_Entry" msprop:Generator_ColumnVarNameInTable="_columnAppl__from_Item_Entry" msprop:Generator_ColumnPropNameInRow="_Appl__from_Item_Entry" msprop:Generator_ColumnPropNameInTable="_Appl__from_Item_EntryColumn" msprop:Generator_UserColumnName="Appl_-from Item Entry" type="xs:int" minOccurs="0" />
+              <xs:element name="Return_x0020_Reason_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnReturn_Reason_Code" msprop:Generator_ColumnPropNameInRow="Return_Reason_Code" msprop:Generator_ColumnPropNameInTable="Return_Reason_CodeColumn" msprop:Generator_UserColumnName="Return Reason Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Document_x0020_Line_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnDocument_Line_No_" msprop:Generator_ColumnPropNameInRow="Document_Line_No_" msprop:Generator_ColumnPropNameInTable="Document_Line_No_Column" msprop:Generator_UserColumnName="Document Line No_" type="xs:int" minOccurs="0" />
+              <xs:element name="Line_x0020_Discount_x0020_Calculation" msprop:Generator_ColumnVarNameInTable="columnLine_Discount_Calculation" msprop:Generator_ColumnPropNameInRow="Line_Discount_Calculation" msprop:Generator_ColumnPropNameInTable="Line_Discount_CalculationColumn" msprop:Generator_UserColumnName="Line Discount Calculation" type="xs:int" minOccurs="0" />
+              <xs:element name="Price_x0020_description" msprop:Generator_ColumnVarNameInTable="columnPrice_description" msprop:Generator_ColumnPropNameInRow="Price_description" msprop:Generator_ColumnPropNameInTable="Price_descriptionColumn" msprop:Generator_UserColumnName="Price description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InfoSAIPlusEmpresa" msprop:Generator_TableClassName="InfoSAIPlusEmpresaDataTable" msprop:Generator_TableVarName="tableInfoSAIPlusEmpresa" msprop:Generator_RowChangedName="InfoSAIPlusEmpresaRowChanged" msprop:Generator_TablePropName="InfoSAIPlusEmpresa" msprop:Generator_RowDeletingName="InfoSAIPlusEmpresaRowDeleting" msprop:Generator_RowChangingName="InfoSAIPlusEmpresaRowChanging" msprop:Generator_RowEvHandlerName="InfoSAIPlusEmpresaRowChangeEventHandler" msprop:Generator_RowDeletedName="InfoSAIPlusEmpresaRowDeleted" msprop:Generator_RowClassName="InfoSAIPlusEmpresaRow" msprop:Generator_UserTableName="InfoSAIPlusEmpresa" msprop:Generator_RowEvArgName="InfoSAIPlusEmpresaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmpresaNav" msprop:Generator_ColumnVarNameInTable="columnEmpresaNav" msprop:Generator_ColumnPropNameInRow="EmpresaNav" msprop:Generator_ColumnPropNameInTable="EmpresaNavColumn" msprop:Generator_UserColumnName="EmpresaNav">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodClie" msprop:Generator_ColumnVarNameInTable="columnCodClie" msprop:Generator_ColumnPropNameInRow="CodClie" msprop:Generator_ColumnPropNameInTable="CodClieColumn" msprop:Generator_UserColumnName="CodClie" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CABANA" msprop:Generator_ColumnVarNameInTable="columnCABANA" msprop:Generator_ColumnPropNameInRow="CABANA" msprop:Generator_ColumnPropNameInTable="CABANAColumn" msprop:Generator_UserColumnName="CABANA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClieCABANA" msprop:Generator_ColumnVarNameInTable="columnClieCABANA" msprop:Generator_ColumnPropNameInRow="ClieCABANA" msprop:Generator_ColumnPropNameInTable="ClieCABANAColumn" msprop:Generator_UserColumnName="ClieCABANA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodEmpresa" msprop:Generator_ColumnVarNameInTable="columnCodEmpresa" msprop:Generator_ColumnPropNameInRow="CodEmpresa" msprop:Generator_ColumnPropNameInTable="CodEmpresaColumn" msprop:Generator_UserColumnName="CodEmpresa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LACABANAVendor" msprop:Generator_TableClassName="LACABANAVendorDataTable" msprop:Generator_TableVarName="tableLACABANAVendor" msprop:Generator_RowChangedName="LACABANAVendorRowChanged" msprop:Generator_TablePropName="LACABANAVendor" msprop:Generator_RowDeletingName="LACABANAVendorRowDeleting" msprop:Generator_RowChangingName="LACABANAVendorRowChanging" msprop:Generator_RowEvHandlerName="LACABANAVendorRowChangeEventHandler" msprop:Generator_RowDeletedName="LACABANAVendorRowDeleted" msprop:Generator_RowClassName="LACABANAVendorRow" msprop:Generator_UserTableName="LACABANAVendor" msprop:Generator_RowEvArgName="LACABANAVendorRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="timestamp" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntimestamp" msprop:Generator_ColumnPropNameInRow="timestamp" msprop:Generator_ColumnPropNameInTable="timestampColumn" msprop:Generator_UserColumnName="timestamp" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="No_" msprop:Generator_ColumnVarNameInTable="columnNo_" msprop:Generator_ColumnPropNameInRow="No_" msprop:Generator_ColumnPropNameInTable="No_Column" msprop:Generator_UserColumnName="No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Search_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnSearch_Name" msprop:Generator_ColumnPropNameInRow="Search_Name" msprop:Generator_ColumnPropNameInTable="Search_NameColumn" msprop:Generator_UserColumnName="Search Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_x0020_2" msprop:Generator_ColumnVarNameInTable="columnName_2" msprop:Generator_ColumnPropNameInRow="Name_2" msprop:Generator_ColumnPropNameInTable="Name_2Column" msprop:Generator_UserColumnName="Name 2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address_x0020_2" msprop:Generator_ColumnVarNameInTable="columnAddress_2" msprop:Generator_ColumnPropNameInRow="Address_2" msprop:Generator_ColumnPropNameInTable="Address_2Column" msprop:Generator_UserColumnName="Address 2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnPhone_No_" msprop:Generator_ColumnPropNameInRow="Phone_No_" msprop:Generator_ColumnPropNameInTable="Phone_No_Column" msprop:Generator_UserColumnName="Phone No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telex_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnTelex_No_" msprop:Generator_ColumnPropNameInRow="Telex_No_" msprop:Generator_ColumnPropNameInTable="Telex_No_Column" msprop:Generator_UserColumnName="Telex No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Our_x0020_Account_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnOur_Account_No_" msprop:Generator_ColumnPropNameInRow="Our_Account_No_" msprop:Generator_ColumnPropNameInTable="Our_Account_No_Column" msprop:Generator_UserColumnName="Our Account No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Territory_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnTerritory_Code" msprop:Generator_ColumnPropNameInRow="Territory_Code" msprop:Generator_ColumnPropNameInTable="Territory_CodeColumn" msprop:Generator_UserColumnName="Territory Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Global_x0020_Dimension_x0020_1_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnGlobal_Dimension_1_Code" msprop:Generator_ColumnPropNameInRow="Global_Dimension_1_Code" msprop:Generator_ColumnPropNameInTable="Global_Dimension_1_CodeColumn" msprop:Generator_UserColumnName="Global Dimension 1 Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Global_x0020_Dimension_x0020_2_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnGlobal_Dimension_2_Code" msprop:Generator_ColumnPropNameInRow="Global_Dimension_2_Code" msprop:Generator_ColumnPropNameInTable="Global_Dimension_2_CodeColumn" msprop:Generator_UserColumnName="Global Dimension 2 Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Budgeted_x0020_Amount" msprop:Generator_ColumnVarNameInTable="columnBudgeted_Amount" msprop:Generator_ColumnPropNameInRow="Budgeted_Amount" msprop:Generator_ColumnPropNameInTable="Budgeted_AmountColumn" msprop:Generator_UserColumnName="Budgeted Amount" type="xs:decimal" />
+              <xs:element name="Vendor_x0020_Posting_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnVendor_Posting_Group" msprop:Generator_ColumnPropNameInRow="Vendor_Posting_Group" msprop:Generator_ColumnPropNameInTable="Vendor_Posting_GroupColumn" msprop:Generator_UserColumnName="Vendor Posting Group">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Currency_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnCurrency_Code" msprop:Generator_ColumnPropNameInRow="Currency_Code" msprop:Generator_ColumnPropNameInTable="Currency_CodeColumn" msprop:Generator_UserColumnName="Currency Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Language_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnLanguage_Code" msprop:Generator_ColumnPropNameInRow="Language_Code" msprop:Generator_ColumnPropNameInTable="Language_CodeColumn" msprop:Generator_UserColumnName="Language Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Statistics_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnStatistics_Group" msprop:Generator_ColumnPropNameInRow="Statistics_Group" msprop:Generator_ColumnPropNameInTable="Statistics_GroupColumn" msprop:Generator_UserColumnName="Statistics Group" type="xs:int" />
+              <xs:element name="Payment_x0020_Terms_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnPayment_Terms_Code" msprop:Generator_ColumnPropNameInRow="Payment_Terms_Code" msprop:Generator_ColumnPropNameInTable="Payment_Terms_CodeColumn" msprop:Generator_UserColumnName="Payment Terms Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fin__x0020_Charge_x0020_Terms_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnFin__Charge_Terms_Code" msprop:Generator_ColumnPropNameInRow="Fin__Charge_Terms_Code" msprop:Generator_ColumnPropNameInTable="Fin__Charge_Terms_CodeColumn" msprop:Generator_UserColumnName="Fin_ Charge Terms Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Purchaser_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnPurchaser_Code" msprop:Generator_ColumnPropNameInRow="Purchaser_Code" msprop:Generator_ColumnPropNameInTable="Purchaser_CodeColumn" msprop:Generator_UserColumnName="Purchaser Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shipment_x0020_Method_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnShipment_Method_Code" msprop:Generator_ColumnPropNameInRow="Shipment_Method_Code" msprop:Generator_ColumnPropNameInTable="Shipment_Method_CodeColumn" msprop:Generator_UserColumnName="Shipment Method Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shipping_x0020_Agent_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnShipping_Agent_Code" msprop:Generator_ColumnPropNameInRow="Shipping_Agent_Code" msprop:Generator_ColumnPropNameInTable="Shipping_Agent_CodeColumn" msprop:Generator_UserColumnName="Shipping Agent Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Invoice_x0020_Disc__x0020_Code" msprop:Generator_ColumnVarNameInTable="columnInvoice_Disc__Code" msprop:Generator_ColumnPropNameInRow="Invoice_Disc__Code" msprop:Generator_ColumnPropNameInTable="Invoice_Disc__CodeColumn" msprop:Generator_UserColumnName="Invoice Disc_ Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Country_Region_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnCountry_Region_Code" msprop:Generator_ColumnPropNameInRow="Country_Region_Code" msprop:Generator_ColumnPropNameInTable="Country_Region_CodeColumn" msprop:Generator_UserColumnName="Country_Region Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Blocked" msprop:Generator_ColumnVarNameInTable="columnBlocked" msprop:Generator_ColumnPropNameInRow="Blocked" msprop:Generator_ColumnPropNameInTable="BlockedColumn" msprop:Generator_UserColumnName="Blocked" type="xs:int" />
+              <xs:element name="Pay-to_x0020_Vendor_x0020_No_" msprop:Generator_ColumnVarNameInTable="_columnPay_to_Vendor_No_" msprop:Generator_ColumnPropNameInRow="_Pay_to_Vendor_No_" msprop:Generator_ColumnPropNameInTable="_Pay_to_Vendor_No_Column" msprop:Generator_UserColumnName="Pay-to Vendor No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Priority" msprop:Generator_ColumnVarNameInTable="columnPriority" msprop:Generator_ColumnPropNameInRow="Priority" msprop:Generator_ColumnPropNameInTable="PriorityColumn" msprop:Generator_UserColumnName="Priority" type="xs:int" />
+              <xs:element name="Payment_x0020_Method_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnPayment_Method_Code" msprop:Generator_ColumnPropNameInRow="Payment_Method_Code" msprop:Generator_ColumnPropNameInTable="Payment_Method_CodeColumn" msprop:Generator_UserColumnName="Payment Method Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Last_x0020_Modified_x0020_Date_x0020_Time" msprop:Generator_ColumnVarNameInTable="columnLast_Modified_Date_Time" msprop:Generator_ColumnPropNameInRow="Last_Modified_Date_Time" msprop:Generator_ColumnPropNameInTable="Last_Modified_Date_TimeColumn" msprop:Generator_UserColumnName="Last Modified Date Time" type="xs:dateTime" />
+              <xs:element name="Last_x0020_Date_x0020_Modified" msprop:Generator_ColumnVarNameInTable="columnLast_Date_Modified" msprop:Generator_ColumnPropNameInRow="Last_Date_Modified" msprop:Generator_ColumnPropNameInTable="Last_Date_ModifiedColumn" msprop:Generator_UserColumnName="Last Date Modified" type="xs:dateTime" />
+              <xs:element name="Application_x0020_Method" msprop:Generator_ColumnVarNameInTable="columnApplication_Method" msprop:Generator_ColumnPropNameInRow="Application_Method" msprop:Generator_ColumnPropNameInTable="Application_MethodColumn" msprop:Generator_UserColumnName="Application Method" type="xs:int" />
+              <xs:element name="Prices_x0020_Including_x0020_VAT" msprop:Generator_ColumnVarNameInTable="columnPrices_Including_VAT" msprop:Generator_ColumnPropNameInRow="Prices_Including_VAT" msprop:Generator_ColumnPropNameInTable="Prices_Including_VATColumn" msprop:Generator_UserColumnName="Prices Including VAT" type="xs:unsignedByte" />
+              <xs:element name="Fax_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnFax_No_" msprop:Generator_ColumnPropNameInRow="Fax_No_" msprop:Generator_ColumnPropNameInTable="Fax_No_Column" msprop:Generator_UserColumnName="Fax No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telex_x0020_Answer_x0020_Back" msprop:Generator_ColumnVarNameInTable="columnTelex_Answer_Back" msprop:Generator_ColumnPropNameInRow="Telex_Answer_Back" msprop:Generator_ColumnPropNameInTable="Telex_Answer_BackColumn" msprop:Generator_UserColumnName="Telex Answer Back">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VAT_x0020_Registration_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnVAT_Registration_No_" msprop:Generator_ColumnPropNameInRow="VAT_Registration_No_" msprop:Generator_ColumnPropNameInTable="VAT_Registration_No_Column" msprop:Generator_UserColumnName="VAT Registration No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gen__x0020_Bus__x0020_Posting_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnGen__Bus__Posting_Group" msprop:Generator_ColumnPropNameInRow="Gen__Bus__Posting_Group" msprop:Generator_ColumnPropNameInTable="Gen__Bus__Posting_GroupColumn" msprop:Generator_UserColumnName="Gen_ Bus_ Posting Group">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Picture" msprop:Generator_ColumnVarNameInTable="columnPicture" msprop:Generator_ColumnPropNameInRow="Picture" msprop:Generator_ColumnPropNameInTable="PictureColumn" msprop:Generator_UserColumnName="Picture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="GLN" msprop:Generator_ColumnVarNameInTable="columnGLN" msprop:Generator_ColumnPropNameInRow="GLN" msprop:Generator_ColumnPropNameInTable="GLNColumn" msprop:Generator_UserColumnName="GLN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Post_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnPost_Code" msprop:Generator_ColumnPropNameInRow="Post_Code" msprop:Generator_ColumnPropNameInTable="Post_CodeColumn" msprop:Generator_UserColumnName="Post Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="County" msprop:Generator_ColumnVarNameInTable="columnCounty" msprop:Generator_ColumnPropNameInRow="County" msprop:Generator_ColumnPropNameInTable="CountyColumn" msprop:Generator_UserColumnName="County">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="E-Mail" msprop:Generator_ColumnVarNameInTable="_columnE_Mail" msprop:Generator_ColumnPropNameInRow="_E_Mail" msprop:Generator_ColumnPropNameInTable="_E_MailColumn" msprop:Generator_UserColumnName="E-Mail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Home_x0020_Page" msprop:Generator_ColumnVarNameInTable="columnHome_Page" msprop:Generator_ColumnPropNameInRow="Home_Page" msprop:Generator_ColumnPropNameInTable="Home_PageColumn" msprop:Generator_UserColumnName="Home Page">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No__x0020_Series" msprop:Generator_ColumnVarNameInTable="columnNo__Series" msprop:Generator_ColumnPropNameInRow="No__Series" msprop:Generator_ColumnPropNameInTable="No__SeriesColumn" msprop:Generator_UserColumnName="No_ Series">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tax_x0020_Area_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnTax_Area_Code" msprop:Generator_ColumnPropNameInRow="Tax_Area_Code" msprop:Generator_ColumnPropNameInTable="Tax_Area_CodeColumn" msprop:Generator_UserColumnName="Tax Area Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tax_x0020_Liable" msprop:Generator_ColumnVarNameInTable="columnTax_Liable" msprop:Generator_ColumnPropNameInRow="Tax_Liable" msprop:Generator_ColumnPropNameInTable="Tax_LiableColumn" msprop:Generator_UserColumnName="Tax Liable" type="xs:unsignedByte" />
+              <xs:element name="VAT_x0020_Bus__x0020_Posting_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnVAT_Bus__Posting_Group" msprop:Generator_ColumnPropNameInRow="VAT_Bus__Posting_Group" msprop:Generator_ColumnPropNameInTable="VAT_Bus__Posting_GroupColumn" msprop:Generator_UserColumnName="VAT Bus_ Posting Group">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Block_x0020_Payment_x0020_Tolerance" msprop:Generator_ColumnVarNameInTable="columnBlock_Payment_Tolerance" msprop:Generator_ColumnPropNameInRow="Block_Payment_Tolerance" msprop:Generator_ColumnPropNameInTable="Block_Payment_ToleranceColumn" msprop:Generator_UserColumnName="Block Payment Tolerance" type="xs:unsignedByte" />
+              <xs:element name="IC_x0020_Partner_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnIC_Partner_Code" msprop:Generator_ColumnPropNameInRow="IC_Partner_Code" msprop:Generator_ColumnPropNameInTable="IC_Partner_CodeColumn" msprop:Generator_UserColumnName="IC Partner Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prepayment_x0020__" msprop:Generator_ColumnVarNameInTable="columnPrepayment__" msprop:Generator_ColumnPropNameInRow="Prepayment__" msprop:Generator_ColumnPropNameInTable="Prepayment__Column" msprop:Generator_UserColumnName="Prepayment _" type="xs:decimal" />
+              <xs:element name="Partner_x0020_Type" msprop:Generator_ColumnVarNameInTable="columnPartner_Type" msprop:Generator_ColumnPropNameInRow="Partner_Type" msprop:Generator_ColumnPropNameInTable="Partner_TypeColumn" msprop:Generator_UserColumnName="Partner Type" type="xs:int" />
+              <xs:element name="Image" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnImage" msprop:Generator_ColumnPropNameInRow="Image" msprop:Generator_ColumnPropNameInTable="ImageColumn" msprop:Generator_UserColumnName="Image" type="xs:string" />
+              <xs:element name="Privacy_x0020_Blocked" msprop:Generator_ColumnVarNameInTable="columnPrivacy_Blocked" msprop:Generator_ColumnPropNameInRow="Privacy_Blocked" msprop:Generator_ColumnPropNameInTable="Privacy_BlockedColumn" msprop:Generator_UserColumnName="Privacy Blocked" type="xs:unsignedByte" />
+              <xs:element name="Creditor_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnCreditor_No_" msprop:Generator_ColumnPropNameInRow="Creditor_No_" msprop:Generator_ColumnPropNameInTable="Creditor_No_Column" msprop:Generator_UserColumnName="Creditor No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Preferred_x0020_Bank_x0020_Account" msprop:Generator_ColumnVarNameInTable="columnPreferred_Bank_Account" msprop:Generator_ColumnPropNameInRow="Preferred_Bank_Account" msprop:Generator_ColumnPropNameInTable="Preferred_Bank_AccountColumn" msprop:Generator_UserColumnName="Preferred Bank Account">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cash_x0020_Flow_x0020_Payment_x0020_Terms_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnCash_Flow_Payment_Terms_Code" msprop:Generator_ColumnPropNameInRow="Cash_Flow_Payment_Terms_Code" msprop:Generator_ColumnPropNameInTable="Cash_Flow_Payment_Terms_CodeColumn" msprop:Generator_UserColumnName="Cash Flow Payment Terms Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Primary_x0020_Contact_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnPrimary_Contact_No_" msprop:Generator_ColumnPropNameInRow="Primary_Contact_No_" msprop:Generator_ColumnPropNameInTable="Primary_Contact_No_Column" msprop:Generator_UserColumnName="Primary Contact No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Responsibility_x0020_Center" msprop:Generator_ColumnVarNameInTable="columnResponsibility_Center" msprop:Generator_ColumnPropNameInRow="Responsibility_Center" msprop:Generator_ColumnPropNameInTable="Responsibility_CenterColumn" msprop:Generator_UserColumnName="Responsibility Center">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Location_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnLocation_Code" msprop:Generator_ColumnPropNameInRow="Location_Code" msprop:Generator_ColumnPropNameInTable="Location_CodeColumn" msprop:Generator_UserColumnName="Location Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lead_x0020_Time_x0020_Calculation" msprop:Generator_ColumnVarNameInTable="columnLead_Time_Calculation" msprop:Generator_ColumnPropNameInRow="Lead_Time_Calculation" msprop:Generator_ColumnPropNameInTable="Lead_Time_CalculationColumn" msprop:Generator_UserColumnName="Lead Time Calculation">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Base_x0020_Calendar_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnBase_Calendar_Code" msprop:Generator_ColumnPropNameInRow="Base_Calendar_Code" msprop:Generator_ColumnPropNameInTable="Base_Calendar_CodeColumn" msprop:Generator_UserColumnName="Base Calendar Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Document_x0020_Sending_x0020_Profile" msprop:Generator_ColumnVarNameInTable="columnDocument_Sending_Profile" msprop:Generator_ColumnPropNameInRow="Document_Sending_Profile" msprop:Generator_ColumnPropNameInTable="Document_Sending_ProfileColumn" msprop:Generator_UserColumnName="Document Sending Profile">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Validate_x0020_EU_x0020_Vat_x0020_Reg__x0020_No_" msprop:Generator_ColumnVarNameInTable="columnValidate_EU_Vat_Reg__No_" msprop:Generator_ColumnPropNameInRow="Validate_EU_Vat_Reg__No_" msprop:Generator_ColumnPropNameInTable="Validate_EU_Vat_Reg__No_Column" msprop:Generator_UserColumnName="Validate EU Vat Reg_ No_" type="xs:unsignedByte" />
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" />
+              <xs:element name="Currency_x0020_Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnCurrency_Id" msprop:Generator_ColumnPropNameInRow="Currency_Id" msprop:Generator_ColumnPropNameInTable="Currency_IdColumn" msprop:Generator_UserColumnName="Currency Id" type="xs:string" />
+              <xs:element name="Payment_x0020_Terms_x0020_Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPayment_Terms_Id" msprop:Generator_ColumnPropNameInRow="Payment_Terms_Id" msprop:Generator_ColumnPropNameInTable="Payment_Terms_IdColumn" msprop:Generator_UserColumnName="Payment Terms Id" type="xs:string" />
+              <xs:element name="Payment_x0020_Method_x0020_Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPayment_Method_Id" msprop:Generator_ColumnPropNameInRow="Payment_Method_Id" msprop:Generator_ColumnPropNameInTable="Payment_Method_IdColumn" msprop:Generator_UserColumnName="Payment Method Id" type="xs:string" />
+              <xs:element name="UPS_x0020_Zone" msprop:Generator_ColumnVarNameInTable="columnUPS_Zone" msprop:Generator_ColumnPropNameInRow="UPS_Zone" msprop:Generator_ColumnPropNameInTable="UPS_ZoneColumn" msprop:Generator_UserColumnName="UPS Zone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Federal_x0020_ID_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnFederal_ID_No_" msprop:Generator_ColumnPropNameInRow="Federal_ID_No_" msprop:Generator_ColumnPropNameInTable="Federal_ID_No_Column" msprop:Generator_UserColumnName="Federal ID No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bank_x0020_Communication" msprop:Generator_ColumnVarNameInTable="columnBank_Communication" msprop:Generator_ColumnPropNameInRow="Bank_Communication" msprop:Generator_ColumnPropNameInTable="Bank_CommunicationColumn" msprop:Generator_UserColumnName="Bank Communication" type="xs:int" />
+              <xs:element name="Check_x0020_Date_x0020_Format" msprop:Generator_ColumnVarNameInTable="columnCheck_Date_Format" msprop:Generator_ColumnPropNameInRow="Check_Date_Format" msprop:Generator_ColumnPropNameInTable="Check_Date_FormatColumn" msprop:Generator_UserColumnName="Check Date Format" type="xs:int" />
+              <xs:element name="Check_x0020_Date_x0020_Separator" msprop:Generator_ColumnVarNameInTable="columnCheck_Date_Separator" msprop:Generator_ColumnPropNameInRow="Check_Date_Separator" msprop:Generator_ColumnPropNameInTable="Check_Date_SeparatorColumn" msprop:Generator_UserColumnName="Check Date Separator" type="xs:int" />
+              <xs:element name="IRS_x0020_1099_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnIRS_1099_Code" msprop:Generator_ColumnPropNameInRow="IRS_1099_Code" msprop:Generator_ColumnPropNameInTable="IRS_1099_CodeColumn" msprop:Generator_UserColumnName="IRS 1099 Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFC_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnRFC_No_" msprop:Generator_ColumnPropNameInRow="RFC_No_" msprop:Generator_ColumnPropNameInTable="RFC_No_Column" msprop:Generator_UserColumnName="RFC No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CURP_x0020_No_" msprop:Generator_ColumnVarNameInTable="columnCURP_No_" msprop:Generator_ColumnPropNameInRow="CURP_No_" msprop:Generator_ColumnPropNameInTable="CURP_No_Column" msprop:Generator_UserColumnName="CURP No_">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="State_x0020_Inscription" msprop:Generator_ColumnVarNameInTable="columnState_Inscription" msprop:Generator_ColumnPropNameInRow="State_Inscription" msprop:Generator_ColumnPropNameInTable="State_InscriptionColumn" msprop:Generator_UserColumnName="State Inscription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FATCA_x0020_filing_x0020_requirement" msprop:Generator_ColumnVarNameInTable="columnFATCA_filing_requirement" msprop:Generator_ColumnPropNameInRow="FATCA_filing_requirement" msprop:Generator_ColumnPropNameInTable="FATCA_filing_requirementColumn" msprop:Generator_UserColumnName="FATCA filing requirement" type="xs:unsignedByte" />
+              <xs:element name="Withholding_x0020_Tax_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnWithholding_Tax_Code" msprop:Generator_ColumnPropNameInRow="Withholding_Tax_Code" msprop:Generator_ColumnPropNameInTable="Withholding_Tax_CodeColumn" msprop:Generator_UserColumnName="Withholding Tax Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tax_x0020_Identification_x0020_Type" msprop:Generator_ColumnVarNameInTable="columnTax_Identification_Type" msprop:Generator_ColumnPropNameInRow="Tax_Identification_Type" msprop:Generator_ColumnPropNameInTable="Tax_Identification_TypeColumn" msprop:Generator_UserColumnName="Tax Identification Type" type="xs:int" />
+              <xs:element name="Contributor_x0020_Type" msprop:Generator_ColumnVarNameInTable="columnContributor_Type" msprop:Generator_ColumnPropNameInRow="Contributor_Type" msprop:Generator_ColumnPropNameInTable="Contributor_TypeColumn" msprop:Generator_UserColumnName="Contributor Type" type="xs:int" />
+              <xs:element name="Favorite_x0020_Doc" msprop:Generator_ColumnVarNameInTable="columnFavorite_Doc" msprop:Generator_ColumnPropNameInRow="Favorite_Doc" msprop:Generator_ColumnPropNameInTable="Favorite_DocColumn" msprop:Generator_UserColumnName="Favorite Doc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GIRO" msprop:Generator_ColumnVarNameInTable="columnGIRO" msprop:Generator_ColumnPropNameInRow="GIRO" msprop:Generator_ColumnPropNameInTable="GIROColumn" msprop:Generator_UserColumnName="GIRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Other_x0020_Doc" msprop:Generator_ColumnVarNameInTable="columnOther_Doc" msprop:Generator_ColumnPropNameInRow="Other_Doc" msprop:Generator_ColumnPropNameInTable="Other_DocColumn" msprop:Generator_UserColumnName="Other Doc" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:InfoSAIPlusEmpresa" />
+      <xs:field xpath="mstns:EmpresaNav" />
+    </xs:unique>
+    <xs:unique name="LACABANAVendor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LACABANAVendor" />
+      <xs:field xpath="mstns:No_" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1645 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="NAV" xmlns="http://schemas.microsoft.com/ado/2007/05/edm">
+      <EntityType Name="A_F_Diario">
+        <Key>
+          <PropertyRef Name="Journal_Batch_Name" />
+          <PropertyRef Name="Journal_Template_Name" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Journal_Template_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Journal_Batch_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FA_Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Type" Type="Edm.String" />
+        <Property Name="Document_No" Type="Edm.String" />
+        <Property Name="FA_No" Type="Edm.String" />
+        <Property Name="Depreciation_Book_Code" Type="Edm.String" />
+        <Property Name="FA_Posting_Type" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Amount" Type="Edm.Decimal" />
+        <Property Name="Debit_Amount" Type="Edm.Decimal" />
+        <Property Name="Credit_Amount" Type="Edm.Decimal" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="Salvage_Value" Type="Edm.Decimal" />
+        <Property Name="No_of_Depreciation_Days" Type="Edm.Int32" />
+        <Property Name="Depr_until_FA_Posting_Date" Type="Edm.Boolean" />
+        <Property Name="Depr_Acquisition_Cost" Type="Edm.Boolean" />
+        <Property Name="Maintenance_Code" Type="Edm.String" />
+        <Property Name="Insurance_No" Type="Edm.String" />
+        <Property Name="Budgeted_FA_No" Type="Edm.String" />
+        <Property Name="Duplicate_in_Depreciation_Book" Type="Edm.String" />
+        <Property Name="Use_Duplication_List" Type="Edm.Boolean" />
+        <Property Name="FA_Reclassification_Entry" Type="Edm.Boolean" />
+        <Property Name="FA_Error_Entry_No" Type="Edm.Int32" />
+        <Property Name="FADescription" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="A_F_Diario_activos">
+        <Key>
+          <PropertyRef Name="Journal_Batch_Name" />
+          <PropertyRef Name="Journal_Template_Name" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Journal_Template_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Journal_Batch_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FA_Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Type" Type="Edm.String" />
+        <Property Name="Document_No" Type="Edm.String" />
+        <Property Name="FA_No" Type="Edm.String" />
+        <Property Name="Depreciation_Book_Code" Type="Edm.String" />
+        <Property Name="FA_Posting_Type" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Amount" Type="Edm.Decimal" />
+        <Property Name="Debit_Amount" Type="Edm.Decimal" />
+        <Property Name="Credit_Amount" Type="Edm.Decimal" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="Salvage_Value" Type="Edm.Decimal" />
+        <Property Name="No_of_Depreciation_Days" Type="Edm.Int32" />
+        <Property Name="Depr_until_FA_Posting_Date" Type="Edm.Boolean" />
+        <Property Name="Depr_Acquisition_Cost" Type="Edm.Boolean" />
+        <Property Name="Maintenance_Code" Type="Edm.String" />
+        <Property Name="Insurance_No" Type="Edm.String" />
+        <Property Name="Budgeted_FA_No" Type="Edm.String" />
+        <Property Name="Duplicate_in_Depreciation_Book" Type="Edm.String" />
+        <Property Name="Use_Duplication_List" Type="Edm.Boolean" />
+        <Property Name="FA_Reclassification_Entry" Type="Edm.Boolean" />
+        <Property Name="FA_Error_Entry_No" Type="Edm.Int32" />
+        <Property Name="FADescription" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="A_F_Diario_general">
+        <Key>
+          <PropertyRef Name="Journal_Batch_Name" />
+          <PropertyRef Name="Journal_Template_Name" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Journal_Template_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Journal_Batch_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Type" Type="Edm.String" />
+        <Property Name="Document_No" Type="Edm.String" />
+        <Property Name="External_Document_No" Type="Edm.String" />
+        <Property Name="Account_Type" Type="Edm.String" />
+        <Property Name="Account_No" Type="Edm.String" />
+        <Property Name="Depreciation_Book_Code" Type="Edm.String" />
+        <Property Name="FA_Posting_Type" Type="Edm.String" />
+        <Property Name="GetAddCurrCode" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Business_Unit_Code" Type="Edm.String" />
+        <Property Name="Salespers_Purch_Code" Type="Edm.String" />
+        <Property Name="Campaign_No" Type="Edm.String" />
+        <Property Name="Currency_Code" Type="Edm.String" />
+        <Property Name="Gen_Posting_Type" Type="Edm.String" />
+        <Property Name="Gen_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="Gen_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="VAT_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="VAT_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Amount" Type="Edm.Decimal" />
+        <Property Name="Debit_Amount" Type="Edm.Decimal" />
+        <Property Name="Credit_Amount" Type="Edm.Decimal" />
+        <Property Name="VAT_Amount" Type="Edm.Decimal" />
+        <Property Name="VAT_Difference" Type="Edm.Decimal" />
+        <Property Name="Bal_VAT_Amount" Type="Edm.Decimal" />
+        <Property Name="Bal_VAT_Difference" Type="Edm.Decimal" />
+        <Property Name="Bal_Account_Type" Type="Edm.String" />
+        <Property Name="Bal_Account_No" Type="Edm.String" />
+        <Property Name="Bal_Gen_Posting_Type" Type="Edm.String" />
+        <Property Name="Bal_Gen_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Bal_VAT_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="Bal_VAT_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Bal_Gen_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="Payment_Terms_Code" Type="Edm.String" />
+        <Property Name="Applies_to_Doc_Type" Type="Edm.String" />
+        <Property Name="Applies_to_Doc_No" Type="Edm.String" />
+        <Property Name="Applies_to_ID" Type="Edm.String" />
+        <Property Name="On_Hold" Type="Edm.String" />
+        <Property Name="Bank_Payment_Type" Type="Edm.String" />
+        <Property Name="Reason_Code" Type="Edm.String" />
+        <Property Name="FA_Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="Salvage_Value" Type="Edm.Decimal" />
+        <Property Name="No_of_Depreciation_Days" Type="Edm.Int32" />
+        <Property Name="Depr_until_FA_Posting_Date" Type="Edm.Boolean" />
+        <Property Name="Depr_Acquisition_Cost" Type="Edm.Boolean" />
+        <Property Name="Maintenance_Code" Type="Edm.String" />
+        <Property Name="Insurance_No" Type="Edm.String" />
+        <Property Name="Budgeted_FA_No" Type="Edm.String" />
+        <Property Name="Duplicate_in_Depreciation_Book" Type="Edm.String" />
+        <Property Name="Use_Duplication_List" Type="Edm.Boolean" />
+        <Property Name="FA_Reclassification_Entry" Type="Edm.Boolean" />
+        <Property Name="FA_Error_Entry_No" Type="Edm.Int32" />
+        <Property Name="AccName" Type="Edm.String" />
+        <Property Name="BalAccountName" Type="Edm.String" />
+        <Property Name="Balance" Type="Edm.Decimal" />
+        <Property Name="TotalBalance" Type="Edm.Decimal" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="Activo">
+        <Key>
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="FA_Class_Code" Type="Edm.String" />
+        <Property Name="FA_Subclass_Code" Type="Edm.String" />
+        <Property Name="FA_Location_Code" Type="Edm.String" />
+        <Property Name="Budgeted_Asset" Type="Edm.Boolean" />
+        <Property Name="Serial_No" Type="Edm.String" />
+        <Property Name="Main_Asset_Component" Type="Edm.String" />
+        <Property Name="Component_of_Main_Asset" Type="Edm.String" />
+        <Property Name="Search_Description" Type="Edm.String" />
+        <Property Name="Responsible_Employee" Type="Edm.String" />
+        <Property Name="Inactive" Type="Edm.Boolean" />
+        <Property Name="Blocked" Type="Edm.Boolean" />
+        <Property Name="Acquired" Type="Edm.Boolean" />
+        <Property Name="Last_Date_Modified" Type="Edm.DateTime" />
+        <Property Name="DepreciationBookCode" Type="Edm.String" />
+        <Property Name="FAPostingGroup" Type="Edm.String" />
+        <Property Name="DepreciationMethod" Type="Edm.String" />
+        <Property Name="DepreciationStartingDate" Type="Edm.DateTime" />
+        <Property Name="NumberOfDepreciationYears" Type="Edm.Decimal" />
+        <Property Name="DepreciationEndingDate" Type="Edm.DateTime" />
+        <Property Name="BookValue" Type="Edm.Decimal" />
+        <Property Name="AddMoreDeprBooks" Type="Edm.String" />
+        <Property Name="Vendor_No" Type="Edm.String" />
+        <Property Name="Maintenance_Vendor_No" Type="Edm.String" />
+        <Property Name="Under_Maintenance" Type="Edm.Boolean" />
+        <Property Name="Next_Service_Date" Type="Edm.DateTime" />
+        <Property Name="Warranty_Date" Type="Edm.DateTime" />
+        <Property Name="Insured" Type="Edm.Boolean" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="ActivoDepreciationBook" Relationship="NAV.Activo_ActivoDepreciationBook" ToRole="ActivoDepreciationBook" FromRole="Activo" />
+      </EntityType>
+      <EntityType Name="ActivoDepreciationBook">
+        <Key>
+          <PropertyRef Name="Depreciation_Book_Code" />
+          <PropertyRef Name="FA_No" />
+        </Key>
+        <Property Name="FA_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Depreciation_Book_Code" Type="Edm.String" Nullable="false" />
+        <Property Name="GetAddCurrCode" Type="Edm.String" />
+        <Property Name="FA_Posting_Group" Type="Edm.String" />
+        <Property Name="Depreciation_Method" Type="Edm.String" />
+        <Property Name="Depreciation_Starting_Date" Type="Edm.DateTime" />
+        <Property Name="No_of_Depreciation_Years" Type="Edm.Decimal" />
+        <Property Name="Depreciation_Ending_Date" Type="Edm.DateTime" />
+        <Property Name="No_of_Depreciation_Months" Type="Edm.Decimal" />
+        <Property Name="Straight_Line_Percent" Type="Edm.Decimal" />
+        <Property Name="Fixed_Depr_Amount" Type="Edm.Decimal" />
+        <Property Name="Declining_Balance_Percent" Type="Edm.Decimal" />
+        <Property Name="First_User_Defined_Depr_Date" Type="Edm.DateTime" />
+        <Property Name="Book_Value" Type="Edm.Decimal" />
+        <Property Name="Depreciation_Table_Code" Type="Edm.String" />
+        <Property Name="Final_Rounding_Amount" Type="Edm.Decimal" />
+        <Property Name="Ending_Book_Value" Type="Edm.Decimal" />
+        <Property Name="Ignore_Def_Ending_Book_Value" Type="Edm.Boolean" />
+        <Property Name="FA_Exchange_Rate" Type="Edm.Decimal" />
+        <Property Name="Use_FA_Ledger_Check" Type="Edm.Boolean" />
+        <Property Name="Depr_below_Zero_Percent" Type="Edm.Decimal" />
+        <Property Name="Fixed_Depr_Amount_below_Zero" Type="Edm.Decimal" />
+        <Property Name="Projected_Disposal_Date" Type="Edm.DateTime" />
+        <Property Name="Projected_Proceeds_on_Disposal" Type="Edm.Decimal" />
+        <Property Name="Depr_Starting_Date_Custom_1" Type="Edm.DateTime" />
+        <Property Name="Depr_Ending_Date_Custom_1" Type="Edm.DateTime" />
+        <Property Name="Accum_Depr_Percent_Custom_1" Type="Edm.Decimal" />
+        <Property Name="Depr_This_Year_Percent_Custom_1" Type="Edm.Decimal" />
+        <Property Name="Property_Class_Custom_1" Type="Edm.String" />
+        <Property Name="Use_Half_Year_Convention" Type="Edm.Boolean" />
+        <Property Name="Use_DBPercent_First_Fiscal_Year" Type="Edm.Boolean" />
+        <Property Name="Temp_Ending_Date" Type="Edm.DateTime" />
+        <Property Name="Temp_Fixed_Depr_Amount" Type="Edm.Decimal" />
+        <Property Name="FA_Posting_Date_Filter" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="AFDIARIO">
+        <Key>
+          <PropertyRef Name="Journal_Batch_Name" />
+          <PropertyRef Name="Journal_Template_Name" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Journal_Template_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Journal_Batch_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FA_Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Type" Type="Edm.String" />
+        <Property Name="Document_No" Type="Edm.String" />
+        <Property Name="FA_No" Type="Edm.String" />
+        <Property Name="Depreciation_Book_Code" Type="Edm.String" />
+        <Property Name="FA_Posting_Type" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Amount" Type="Edm.Decimal" />
+        <Property Name="Debit_Amount" Type="Edm.Decimal" />
+        <Property Name="Credit_Amount" Type="Edm.Decimal" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="Salvage_Value" Type="Edm.Decimal" />
+        <Property Name="No_of_Depreciation_Days" Type="Edm.Int32" />
+        <Property Name="Depr_until_FA_Posting_Date" Type="Edm.Boolean" />
+        <Property Name="Depr_Acquisition_Cost" Type="Edm.Boolean" />
+        <Property Name="Maintenance_Code" Type="Edm.String" />
+        <Property Name="Insurance_No" Type="Edm.String" />
+        <Property Name="Budgeted_FA_No" Type="Edm.String" />
+        <Property Name="Duplicate_in_Depreciation_Book" Type="Edm.String" />
+        <Property Name="Use_Duplication_List" Type="Edm.Boolean" />
+        <Property Name="FA_Reclassification_Entry" Type="Edm.Boolean" />
+        <Property Name="FA_Error_Entry_No" Type="Edm.Int32" />
+        <Property Name="FADescription" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="Avance_observado">
+        <Key>
+          <PropertyRef Name="Entry" />
+        </Key>
+        <Property Name="Entry" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Observed_Date" Type="Edm.DateTime" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Document_No" Type="Edm.String" />
+        <Property Name="Phase" Type="Edm.String" />
+        <Property Name="Order_Date" Type="Edm.DateTime" />
+        <Property Name="Type" Type="Edm.String" />
+        <Property Name="No" Type="Edm.String" />
+        <Property Name="Service_Item_No" Type="Edm.String" />
+        <Property Name="Service_Item_Line_Line_No" Type="Edm.Int32" />
+        <Property Name="Service_Line_Line_No" Type="Edm.Int32" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Maintenance_Plan_Code" Type="Edm.String" />
+        <Property Name="Location_Code" Type="Edm.String" />
+        <Property Name="Quantity" Type="Edm.Decimal" />
+        <Property Name="Initial_Quantity" Type="Edm.Decimal" />
+        <Property Name="Initial_Quantity_Manual" Type="Edm.Decimal" />
+        <Property Name="Resource_No_Allocation" Type="Edm.String" />
+        <Property Name="Resource_No_Allocation_Name" Type="Edm.String" />
+        <Property Name="Adv1" Type="Edm.Decimal" />
+        <Property Name="Service_Zone_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_3_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_4_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_5_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_6_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_7_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_8_Code" Type="Edm.String" />
+        <Property Name="Planned_Delivery_Date" Type="Edm.DateTime" />
+        <Property Name="Requested_Delivery_Date" Type="Edm.DateTime" />
+        <Property Name="Promised_Delivery_Date" Type="Edm.DateTime" />
+        <Property Name="Service_Item_Group_Code" Type="Edm.String" />
+        <Property Name="Service_Order_Type" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="DiarioPago">
+        <Key>
+          <PropertyRef Name="Journal_Batch_Name" />
+          <PropertyRef Name="Journal_Template_Name" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Journal_Template_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Journal_Batch_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Type" Type="Edm.String" />
+        <Property Name="Document_No" Type="Edm.String" />
+        <Property Name="Incoming_Document_Entry_No" Type="Edm.Int32" />
+        <Property Name="External_Document_No" Type="Edm.String" />
+        <Property Name="Applies_to_Ext_Doc_No" Type="Edm.String" />
+        <Property Name="Account_Type" Type="Edm.String" />
+        <Property Name="Account_No" Type="Edm.String" />
+        <Property Name="Recipient_Bank_Account" Type="Edm.String" />
+        <Property Name="Message_to_Recipient" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Salespers_Purch_Code" Type="Edm.String" />
+        <Property Name="Campaign_No" Type="Edm.String" />
+        <Property Name="Currency_Code" Type="Edm.String" />
+        <Property Name="Gen_Posting_Type" Type="Edm.String" />
+        <Property Name="Gen_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="Gen_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="VAT_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="VAT_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Payment_Method_Code" Type="Edm.String" />
+        <Property Name="Payment_Reference" Type="Edm.String" />
+        <Property Name="Creditor_No" Type="Edm.String" />
+        <Property Name="Amount" Type="Edm.Decimal" />
+        <Property Name="Amount_LCY" Type="Edm.Decimal" />
+        <Property Name="Debit_Amount" Type="Edm.Decimal" />
+        <Property Name="Credit_Amount" Type="Edm.Decimal" />
+        <Property Name="VAT_Amount" Type="Edm.Decimal" />
+        <Property Name="VAT_Difference" Type="Edm.Decimal" />
+        <Property Name="Bal_VAT_Amount" Type="Edm.Decimal" />
+        <Property Name="Bal_VAT_Difference" Type="Edm.Decimal" />
+        <Property Name="Bal_Account_Type" Type="Edm.String" />
+        <Property Name="Bal_Account_No" Type="Edm.String" />
+        <Property Name="Bal_Gen_Posting_Type" Type="Edm.String" />
+        <Property Name="Bal_Gen_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="Bal_Gen_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Bal_VAT_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="Bal_VAT_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="Applied_Yes_No" Type="Edm.Boolean" />
+        <Property Name="Applies_to_Doc_Type" Type="Edm.String" />
+        <Property Name="AppliesToDocNo" Type="Edm.String" />
+        <Property Name="Applies_to_ID" Type="Edm.String" />
+        <Property Name="GetAppliesToDocDueDate" Type="Edm.DateTime" />
+        <Property Name="Bank_Payment_Type" Type="Edm.String" />
+        <Property Name="Foreign_Exchange_Indicator" Type="Edm.String" />
+        <Property Name="Foreign_Exchange_Ref_Indicator" Type="Edm.String" />
+        <Property Name="Foreign_Exchange_Reference" Type="Edm.String" />
+        <Property Name="Origin_DFI_ID_Qualifier" Type="Edm.String" />
+        <Property Name="Receiv_DFI_ID_Qualifier" Type="Edm.String" />
+        <Property Name="Transaction_Type_Code" Type="Edm.String" />
+        <Property Name="Gateway_Operator_OFAC_Scr_Inc" Type="Edm.String" />
+        <Property Name="Secondary_OFAC_Scr_Indicator" Type="Edm.String" />
+        <Property Name="Transaction_Code" Type="Edm.String" />
+        <Property Name="Company_Entry_Description" Type="Edm.String" />
+        <Property Name="Payment_Related_Information_1" Type="Edm.String" />
+        <Property Name="Payment_Related_Information_2" Type="Edm.String" />
+        <Property Name="Check_Printed" Type="Edm.Boolean" />
+        <Property Name="Reason_Code" Type="Edm.String" />
+        <Property Name="Source_Type" Type="Edm.String" />
+        <Property Name="Source_No" Type="Edm.String" />
+        <Property Name="Comment" Type="Edm.String" />
+        <Property Name="Exported_to_Payment_File" Type="Edm.Boolean" />
+        <Property Name="TotalExportedAmount" Type="Edm.Decimal" />
+        <Property Name="Has_Payment_Export_Error" Type="Edm.Boolean" />
+        <Property Name="Reference" Type="Edm.String" />
+        <Property Name="OverdueWarningText" Type="Edm.String" />
+        <Property Name="AccName" Type="Edm.String" />
+        <Property Name="BalAccName" Type="Edm.String" />
+        <Property Name="Balance" Type="Edm.Decimal" />
+        <Property Name="TotalBalance" Type="Edm.Decimal" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="DiarioProducto">
+        <Key>
+          <PropertyRef Name="Journal_Batch_Name" />
+          <PropertyRef Name="Journal_Template_Name" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Journal_Template_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Journal_Batch_Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Date" Type="Edm.DateTime" />
+        <Property Name="Entry_Type" Type="Edm.String" />
+        <Property Name="Document_No" Type="Edm.String" />
+        <Property Name="External_Document_No" Type="Edm.String" />
+        <Property Name="Item_No" Type="Edm.String" />
+        <Property Name="Variant_Code" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="Location_Code" Type="Edm.String" />
+        <Property Name="Bin_Code" Type="Edm.String" />
+        <Property Name="Salespers_Purch_Code" Type="Edm.String" />
+        <Property Name="Gen_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="Gen_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Quantity" Type="Edm.Decimal" />
+        <Property Name="Unit_of_Measure_Code" Type="Edm.String" />
+        <Property Name="Unit_Amount" Type="Edm.Decimal" />
+        <Property Name="Amount" Type="Edm.Decimal" />
+        <Property Name="Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Indirect_Cost_Percent" Type="Edm.Decimal" />
+        <Property Name="Unit_Cost" Type="Edm.Decimal" />
+        <Property Name="Applies_to_Entry" Type="Edm.Int32" />
+        <Property Name="Applies_from_Entry" Type="Edm.Int32" />
+        <Property Name="Transaction_Type" Type="Edm.String" />
+        <Property Name="Transport_Method" Type="Edm.String" />
+        <Property Name="Country_Region_Code" Type="Edm.String" />
+        <Property Name="Reason_Code" Type="Edm.String" />
+        <Property Name="ItemDescription" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="DocumentosdeCalidad">
+        <Key>
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Template_Test" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Document_Date" Type="Edm.DateTime" />
+        <Property Name="User" Type="Edm.String" />
+        <Property Name="Status" Type="Edm.String" />
+        <Property Name="No_Series" Type="Edm.String" />
+        <Property Name="No_Document_Source" Type="Edm.String" />
+        <Property Name="Start_Date" Type="Edm.DateTime" />
+        <Property Name="End_Date" Type="Edm.DateTime" />
+        <Property Name="Production_Order" Type="Edm.String" />
+        <Property Name="Job_No" Type="Edm.String" />
+        <Property Name="Task_Job_No" Type="Edm.String" />
+        <Property Name="Purchase_Order" Type="Edm.String" />
+        <Property Name="Purchase_Order_Line" Type="Edm.Int32" />
+        <Property Name="Assembly" Type="Edm.String" />
+        <Property Name="Resource" Type="Edm.String" />
+        <Property Name="Resource_Name" Type="Edm.String" />
+        <Property Name="Sales_Order" Type="Edm.String" />
+        <Property Name="Sales_Order_Line" Type="Edm.Int32" />
+        <Property Name="Transfer_Shipment" Type="Edm.String" />
+        <Property Name="Transfer_Receipt" Type="Edm.String" />
+        <Property Name="Warehouse_Test" Type="Edm.String" />
+        <Property Name="Service_Item_No" Type="Edm.String" />
+        <Property Name="Order_Services" Type="Edm.String" />
+        <Property Name="Observaciones" Type="Edm.String" />
+        <Property Name="Observaciones_Adicionales" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="DocumentosdeCalidadDocument_Test_Line_subform" Relationship="NAV.DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_subform" ToRole="DocumentosdeCalidadDocument_Test_Line_subform" FromRole="DocumentosdeCalidad" />
+        <NavigationProperty Name="DocumentosdeCalidadDocument_Test_Line_Range" Relationship="NAV.DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Range" ToRole="DocumentosdeCalidadDocument_Test_Line_Range" FromRole="DocumentosdeCalidad" />
+        <NavigationProperty Name="DocumentosdeCalidadDocument_Test_Line_Descrip" Relationship="NAV.DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Descrip" ToRole="DocumentosdeCalidadDocument_Test_Line_Descrip" FromRole="DocumentosdeCalidad" />
+        <NavigationProperty Name="DocumentosdeCalidadDocument_Test_Line_Boolean" Relationship="NAV.DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Boolean" ToRole="DocumentosdeCalidadDocument_Test_Line_Boolean" FromRole="DocumentosdeCalidad" />
+      </EntityType>
+      <EntityType Name="DocumentosdeCalidadDocument_Test_Line_subform">
+        <Key>
+          <PropertyRef Name="Document_No" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Document_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Measure_Code" Type="Edm.String" />
+        <Property Name="Measure_Description" Type="Edm.String" />
+        <Property Name="Expected_Value_List" Type="Edm.String" />
+        <Property Name="Value_List" Type="Edm.String" />
+        <Property Name="Time_sampling" Type="Edm.String" />
+        <Property Name="Entry_Time_result" Type="Edm.DateTime" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="DocumentosdeCalidadDocument_Test_Line_Range">
+        <Key>
+          <PropertyRef Name="Document_No" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Document_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Measure_Code" Type="Edm.String" />
+        <Property Name="Measure_Description" Type="Edm.String" />
+        <Property Name="Minimum_expected_value" Type="Edm.Decimal" />
+        <Property Name="Maximun_expected_Value" Type="Edm.Decimal" />
+        <Property Name="Result_Value" Type="Edm.Decimal" />
+        <Property Name="Time_sampling" Type="Edm.String" />
+        <Property Name="Entry_Time_result" Type="Edm.DateTime" />
+        <Property Name="Description_expected" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="DocumentosdeCalidadDocument_Test_Line_Descrip">
+        <Key>
+          <PropertyRef Name="Document_No" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Document_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Measure_Code" Type="Edm.String" />
+        <Property Name="Measure_Description" Type="Edm.String" />
+        <Property Name="Description_expected" Type="Edm.String" />
+        <Property Name="Description_Result" Type="Edm.String" />
+        <Property Name="Time_sampling" Type="Edm.String" />
+        <Property Name="Entry_Time_result" Type="Edm.DateTime" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="DocumentosdeCalidadDocument_Test_Line_Boolean">
+        <Key>
+          <PropertyRef Name="Document_No" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Document_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Measure_Code" Type="Edm.String" />
+        <Property Name="Measure_Description" Type="Edm.String" />
+        <Property Name="Boolena_expected" Type="Edm.Boolean" />
+        <Property Name="Result_Boolena" Type="Edm.Boolean" />
+        <Property Name="Time_sampling" Type="Edm.String" />
+        <Property Name="Entry_Time_result" Type="Edm.DateTime" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="Fichaprodservicio">
+        <Key>
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Description_2" Type="Edm.String" />
+        <Property Name="Service_Item_Group_Code" Type="Edm.String" />
+        <Property Name="Serial_No" Type="Edm.String" />
+        <Property Name="Status" Type="Edm.String" />
+        <Property Name="Service_Item_Components" Type="Edm.Boolean" />
+        <Property Name="Search_Description" Type="Edm.String" />
+        <Property Name="Response_Time_Hours" Type="Edm.Decimal" />
+        <Property Name="Priority" Type="Edm.String" />
+        <Property Name="Last_Service_Date" Type="Edm.DateTime" />
+        <Property Name="Warranty_Starting_Date_Parts" Type="Edm.DateTime" />
+        <Property Name="Warranty_Ending_Date_Parts" Type="Edm.DateTime" />
+        <Property Name="Warranty_Percent_Parts" Type="Edm.Decimal" />
+        <Property Name="Warranty_Starting_Date_Labor" Type="Edm.DateTime" />
+        <Property Name="Warranty_Ending_Date_Labor" Type="Edm.DateTime" />
+        <Property Name="Warranty_Percent_Labor" Type="Edm.Decimal" />
+        <Property Name="Preferred_Resource" Type="Edm.String" />
+        <Property Name="Item_No" Type="Edm.String" />
+        <Property Name="Item_Description" Type="Edm.String" />
+        <Property Name="Variant_Code" Type="Edm.String" />
+        <Property Name="CentroCosto" Type="Edm.String" />
+        <Property Name="Service_Price_Group_Code" Type="Edm.String" />
+        <Property Name="Parent_Service_Item_No" Type="Edm.String" />
+        <Property Name="Serie" Type="Edm.String" />
+        <Property Name="Brand" Type="Edm.String" />
+        <Property Name="Model" Type="Edm.String" />
+        <Property Name="Customer_No" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Address" Type="Edm.String" />
+        <Property Name="Address_2" Type="Edm.String" />
+        <Property Name="City" Type="Edm.String" />
+        <Property Name="County" Type="Edm.String" />
+        <Property Name="Post_Code" Type="Edm.String" />
+        <Property Name="Contact" Type="Edm.String" />
+        <Property Name="Location_of_Service_Item" Type="Edm.String" />
+        <Property Name="Phone_No" Type="Edm.String" />
+        <Property Name="Ship_to_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Name" Type="Edm.String" />
+        <Property Name="Ship_to_Address" Type="Edm.String" />
+        <Property Name="Ship_to_Address_2" Type="Edm.String" />
+        <Property Name="Ship_to_City" Type="Edm.String" />
+        <Property Name="Ship_to_County" Type="Edm.String" />
+        <Property Name="Ship_to_Post_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Contact" Type="Edm.String" />
+        <Property Name="Ship_to_Phone_No" Type="Edm.String" />
+        <Property Name="Service_Zone_Code" Type="Edm.String" />
+        <Property Name="Default_Contract_Cost" Type="Edm.Decimal" />
+        <Property Name="Default_Contract_Value" Type="Edm.Decimal" />
+        <Property Name="Default_Contract_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Service_Contracts" Type="Edm.Boolean" />
+        <Property Name="Contract_Value_Calc_Method" Type="Edm.String" />
+        <Property Name="Maintenance_Costs" Type="Edm.Decimal" />
+        <Property Name="Maintenance_Amount" Type="Edm.Decimal" />
+        <Property Name="Vendor_No" Type="Edm.String" />
+        <Property Name="Vendor_Name" Type="Edm.String" />
+        <Property Name="Vendor_Item_No" Type="Edm.String" />
+        <Property Name="Vendor_Item_Name" Type="Edm.String" />
+        <Property Name="Sales_Unit_Cost" Type="Edm.Decimal" />
+        <Property Name="Sales_Unit_Price" Type="Edm.Decimal" />
+        <Property Name="Sales_Date" Type="Edm.DateTime" />
+        <Property Name="Unit_of_Measure_Code" Type="Edm.String" />
+        <Property Name="Installation_Date" Type="Edm.DateTime" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="FichaProducto">
+        <Key>
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Description_2" Type="Edm.String" />
+        <Property Name="Blocked" Type="Edm.Boolean" />
+        <Property Name="Type" Type="Edm.String" />
+        <Property Name="Base_Unit_of_Measure" Type="Edm.String" />
+        <Property Name="Last_Date_Modified" Type="Edm.DateTime" />
+        <Property Name="GTIN" Type="Edm.String" />
+        <Property Name="Item_Category_Code" Type="Edm.String" />
+        <Property Name="Product_Group_Code" Type="Edm.String" />
+        <Property Name="Service_Item_Group" Type="Edm.String" />
+        <Property Name="Duty_Due_Percent" Type="Edm.Decimal" />
+        <Property Name="Automatic_Ext_Texts" Type="Edm.Boolean" />
+        <Property Name="Shelf_No" Type="Edm.String" />
+        <Property Name="Created_From_Nonstock_Item" Type="Edm.Boolean" />
+        <Property Name="Search_Description" Type="Edm.String" />
+        <Property Name="Inventory" Type="Edm.Decimal" />
+        <Property Name="Prevent_Negative_Inventory" Type="Edm.String" />
+        <Property Name="Qty_on_Purch_Order" Type="Edm.Decimal" />
+        <Property Name="Qty_on_Prod_Order" Type="Edm.Decimal" />
+        <Property Name="Qty_on_Component_Lines" Type="Edm.Decimal" />
+        <Property Name="Qty_on_Sales_Order" Type="Edm.Decimal" />
+        <Property Name="Qty_on_Service_Order" Type="Edm.Decimal" />
+        <Property Name="Qty_on_Job_Order" Type="Edm.Decimal" />
+        <Property Name="Qty_on_Assembly_Order" Type="Edm.Decimal" />
+        <Property Name="Qty_on_Asm_Component" Type="Edm.Decimal" />
+        <Property Name="StockoutWarningDefaultYes" Type="Edm.String" />
+        <Property Name="Net_Weight" Type="Edm.Decimal" />
+        <Property Name="Gross_Weight" Type="Edm.Decimal" />
+        <Property Name="Unit_Volume" Type="Edm.Decimal" />
+        <Property Name="SAT_Item_Classification" Type="Edm.String" />
+        <Property Name="Item_Group_cost" Type="Edm.String" />
+        <Property Name="Costing_Method" Type="Edm.String" />
+        <Property Name="Standard_Cost" Type="Edm.Decimal" />
+        <Property Name="Unit_Cost" Type="Edm.Decimal" />
+        <Property Name="Indirect_Cost_Percent" Type="Edm.Decimal" />
+        <Property Name="Last_Direct_Cost" Type="Edm.Decimal" />
+        <Property Name="Net_Invoiced_Qty" Type="Edm.Decimal" />
+        <Property Name="Cost_is_Adjusted" Type="Edm.Boolean" />
+        <Property Name="Cost_is_Posted_to_G_L" Type="Edm.Boolean" />
+        <Property Name="SpecialPurchPricesAndDiscountsTxt" Type="Edm.String" />
+        <Property Name="Gen_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="VAT_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Tax_Group_Code" Type="Edm.String" />
+        <Property Name="Inventory_Posting_Group" Type="Edm.String" />
+        <Property Name="Default_Deferral_Template_Code" Type="Edm.String" />
+        <Property Name="Tariff_No" Type="Edm.String" />
+        <Property Name="Country_Region_of_Origin_Code" Type="Edm.String" />
+        <Property Name="Unit_Price" Type="Edm.Decimal" />
+        <Property Name="CalcUnitPriceExclVAT" Type="Edm.Decimal" />
+        <Property Name="Price_Includes_VAT" Type="Edm.Boolean" />
+        <Property Name="Price_Profit_Calculation" Type="Edm.String" />
+        <Property Name="Profit_Percent" Type="Edm.Decimal" />
+        <Property Name="SpecialPricesAndDiscountsTxt" Type="Edm.String" />
+        <Property Name="Allow_Invoice_Disc" Type="Edm.Boolean" />
+        <Property Name="Item_Disc_Group" Type="Edm.String" />
+        <Property Name="Sales_Unit_of_Measure" Type="Edm.String" />
+        <Property Name="Application_Wksh_User_ID" Type="Edm.String" />
+        <Property Name="VAT_Bus_Posting_Gr_Price" Type="Edm.String" />
+        <Property Name="Replenishment_System" Type="Edm.String" />
+        <Property Name="Lead_Time_Calculation" Type="Edm.String" />
+        <Property Name="Vendor_No" Type="Edm.String" />
+        <Property Name="Vendor_Item_No" Type="Edm.String" />
+        <Property Name="Purch_Unit_of_Measure" Type="Edm.String" />
+        <Property Name="Manufacturing_Policy" Type="Edm.String" />
+        <Property Name="Routing_No" Type="Edm.String" />
+        <Property Name="Production_BOM_No" Type="Edm.String" />
+        <Property Name="Rounding_Precision" Type="Edm.Decimal" />
+        <Property Name="Flushing_Method" Type="Edm.String" />
+        <Property Name="Overhead_Rate" Type="Edm.Decimal" />
+        <Property Name="Scrap_Percent" Type="Edm.Decimal" />
+        <Property Name="Lot_Size" Type="Edm.Decimal" />
+        <Property Name="Assembly_Policy" Type="Edm.String" />
+        <Property Name="Assembly_BOM" Type="Edm.Boolean" />
+        <Property Name="Reordering_Policy" Type="Edm.String" />
+        <Property Name="Reserve" Type="Edm.String" />
+        <Property Name="Order_Tracking_Policy" Type="Edm.String" />
+        <Property Name="Stockkeeping_Unit_Exists" Type="Edm.Boolean" />
+        <Property Name="Dampener_Period" Type="Edm.String" />
+        <Property Name="Dampener_Quantity" Type="Edm.Decimal" />
+        <Property Name="Critical" Type="Edm.Boolean" />
+        <Property Name="Safety_Lead_Time" Type="Edm.String" />
+        <Property Name="Safety_Stock_Quantity" Type="Edm.Decimal" />
+        <Property Name="Include_Inventory" Type="Edm.Boolean" />
+        <Property Name="Lot_Accumulation_Period" Type="Edm.String" />
+        <Property Name="Rescheduling_Period" Type="Edm.String" />
+        <Property Name="Reorder_Point" Type="Edm.Decimal" />
+        <Property Name="Reorder_Quantity" Type="Edm.Decimal" />
+        <Property Name="Maximum_Inventory" Type="Edm.Decimal" />
+        <Property Name="Overflow_Level" Type="Edm.Decimal" />
+        <Property Name="Time_Bucket" Type="Edm.String" />
+        <Property Name="Minimum_Order_Quantity" Type="Edm.Decimal" />
+        <Property Name="Maximum_Order_Quantity" Type="Edm.Decimal" />
+        <Property Name="Order_Multiple" Type="Edm.Decimal" />
+        <Property Name="Item_Tracking_Code" Type="Edm.String" />
+        <Property Name="Serial_Nos" Type="Edm.String" />
+        <Property Name="Lot_Nos" Type="Edm.String" />
+        <Property Name="Expiration_Calculation" Type="Edm.String" />
+        <Property Name="Warehouse_Class_Code" Type="Edm.String" />
+        <Property Name="Special_Equipment_Code" Type="Edm.String" />
+        <Property Name="Put_away_Template_Code" Type="Edm.String" />
+        <Property Name="Put_away_Unit_of_Measure_Code" Type="Edm.String" />
+        <Property Name="Phys_Invt_Counting_Period_Code" Type="Edm.String" />
+        <Property Name="Last_Phys_Invt_Date" Type="Edm.DateTime" />
+        <Property Name="Last_Counting_Period_Update" Type="Edm.DateTime" />
+        <Property Name="Next_Counting_Start_Date" Type="Edm.DateTime" />
+        <Property Name="Next_Counting_End_Date" Type="Edm.DateTime" />
+        <Property Name="Identifier_Code" Type="Edm.String" />
+        <Property Name="Use_Cross_Docking" Type="Edm.Boolean" />
+        <Property Name="Weight_UOM" Type="Edm.String" />
+        <Property Name="Volume_UOM" Type="Edm.String" />
+        <Property Name="BOM_Type" Type="Edm.String" />
+        <Property Name="Item_Type" Type="Edm.String" />
+        <Property Name="Specific_Gravity" Type="Edm.Decimal" />
+        <Property Name="Production_Grouping_Variant" Type="Edm.String" />
+        <Property Name="Production_Grouping_Item" Type="Edm.String" />
+        <Property Name="copyItem" Type="Edm.String" />
+        <Property Name="Global_Dimension_1_Filter" Type="Edm.String" />
+        <Property Name="Global_Dimension_2_Filter" Type="Edm.String" />
+        <Property Name="Location_Filter" Type="Edm.String" />
+        <Property Name="Drop_Shipment_Filter" Type="Edm.String" />
+        <Property Name="Variant_Filter" Type="Edm.String" />
+        <Property Name="Lot_No_Filter" Type="Edm.String" />
+        <Property Name="Serial_No_Filter" Type="Edm.String" />
+        <Property Name="Date_Filter" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="InvoicePurchase">
+        <Key>
+          <PropertyRef Name="Document_Type" />
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="Document_Type" Type="Edm.String" Nullable="false" />
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Buy_from_Vendor_No" Type="Edm.String" />
+        <Property Name="Buy_from_Vendor_Name" Type="Edm.String" />
+        <Property Name="Buy_from_Address" Type="Edm.String" />
+        <Property Name="Buy_from_Address_2" Type="Edm.String" />
+        <Property Name="Buy_from_City" Type="Edm.String" />
+        <Property Name="Buy_from_County" Type="Edm.String" />
+        <Property Name="Buy_from_Post_Code" Type="Edm.String" />
+        <Property Name="Buy_from_Contact_No" Type="Edm.String" />
+        <Property Name="Buy_from_Contact" Type="Edm.String" />
+        <Property Name="Posting_Description" Type="Edm.String" />
+        <Property Name="Vendor_Posting_Group" Type="Edm.String" />
+        <Property Name="Document_Date" Type="Edm.DateTime" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Due_Date" Type="Edm.DateTime" />
+        <Property Name="Incoming_Document_Entry_No" Type="Edm.Int32" />
+        <Property Name="Vendor_Invoice_No" Type="Edm.String" />
+        <Property Name="Purchaser_Code" Type="Edm.String" />
+        <Property Name="Vendor_Order_No" Type="Edm.String" />
+        <Property Name="Campaign_No" Type="Edm.String" />
+        <Property Name="Order_Address_Code" Type="Edm.String" />
+        <Property Name="Responsibility_Center" Type="Edm.String" />
+        <Property Name="Assigned_User_ID" Type="Edm.String" />
+        <Property Name="Status" Type="Edm.String" />
+        <Property Name="SubType" Type="Edm.String" />
+        <Property Name="Your_Reference" Type="Edm.String" />
+        <Property Name="Unic_No" Type="Edm.String" />
+        <Property Name="Job_Queue_Status" Type="Edm.String" />
+        <Property Name="Pay_to_Vendor_No" Type="Edm.String" />
+        <Property Name="Currency_Code" Type="Edm.String" />
+        <Property Name="Expected_Receipt_Date" Type="Edm.DateTime" />
+        <Property Name="Payment_Terms_Code" Type="Edm.String" />
+        <Property Name="Payment_Method_Code" Type="Edm.String" />
+        <Property Name="Transaction_Type" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="Payment_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Pmt_Discount_Date" Type="Edm.DateTime" />
+        <Property Name="Tax_Liable" Type="Edm.Boolean" />
+        <Property Name="Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Tax_Exemption_No" Type="Edm.String" />
+        <Property Name="Provincial_Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Shipment_Method_Code" Type="Edm.String" />
+        <Property Name="Payment_Reference" Type="Edm.String" />
+        <Property Name="Creditor_No" Type="Edm.String" />
+        <Property Name="Fiscal_Invoice_Number_PAC" Type="Edm.String" />
+        <Property Name="ShippingOptionWithLocation" Type="Edm.String" />
+        <Property Name="Location_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Name" Type="Edm.String" />
+        <Property Name="Ship_to_Address" Type="Edm.String" />
+        <Property Name="Ship_to_Address_2" Type="Edm.String" />
+        <Property Name="Ship_to_City" Type="Edm.String" />
+        <Property Name="Ship_to_County" Type="Edm.String" />
+        <Property Name="Ship_to_Post_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Country_Region_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Contact" Type="Edm.String" />
+        <Property Name="Ship_to_UPS_Zone" Type="Edm.String" />
+        <Property Name="PayToOptions" Type="Edm.String" />
+        <Property Name="Pay_to_Name" Type="Edm.String" />
+        <Property Name="Pay_to_Address" Type="Edm.String" />
+        <Property Name="Pay_to_Address_2" Type="Edm.String" />
+        <Property Name="Pay_to_City" Type="Edm.String" />
+        <Property Name="Pay_to_County" Type="Edm.String" />
+        <Property Name="Pay_to_Post_Code" Type="Edm.String" />
+        <Property Name="Pay_to_Contact_No" Type="Edm.String" />
+        <Property Name="Pay_to_Contact" Type="Edm.String" />
+        <Property Name="IRS_1099_Code" Type="Edm.String" />
+        <Property Name="On_Hold" Type="Edm.String" />
+        <Property Name="Transaction_Specification" Type="Edm.String" />
+        <Property Name="Transport_Method" Type="Edm.String" />
+        <Property Name="Entry_Point" Type="Edm.String" />
+        <Property Name="Area" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="InvoicePurchasePurchLines" Relationship="NAV.InvoicePurchase_InvoicePurchasePurchLines" ToRole="InvoicePurchasePurchLines" FromRole="InvoicePurchase" />
+      </EntityType>
+      <EntityType Name="InvoicePurchasePurchLines">
+        <Key>
+          <PropertyRef Name="Document_No" />
+          <PropertyRef Name="Document_Type" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Document_Type" Type="Edm.String" Nullable="false" />
+        <Property Name="Document_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Type" Type="Edm.String" />
+        <Property Name="FilteredTypeField" Type="Edm.String" />
+        <Property Name="No" Type="Edm.String" />
+        <Property Name="Cross_Reference_No" Type="Edm.String" />
+        <Property Name="IC_Partner_Code" Type="Edm.String" />
+        <Property Name="IC_Partner_Ref_Type" Type="Edm.String" />
+        <Property Name="IC_Partner_Reference" Type="Edm.String" />
+        <Property Name="Variant_Code" Type="Edm.String" />
+        <Property Name="Nonstock" Type="Edm.Boolean" />
+        <Property Name="GST_HST" Type="Edm.String" />
+        <Property Name="VAT_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Return_Reason_Code" Type="Edm.String" />
+        <Property Name="Location_Code" Type="Edm.String" />
+        <Property Name="Bin_Code" Type="Edm.String" />
+        <Property Name="Quantity" Type="Edm.Decimal" />
+        <Property Name="Unit_of_Measure_Code" Type="Edm.String" />
+        <Property Name="Unit_of_Measure" Type="Edm.String" />
+        <Property Name="Direct_Unit_Cost" Type="Edm.Decimal" />
+        <Property Name="Indirect_Cost_Percent" Type="Edm.Decimal" />
+        <Property Name="Unit_Cost_LCY" Type="Edm.Decimal" />
+        <Property Name="Unit_Price_LCY" Type="Edm.Decimal" />
+        <Property Name="Tax_Liable" Type="Edm.Boolean" />
+        <Property Name="Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Provincial_Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Tax_Group_Code" Type="Edm.String" />
+        <Property Name="Use_Tax" Type="Edm.Boolean" />
+        <Property Name="Line_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Line_Amount" Type="Edm.Decimal" />
+        <Property Name="Line_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Allow_Invoice_Disc" Type="Edm.Boolean" />
+        <Property Name="Inv_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Allow_Item_Charge_Assignment" Type="Edm.Boolean" />
+        <Property Name="Qty_to_Assign" Type="Edm.Decimal" />
+        <Property Name="Qty_Assigned" Type="Edm.Decimal" />
+        <Property Name="Job_No" Type="Edm.String" />
+        <Property Name="Job_Task_No" Type="Edm.String" />
+        <Property Name="Job_Line_Type" Type="Edm.String" />
+        <Property Name="Job_Unit_Price" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Amount" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Job_Total_Price" Type="Edm.Decimal" />
+        <Property Name="Job_Unit_Price_LCY" Type="Edm.Decimal" />
+        <Property Name="Job_Total_Price_LCY" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Amount_LCY" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Disc_Amount_LCY" Type="Edm.Decimal" />
+        <Property Name="Prod_Order_No" Type="Edm.String" />
+        <Property Name="Blanket_Order_No" Type="Edm.String" />
+        <Property Name="Blanket_Order_Line_No" Type="Edm.Int32" />
+        <Property Name="Insurance_No" Type="Edm.String" />
+        <Property Name="Budgeted_FA_No" Type="Edm.String" />
+        <Property Name="FA_Posting_Type" Type="Edm.String" />
+        <Property Name="Depreciation_Book_Code" Type="Edm.String" />
+        <Property Name="Depr_until_FA_Posting_Date" Type="Edm.Boolean" />
+        <Property Name="Depr_Acquisition_Cost" Type="Edm.Boolean" />
+        <Property Name="Duplicate_in_Depreciation_Book" Type="Edm.String" />
+        <Property Name="Use_Duplication_List" Type="Edm.Boolean" />
+        <Property Name="Appl_to_Item_Entry" Type="Edm.Int32" />
+        <Property Name="Deferral_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="IRS_1099_Liable" Type="Edm.Boolean" />
+        <Property Name="Invoice_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Invoice_Disc_Pct" Type="Edm.Decimal" />
+        <Property Name="Total_Amount_Excl_VAT" Type="Edm.Decimal" />
+        <Property Name="Total_VAT_Amount" Type="Edm.Decimal" />
+        <Property Name="Total_Amount_Incl_VAT" Type="Edm.Decimal" />
+        <Property Name="RefreshTotals" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="NotaCompra">
+        <Key>
+          <PropertyRef Name="Document_Type" />
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="Document_Type" Type="Edm.String" Nullable="false" />
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Buy_from_Vendor_No" Type="Edm.String" />
+        <Property Name="Buy_from_Vendor_Name" Type="Edm.String" />
+        <Property Name="Buy_from_Address" Type="Edm.String" />
+        <Property Name="Buy_from_Address_2" Type="Edm.String" />
+        <Property Name="Buy_from_City" Type="Edm.String" />
+        <Property Name="Buy_from_County" Type="Edm.String" />
+        <Property Name="Buy_from_Post_Code" Type="Edm.String" />
+        <Property Name="Buy_from_Contact_No" Type="Edm.String" />
+        <Property Name="Buy_from_Contact" Type="Edm.String" />
+        <Property Name="Posting_Description" Type="Edm.String" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Document_Date" Type="Edm.DateTime" />
+        <Property Name="Due_Date" Type="Edm.DateTime" />
+        <Property Name="Expected_Receipt_Date" Type="Edm.DateTime" />
+        <Property Name="Vendor_Authorization_No" Type="Edm.String" />
+        <Property Name="Incoming_Document_Entry_No" Type="Edm.Int32" />
+        <Property Name="Vendor_Cr_Memo_No" Type="Edm.String" />
+        <Property Name="Purchaser_Code" Type="Edm.String" />
+        <Property Name="Campaign_No" Type="Edm.String" />
+        <Property Name="Responsibility_Center" Type="Edm.String" />
+        <Property Name="Assigned_User_ID" Type="Edm.String" />
+        <Property Name="Job_Queue_Status" Type="Edm.String" />
+        <Property Name="Status" Type="Edm.String" />
+        <Property Name="Unic_No" Type="Edm.String" />
+        <Property Name="SubType" Type="Edm.String" />
+        <Property Name="Currency_Code" Type="Edm.String" />
+        <Property Name="Payment_Terms_Code" Type="Edm.String" />
+        <Property Name="Payment_Method_Code" Type="Edm.String" />
+        <Property Name="Transaction_Type" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="Payment_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Pmt_Discount_Date" Type="Edm.DateTime" />
+        <Property Name="Tax_Liable" Type="Edm.Boolean" />
+        <Property Name="Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Tax_Exemption_No" Type="Edm.String" />
+        <Property Name="Provincial_Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Location_Code" Type="Edm.String" />
+        <Property Name="ShipToOptions" Type="Edm.String" />
+        <Property Name="Order_Address_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Name" Type="Edm.String" />
+        <Property Name="Ship_to_Address" Type="Edm.String" />
+        <Property Name="Ship_to_Address_2" Type="Edm.String" />
+        <Property Name="Ship_to_City" Type="Edm.String" />
+        <Property Name="Ship_to_County" Type="Edm.String" />
+        <Property Name="Ship_to_Post_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Contact" Type="Edm.String" />
+        <Property Name="Ship_to_UPS_Zone" Type="Edm.String" />
+        <Property Name="Pay_to_Name" Type="Edm.String" />
+        <Property Name="Pay_to_Address" Type="Edm.String" />
+        <Property Name="Pay_to_Address_2" Type="Edm.String" />
+        <Property Name="Pay_to_City" Type="Edm.String" />
+        <Property Name="Pay_to_County" Type="Edm.String" />
+        <Property Name="Pay_to_Post_Code" Type="Edm.String" />
+        <Property Name="Pay_to_Contact_No" Type="Edm.String" />
+        <Property Name="Pay_to_Contact" Type="Edm.String" />
+        <Property Name="IRS_1099_Code" Type="Edm.String" />
+        <Property Name="Transaction_Specification" Type="Edm.String" />
+        <Property Name="Transport_Method" Type="Edm.String" />
+        <Property Name="Entry_Point" Type="Edm.String" />
+        <Property Name="Area" Type="Edm.String" />
+        <Property Name="Applies_to_Doc_Type" Type="Edm.String" />
+        <Property Name="Applies_to_Doc_No" Type="Edm.String" />
+        <Property Name="Applies_to_ID" Type="Edm.String" />
+        <Property Name="Fiscal_Invoice_Number_PAC" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="NotaCompraPurchLines" Relationship="NAV.NotaCompra_NotaCompraPurchLines" ToRole="NotaCompraPurchLines" FromRole="NotaCompra" />
+      </EntityType>
+      <EntityType Name="NotaCompraPurchLines">
+        <Key>
+          <PropertyRef Name="Document_No" />
+          <PropertyRef Name="Document_Type" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Document_Type" Type="Edm.String" Nullable="false" />
+        <Property Name="Document_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Type" Type="Edm.String" />
+        <Property Name="FilteredTypeField" Type="Edm.String" />
+        <Property Name="No" Type="Edm.String" />
+        <Property Name="Cross_Reference_No" Type="Edm.String" />
+        <Property Name="IC_Partner_Code" Type="Edm.String" />
+        <Property Name="IC_Partner_Ref_Type" Type="Edm.String" />
+        <Property Name="IC_Partner_Reference" Type="Edm.String" />
+        <Property Name="Variant_Code" Type="Edm.String" />
+        <Property Name="Nonstock" Type="Edm.Boolean" />
+        <Property Name="GST_HST" Type="Edm.String" />
+        <Property Name="VAT_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Return_Reason_Code" Type="Edm.String" />
+        <Property Name="Location_Code" Type="Edm.String" />
+        <Property Name="Bin_Code" Type="Edm.String" />
+        <Property Name="Quantity" Type="Edm.Decimal" />
+        <Property Name="Unit_of_Measure_Code" Type="Edm.String" />
+        <Property Name="Unit_of_Measure" Type="Edm.String" />
+        <Property Name="Direct_Unit_Cost" Type="Edm.Decimal" />
+        <Property Name="Indirect_Cost_Percent" Type="Edm.Decimal" />
+        <Property Name="Unit_Cost_LCY" Type="Edm.Decimal" />
+        <Property Name="Unit_Price_LCY" Type="Edm.Decimal" />
+        <Property Name="Tax_Liable" Type="Edm.Boolean" />
+        <Property Name="Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Provincial_Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Tax_Group_Code" Type="Edm.String" />
+        <Property Name="Use_Tax" Type="Edm.Boolean" />
+        <Property Name="Line_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Line_Amount" Type="Edm.Decimal" />
+        <Property Name="Amount_Including_VAT" Type="Edm.Decimal" />
+        <Property Name="Line_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Allow_Invoice_Disc" Type="Edm.Boolean" />
+        <Property Name="Inv_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Allow_Item_Charge_Assignment" Type="Edm.Boolean" />
+        <Property Name="Qty_to_Assign" Type="Edm.Decimal" />
+        <Property Name="Qty_Assigned" Type="Edm.Decimal" />
+        <Property Name="Job_No" Type="Edm.String" />
+        <Property Name="Job_Task_No" Type="Edm.String" />
+        <Property Name="Job_Line_Type" Type="Edm.String" />
+        <Property Name="Job_Unit_Price" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Amount" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Job_Total_Price" Type="Edm.Decimal" />
+        <Property Name="Job_Unit_Price_LCY" Type="Edm.Decimal" />
+        <Property Name="Job_Total_Price_LCY" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Amount_LCY" Type="Edm.Decimal" />
+        <Property Name="Job_Line_Disc_Amount_LCY" Type="Edm.Decimal" />
+        <Property Name="Prod_Order_No" Type="Edm.String" />
+        <Property Name="Insurance_No" Type="Edm.String" />
+        <Property Name="Budgeted_FA_No" Type="Edm.String" />
+        <Property Name="FA_Posting_Type" Type="Edm.String" />
+        <Property Name="Depr_until_FA_Posting_Date" Type="Edm.Boolean" />
+        <Property Name="Depreciation_Book_Code" Type="Edm.String" />
+        <Property Name="Depr_Acquisition_Cost" Type="Edm.Boolean" />
+        <Property Name="Blanket_Order_No" Type="Edm.String" />
+        <Property Name="Blanket_Order_Line_No" Type="Edm.Int32" />
+        <Property Name="Appl_to_Item_Entry" Type="Edm.Int32" />
+        <Property Name="Deferral_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="IRS_1099_Liable" Type="Edm.Boolean" />
+        <Property Name="Invoice_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Invoice_Disc_Pct" Type="Edm.Decimal" />
+        <Property Name="Total_Amount_Excl_VAT" Type="Edm.Decimal" />
+        <Property Name="Total_VAT_Amount" Type="Edm.Decimal" />
+        <Property Name="Total_Amount_Incl_VAT" Type="Edm.Decimal" />
+        <Property Name="RefreshTotals" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="PedidoVenta">
+        <Key>
+          <PropertyRef Name="Document_Type" />
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="Document_Type" Type="Edm.String" Nullable="false" />
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Sell_to_Customer_No" Type="Edm.String" />
+        <Property Name="Sell_to_Customer_Name" Type="Edm.String" />
+        <Property Name="ExtendTxt5" Type="Edm.String" />
+        <Property Name="Gen_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="SubType" Type="Edm.String" />
+        <Property Name="VAT_Bus_Posting_Group" Type="Edm.String" />
+        <Property Name="Customer_Posting_Group" Type="Edm.String" />
+        <Property Name="Your_Reference" Type="Edm.String" />
+        <Property Name="ExtendDec1" Type="Edm.Decimal" />
+        <Property Name="Quote_No" Type="Edm.String" />
+        <Property Name="Sell_to_Address" Type="Edm.String" />
+        <Property Name="Sell_to_Address_2" Type="Edm.String" />
+        <Property Name="Sell_to_City" Type="Edm.String" />
+        <Property Name="Sell_to_County" Type="Edm.String" />
+        <Property Name="Sell_to_Post_Code" Type="Edm.String" />
+        <Property Name="Sell_to_Contact_No" Type="Edm.String" />
+        <Property Name="Sell_to_Contact" Type="Edm.String" />
+        <Property Name="No_of_Archived_Versions" Type="Edm.Int32" />
+        <Property Name="Document_Date" Type="Edm.DateTime" />
+        <Property Name="Ship" Type="Edm.Boolean" />
+        <Property Name="Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Order_Date" Type="Edm.DateTime" />
+        <Property Name="Due_Date" Type="Edm.DateTime" />
+        <Property Name="Requested_Delivery_Date" Type="Edm.DateTime" />
+        <Property Name="Promised_Delivery_Date" Type="Edm.DateTime" />
+        <Property Name="External_Document_No" Type="Edm.String" />
+        <Property Name="Salesperson_Code" Type="Edm.String" />
+        <Property Name="Campaign_No" Type="Edm.String" />
+        <Property Name="Opportunity_No" Type="Edm.String" />
+        <Property Name="Responsibility_Center" Type="Edm.String" />
+        <Property Name="Assigned_User_ID" Type="Edm.String" />
+        <Property Name="Job_Queue_Status" Type="Edm.String" />
+        <Property Name="Status" Type="Edm.String" />
+        <Property Name="Posting_Description" Type="Edm.String" />
+        <Property Name="WorkDescription" Type="Edm.String" />
+        <Property Name="Currency_Code" Type="Edm.String" />
+        <Property Name="Payment_Terms_Code" Type="Edm.String" />
+        <Property Name="Payment_Method_Code" Type="Edm.String" />
+        <Property Name="Tax_Liable" Type="Edm.Boolean" />
+        <Property Name="Tax_Area_Code" Type="Edm.String" />
+        <Property Name="SelectedPayments" Type="Edm.String" />
+        <Property Name="Transaction_Type" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="Payment_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Pmt_Discount_Date" Type="Edm.DateTime" />
+        <Property Name="Direct_Debit_Mandate_ID" Type="Edm.String" />
+        <Property Name="ExtendTxt1" Type="Edm.String" />
+        <Property Name="ExtendTxt2" Type="Edm.String" />
+        <Property Name="ExtendTxt3" Type="Edm.String" />
+        <Property Name="ExtendTxt4" Type="Edm.String" />
+        <Property Name="Ship_to_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Name" Type="Edm.String" />
+        <Property Name="Ship_to_Address" Type="Edm.String" />
+        <Property Name="Ship_to_Address_2" Type="Edm.String" />
+        <Property Name="Ship_to_City" Type="Edm.String" />
+        <Property Name="Ship_to_County" Type="Edm.String" />
+        <Property Name="Ship_to_Post_Code" Type="Edm.String" />
+        <Property Name="Ship_to_Country_Region_Code" Type="Edm.String" />
+        <Property Name="Ship_to_UPS_Zone" Type="Edm.String" />
+        <Property Name="Ship_to_Contact" Type="Edm.String" />
+        <Property Name="Dispatch_Area_Code" Type="Edm.String" />
+        <Property Name="Dispatch_Area_Position" Type="Edm.Int32" />
+        <Property Name="Monday" Type="Edm.Boolean" />
+        <Property Name="Tuesday" Type="Edm.Boolean" />
+        <Property Name="Wednesday" Type="Edm.Boolean" />
+        <Property Name="Thursday" Type="Edm.Boolean" />
+        <Property Name="Friday" Type="Edm.Boolean" />
+        <Property Name="Saturday" Type="Edm.Boolean" />
+        <Property Name="Sunday" Type="Edm.Boolean" />
+        <Property Name="Start_Hour" Type="Edm.String" />
+        <Property Name="End_Hour" Type="Edm.String" />
+        <Property Name="Shipping_No" Type="Edm.String" />
+        <Property Name="Shipment_Method_Code" Type="Edm.String" />
+        <Property Name="Shipping_Agent_Code" Type="Edm.String" />
+        <Property Name="Shipping_Agent_Service_Code" Type="Edm.String" />
+        <Property Name="Package_Tracking_No" Type="Edm.String" />
+        <Property Name="BillToOptions" Type="Edm.String" />
+        <Property Name="Bill_to_Name" Type="Edm.String" />
+        <Property Name="Bill_to_Address" Type="Edm.String" />
+        <Property Name="Bill_to_Address_2" Type="Edm.String" />
+        <Property Name="Bill_to_City" Type="Edm.String" />
+        <Property Name="Bill_to_County" Type="Edm.String" />
+        <Property Name="Bill_to_Post_Code" Type="Edm.String" />
+        <Property Name="Bill_to_Contact_No" Type="Edm.String" />
+        <Property Name="Bill_to_Contact" Type="Edm.String" />
+        <Property Name="Location_Code" Type="Edm.String" />
+        <Property Name="Shipment_Date" Type="Edm.DateTime" />
+        <Property Name="Shipping_Advice" Type="Edm.String" />
+        <Property Name="Outbound_Whse_Handling_Time" Type="Edm.String" />
+        <Property Name="Shipping_Time" Type="Edm.String" />
+        <Property Name="Late_Order_Shipping" Type="Edm.Boolean" />
+        <Property Name="Transaction_Specification" Type="Edm.String" />
+        <Property Name="Transport_Method" Type="Edm.String" />
+        <Property Name="Exit_Point" Type="Edm.String" />
+        <Property Name="Area" Type="Edm.String" />
+        <Property Name="Prepayment_Percent" Type="Edm.Decimal" />
+        <Property Name="Compress_Prepayment" Type="Edm.Boolean" />
+        <Property Name="Prepmt_Payment_Terms_Code" Type="Edm.String" />
+        <Property Name="Prepayment_Due_Date" Type="Edm.DateTime" />
+        <Property Name="Prepmt_Payment_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Prepmt_Pmt_Discount_Date" Type="Edm.DateTime" />
+        <Property Name="Prepmt_Include_Tax" Type="Edm.Boolean" />
+        <Property Name="Date_Filter" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="PedidoVentaSalesLines" Relationship="NAV.PedidoVenta_PedidoVentaSalesLines" ToRole="PedidoVentaSalesLines" FromRole="PedidoVenta" />
+      </EntityType>
+      <EntityType Name="PedidoVentaSalesLines">
+        <Key>
+          <PropertyRef Name="Document_No" />
+          <PropertyRef Name="Document_Type" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Document_Type" Type="Edm.String" Nullable="false" />
+        <Property Name="Document_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Type" Type="Edm.String" />
+        <Property Name="FilteredTypeField" Type="Edm.String" />
+        <Property Name="No" Type="Edm.String" />
+        <Property Name="Cross_Reference_No" Type="Edm.String" />
+        <Property Name="Description_2" Type="Edm.String" />
+        <Property Name="IC_Partner_Code" Type="Edm.String" />
+        <Property Name="IC_Partner_Ref_Type" Type="Edm.String" />
+        <Property Name="IC_Partner_Reference" Type="Edm.String" />
+        <Property Name="Variant_Code" Type="Edm.String" />
+        <Property Name="Substitution_Available" Type="Edm.Boolean" />
+        <Property Name="Purchasing_Code" Type="Edm.String" />
+        <Property Name="Nonstock" Type="Edm.Boolean" />
+        <Property Name="VAT_Prod_Posting_Group" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Drop_Shipment" Type="Edm.Boolean" />
+        <Property Name="Special_Order" Type="Edm.Boolean" />
+        <Property Name="Return_Reason_Code" Type="Edm.String" />
+        <Property Name="Package_Tracking_No" Type="Edm.String" />
+        <Property Name="Location_Code" Type="Edm.String" />
+        <Property Name="Bin_Code" Type="Edm.String" />
+        <Property Name="Customer_Price_Group" Type="Edm.String" />
+        <Property Name="Reserve" Type="Edm.String" />
+        <Property Name="Quantity" Type="Edm.Decimal" />
+        <Property Name="Qty_to_Assemble_to_Order" Type="Edm.Decimal" />
+        <Property Name="Reserved_Quantity" Type="Edm.Decimal" />
+        <Property Name="Unit_of_Measure_Code" Type="Edm.String" />
+        <Property Name="Unit_of_Measure" Type="Edm.String" />
+        <Property Name="Unit_Cost_LCY" Type="Edm.Decimal" />
+        <Property Name="SalesPriceExist" Type="Edm.Boolean" />
+        <Property Name="Unit_Price" Type="Edm.Decimal" />
+        <Property Name="Tax_Liable" Type="Edm.Boolean" />
+        <Property Name="Tax_Area_Code" Type="Edm.String" />
+        <Property Name="Tax_Group_Code" Type="Edm.String" />
+        <Property Name="Line_Discount_Percent" Type="Edm.Decimal" />
+        <Property Name="Line_Amount" Type="Edm.Decimal" />
+        <Property Name="Amount_Including_VAT" Type="Edm.Decimal" />
+        <Property Name="SalesLineDiscExists" Type="Edm.Boolean" />
+        <Property Name="Line_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Prepayment_Percent" Type="Edm.Decimal" />
+        <Property Name="Prepmt_Line_Amount" Type="Edm.Decimal" />
+        <Property Name="Prepmt_Amt_Inv" Type="Edm.Decimal" />
+        <Property Name="Allow_Invoice_Disc" Type="Edm.Boolean" />
+        <Property Name="Inv_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Inv_Disc_Amount_to_Invoice" Type="Edm.Decimal" />
+        <Property Name="Qty_to_Ship" Type="Edm.Decimal" />
+        <Property Name="Quantity_Shipped" Type="Edm.Decimal" />
+        <Property Name="Qty_to_Invoice" Type="Edm.Decimal" />
+        <Property Name="Quantity_Invoiced" Type="Edm.Decimal" />
+        <Property Name="Prepmt_Amt_to_Deduct" Type="Edm.Decimal" />
+        <Property Name="Prepmt_Amt_Deducted" Type="Edm.Decimal" />
+        <Property Name="Allow_Item_Charge_Assignment" Type="Edm.Boolean" />
+        <Property Name="Qty_to_Assign" Type="Edm.Decimal" />
+        <Property Name="Qty_Assigned" Type="Edm.Decimal" />
+        <Property Name="Requested_Delivery_Date" Type="Edm.DateTime" />
+        <Property Name="Promised_Delivery_Date" Type="Edm.DateTime" />
+        <Property Name="Planned_Delivery_Date" Type="Edm.DateTime" />
+        <Property Name="Planned_Shipment_Date" Type="Edm.DateTime" />
+        <Property Name="Shipment_Date" Type="Edm.DateTime" />
+        <Property Name="Shipping_Agent_Code" Type="Edm.String" />
+        <Property Name="Shipping_Agent_Service_Code" Type="Edm.String" />
+        <Property Name="Shipping_Time" Type="Edm.String" />
+        <Property Name="Work_Type_Code" Type="Edm.String" />
+        <Property Name="Whse_Outstanding_Qty" Type="Edm.Decimal" />
+        <Property Name="Whse_Outstanding_Qty_Base" Type="Edm.Decimal" />
+        <Property Name="ATO_Whse_Outstanding_Qty" Type="Edm.Decimal" />
+        <Property Name="ATO_Whse_Outstd_Qty_Base" Type="Edm.Decimal" />
+        <Property Name="Outbound_Whse_Handling_Time" Type="Edm.String" />
+        <Property Name="Blanket_Order_No" Type="Edm.String" />
+        <Property Name="Blanket_Order_Line_No" Type="Edm.Int32" />
+        <Property Name="FA_Posting_Date" Type="Edm.DateTime" />
+        <Property Name="Depr_until_FA_Posting_Date" Type="Edm.Boolean" />
+        <Property Name="Depreciation_Book_Code" Type="Edm.String" />
+        <Property Name="Use_Duplication_List" Type="Edm.Boolean" />
+        <Property Name="Duplicate_in_Depreciation_Book" Type="Edm.String" />
+        <Property Name="Appl_from_Item_Entry" Type="Edm.Int32" />
+        <Property Name="Appl_to_Item_Entry" Type="Edm.Int32" />
+        <Property Name="Deferral_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Shortcut_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_3_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_4_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_5_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_6_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_7_x005D_" Type="Edm.String" />
+        <Property Name="ShortcutDimCode_x005B_8_x005D_" Type="Edm.String" />
+        <Property Name="TotalSalesLine_Line_Amount" Type="Edm.Decimal" />
+        <Property Name="Invoice_Discount_Amount" Type="Edm.Decimal" />
+        <Property Name="Invoice_Disc_Pct" Type="Edm.Decimal" />
+        <Property Name="Total_Amount_Excl_VAT" Type="Edm.Decimal" />
+        <Property Name="Total_VAT_Amount" Type="Edm.Decimal" />
+        <Property Name="Total_Amount_Incl_VAT" Type="Edm.Decimal" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="PlantillaProduccion">
+        <Key>
+          <PropertyRef Name="Document_No" />
+          <PropertyRef Name="Line_No" />
+        </Key>
+        <Property Name="Document_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Line_No" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Measure_Code" Type="Edm.String" />
+        <Property Name="Measure_Description" Type="Edm.String" />
+        <Property Name="Minimum_expected_value" Type="Edm.Decimal" />
+        <Property Name="Maximun_expected_Value" Type="Edm.Decimal" />
+        <Property Name="Result_Value" Type="Edm.Decimal" />
+        <Property Name="Time_sampling" Type="Edm.String" />
+        <Property Name="Entry_Time_result" Type="Edm.DateTime" />
+        <Property Name="Description_expected" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="Dimenactivo">
+        <Key>
+          <PropertyRef Name="Dimension_Code" />
+          <PropertyRef Name="No" />
+          <PropertyRef Name="Table_ID" />
+        </Key>
+        <Property Name="Table_ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Dimension_Code" Type="Edm.String" Nullable="false" />
+        <Property Name="Dimension_Value_Code" Type="Edm.String" />
+        <Property Name="Value_Posting" Type="Edm.String" />
+        <Property Name="ETag" Type="Edm.String" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="Company">
+        <Key>
+          <PropertyRef Name="Name" />
+        </Key>
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <NavigationProperty Name="A_F_Diario" Relationship="NAV.Company_A_F_Diario" ToRole="A_F_Diario" FromRole="Company" />
+        <NavigationProperty Name="A_F_Diario_activos" Relationship="NAV.Company_A_F_Diario_activos" ToRole="A_F_Diario_activos" FromRole="Company" />
+        <NavigationProperty Name="A_F_Diario_general" Relationship="NAV.Company_A_F_Diario_general" ToRole="A_F_Diario_general" FromRole="Company" />
+        <NavigationProperty Name="Activo" Relationship="NAV.Company_Activo" ToRole="Activo" FromRole="Company" />
+        <NavigationProperty Name="ActivoDepreciationBook" Relationship="NAV.Company_ActivoDepreciationBook" ToRole="ActivoDepreciationBook" FromRole="Company" />
+        <NavigationProperty Name="AFDIARIO" Relationship="NAV.Company_AFDIARIO" ToRole="AFDIARIO" FromRole="Company" />
+        <NavigationProperty Name="Avance_observado" Relationship="NAV.Company_Avance_observado" ToRole="Avance_observado" FromRole="Company" />
+        <NavigationProperty Name="DiarioPago" Relationship="NAV.Company_DiarioPago" ToRole="DiarioPago" FromRole="Company" />
+        <NavigationProperty Name="DiarioProducto" Relationship="NAV.Company_DiarioProducto" ToRole="DiarioProducto" FromRole="Company" />
+        <NavigationProperty Name="DocumentosdeCalidad" Relationship="NAV.Company_DocumentosdeCalidad" ToRole="DocumentosdeCalidad" FromRole="Company" />
+        <NavigationProperty Name="DocumentosdeCalidadDocument_Test_Line_subform" Relationship="NAV.Company_DocumentosdeCalidadDocument_Test_Line_subform" ToRole="DocumentosdeCalidadDocument_Test_Line_subform" FromRole="Company" />
+        <NavigationProperty Name="DocumentosdeCalidadDocument_Test_Line_Range" Relationship="NAV.Company_DocumentosdeCalidadDocument_Test_Line_Range" ToRole="DocumentosdeCalidadDocument_Test_Line_Range" FromRole="Company" />
+        <NavigationProperty Name="DocumentosdeCalidadDocument_Test_Line_Descrip" Relationship="NAV.Company_DocumentosdeCalidadDocument_Test_Line_Descrip" ToRole="DocumentosdeCalidadDocument_Test_Line_Descrip" FromRole="Company" />
+        <NavigationProperty Name="DocumentosdeCalidadDocument_Test_Line_Boolean" Relationship="NAV.Company_DocumentosdeCalidadDocument_Test_Line_Boolean" ToRole="DocumentosdeCalidadDocument_Test_Line_Boolean" FromRole="Company" />
+        <NavigationProperty Name="Fichaprodservicio" Relationship="NAV.Company_Fichaprodservicio" ToRole="Fichaprodservicio" FromRole="Company" />
+        <NavigationProperty Name="FichaProducto" Relationship="NAV.Company_FichaProducto" ToRole="FichaProducto" FromRole="Company" />
+        <NavigationProperty Name="InvoicePurchase" Relationship="NAV.Company_InvoicePurchase" ToRole="InvoicePurchase" FromRole="Company" />
+        <NavigationProperty Name="InvoicePurchasePurchLines" Relationship="NAV.Company_InvoicePurchasePurchLines" ToRole="InvoicePurchasePurchLines" FromRole="Company" />
+        <NavigationProperty Name="NotaCompra" Relationship="NAV.Company_NotaCompra" ToRole="NotaCompra" FromRole="Company" />
+        <NavigationProperty Name="NotaCompraPurchLines" Relationship="NAV.Company_NotaCompraPurchLines" ToRole="NotaCompraPurchLines" FromRole="Company" />
+        <NavigationProperty Name="PedidoVenta" Relationship="NAV.Company_PedidoVenta" ToRole="PedidoVenta" FromRole="Company" />
+        <NavigationProperty Name="PedidoVentaSalesLines" Relationship="NAV.Company_PedidoVentaSalesLines" ToRole="PedidoVentaSalesLines" FromRole="Company" />
+        <NavigationProperty Name="PlantillaProduccion" Relationship="NAV.Company_PlantillaProduccion" ToRole="PlantillaProduccion" FromRole="Company" />
+        <NavigationProperty Name="Dimenactivo" Relationship="NAV.Company_Dimenactivo" ToRole="Dimenactivo" FromRole="Company" />
+      </EntityType>
+      <Association Name="Activo_ActivoDepreciationBook">
+        <End Type="NAV.ActivoDepreciationBook" Role="ActivoDepreciationBook" Multiplicity="*" />
+        <End Type="NAV.Activo" Role="Activo" Multiplicity="*" />
+      </Association>
+      <Association Name="DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_subform">
+        <End Type="NAV.DocumentosdeCalidadDocument_Test_Line_subform" Role="DocumentosdeCalidadDocument_Test_Line_subform" Multiplicity="*" />
+        <End Type="NAV.DocumentosdeCalidad" Role="DocumentosdeCalidad" Multiplicity="*" />
+      </Association>
+      <Association Name="DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Range">
+        <End Type="NAV.DocumentosdeCalidadDocument_Test_Line_Range" Role="DocumentosdeCalidadDocument_Test_Line_Range" Multiplicity="*" />
+        <End Type="NAV.DocumentosdeCalidad" Role="DocumentosdeCalidad" Multiplicity="*" />
+      </Association>
+      <Association Name="DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Descrip">
+        <End Type="NAV.DocumentosdeCalidadDocument_Test_Line_Descrip" Role="DocumentosdeCalidadDocument_Test_Line_Descrip" Multiplicity="*" />
+        <End Type="NAV.DocumentosdeCalidad" Role="DocumentosdeCalidad" Multiplicity="*" />
+      </Association>
+      <Association Name="DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Boolean">
+        <End Type="NAV.DocumentosdeCalidadDocument_Test_Line_Boolean" Role="DocumentosdeCalidadDocument_Test_Line_Boolean" Multiplicity="*" />
+        <End Type="NAV.DocumentosdeCalidad" Role="DocumentosdeCalidad" Multiplicity="*" />
+      </Association>
+      <Association Name="InvoicePurchase_InvoicePurchasePurchLines">
+        <End Type="NAV.InvoicePurchasePurchLines" Role="InvoicePurchasePurchLines" Multiplicity="*" />
+        <End Type="NAV.InvoicePurchase" Role="InvoicePurchase" Multiplicity="*" />
+      </Association>
+      <Association Name="NotaCompra_NotaCompraPurchLines">
+        <End Type="NAV.NotaCompraPurchLines" Role="NotaCompraPurchLines" Multiplicity="*" />
+        <End Type="NAV.NotaCompra" Role="NotaCompra" Multiplicity="*" />
+      </Association>
+      <Association Name="PedidoVenta_PedidoVentaSalesLines">
+        <End Type="NAV.PedidoVentaSalesLines" Role="PedidoVentaSalesLines" Multiplicity="*" />
+        <End Type="NAV.PedidoVenta" Role="PedidoVenta" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_A_F_Diario">
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+        <End Type="NAV.A_F_Diario" Role="A_F_Diario" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_A_F_Diario_activos">
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+        <End Type="NAV.A_F_Diario_activos" Role="A_F_Diario_activos" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_A_F_Diario_general">
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+        <End Type="NAV.A_F_Diario_general" Role="A_F_Diario_general" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_Activo">
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+        <End Type="NAV.Activo" Role="Activo" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_ActivoDepreciationBook">
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+        <End Type="NAV.ActivoDepreciationBook" Role="ActivoDepreciationBook" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_AFDIARIO">
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+        <End Type="NAV.AFDIARIO" Role="AFDIARIO" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_Avance_observado">
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+        <End Type="NAV.Avance_observado" Role="Avance_observado" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_DiarioPago">
+        <End Type="NAV.DiarioPago" Role="DiarioPago" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_DiarioProducto">
+        <End Type="NAV.DiarioProducto" Role="DiarioProducto" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_DocumentosdeCalidad">
+        <End Type="NAV.DocumentosdeCalidad" Role="DocumentosdeCalidad" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_DocumentosdeCalidadDocument_Test_Line_subform">
+        <End Type="NAV.DocumentosdeCalidadDocument_Test_Line_subform" Role="DocumentosdeCalidadDocument_Test_Line_subform" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_DocumentosdeCalidadDocument_Test_Line_Range">
+        <End Type="NAV.DocumentosdeCalidadDocument_Test_Line_Range" Role="DocumentosdeCalidadDocument_Test_Line_Range" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_DocumentosdeCalidadDocument_Test_Line_Descrip">
+        <End Type="NAV.DocumentosdeCalidadDocument_Test_Line_Descrip" Role="DocumentosdeCalidadDocument_Test_Line_Descrip" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_DocumentosdeCalidadDocument_Test_Line_Boolean">
+        <End Type="NAV.DocumentosdeCalidadDocument_Test_Line_Boolean" Role="DocumentosdeCalidadDocument_Test_Line_Boolean" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_Fichaprodservicio">
+        <End Type="NAV.Fichaprodservicio" Role="Fichaprodservicio" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_FichaProducto">
+        <End Type="NAV.FichaProducto" Role="FichaProducto" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_InvoicePurchase">
+        <End Type="NAV.InvoicePurchase" Role="InvoicePurchase" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_InvoicePurchasePurchLines">
+        <End Type="NAV.InvoicePurchasePurchLines" Role="InvoicePurchasePurchLines" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_NotaCompra">
+        <End Type="NAV.NotaCompra" Role="NotaCompra" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_NotaCompraPurchLines">
+        <End Type="NAV.NotaCompraPurchLines" Role="NotaCompraPurchLines" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_PedidoVenta">
+        <End Type="NAV.PedidoVenta" Role="PedidoVenta" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_PedidoVentaSalesLines">
+        <End Type="NAV.PedidoVentaSalesLines" Role="PedidoVentaSalesLines" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_PlantillaProduccion">
+        <End Type="NAV.PlantillaProduccion" Role="PlantillaProduccion" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_Dimenactivo">
+        <End Type="NAV.Dimenactivo" Role="Dimenactivo" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <EntityContainer Name="NAV" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="A_F_Diario" EntityType="NAV.A_F_Diario" />
+        <EntitySet Name="A_F_Diario_activos" EntityType="NAV.A_F_Diario_activos" />
+        <EntitySet Name="A_F_Diario_general" EntityType="NAV.A_F_Diario_general" />
+        <EntitySet Name="Activo" EntityType="NAV.Activo" />
+        <EntitySet Name="ActivoDepreciationBook" EntityType="NAV.ActivoDepreciationBook" />
+        <EntitySet Name="AFDIARIO" EntityType="NAV.AFDIARIO" />
+        <EntitySet Name="Avance_observado" EntityType="NAV.Avance_observado" />
+        <EntitySet Name="DiarioPago" EntityType="NAV.DiarioPago" />
+        <EntitySet Name="DiarioProducto" EntityType="NAV.DiarioProducto" />
+        <EntitySet Name="DocumentosdeCalidad" EntityType="NAV.DocumentosdeCalidad" />
+        <EntitySet Name="DocumentosdeCalidadDocument_Test_Line_subform" EntityType="NAV.DocumentosdeCalidadDocument_Test_Line_subform" />
+        <EntitySet Name="DocumentosdeCalidadDocument_Test_Line_Range" EntityType="NAV.DocumentosdeCalidadDocument_Test_Line_Range" />
+        <EntitySet Name="DocumentosdeCalidadDocument_Test_Line_Descrip" EntityType="NAV.DocumentosdeCalidadDocument_Test_Line_Descrip" />
+        <EntitySet Name="DocumentosdeCalidadDocument_Test_Line_Boolean" EntityType="NAV.DocumentosdeCalidadDocument_Test_Line_Boolean" />
+        <EntitySet Name="Fichaprodservicio" EntityType="NAV.Fichaprodservicio" />
+        <EntitySet Name="FichaProducto" EntityType="NAV.FichaProducto" />
+        <EntitySet Name="InvoicePurchase" EntityType="NAV.InvoicePurchase" />
+        <EntitySet Name="InvoicePurchasePurchLines" EntityType="NAV.InvoicePurchasePurchLines" />
+        <EntitySet Name="NotaCompra" EntityType="NAV.NotaCompra" />
+        <EntitySet Name="NotaCompraPurchLines" EntityType="NAV.NotaCompraPurchLines" />
+        <EntitySet Name="PedidoVenta" EntityType="NAV.PedidoVenta" />
+        <EntitySet Name="PedidoVentaSalesLines" EntityType="NAV.PedidoVentaSalesLines" />
+        <EntitySet Name="PlantillaProduccion" EntityType="NAV.PlantillaProduccion" />
+        <EntitySet Name="Dimenactivo" EntityType="NAV.Dimenactivo" />
+        <EntitySet Name="Company" EntityType="NAV.Company" />
+        <AssociationSet Name="Activo_ActivoDepreciationBook_ActivoDepreciationBook" Association="NAV.Activo_ActivoDepreciationBook">
+          <End Role="Activo" EntitySet="Activo" />
+          <End Role="ActivoDepreciationBook" EntitySet="ActivoDepreciationBook" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_subform_DocumentosdeCalidadDocument_Test_Line_subform" Association="NAV.DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_subform">
+          <End Role="DocumentosdeCalidad" EntitySet="DocumentosdeCalidad" />
+          <End Role="DocumentosdeCalidadDocument_Test_Line_subform" EntitySet="DocumentosdeCalidadDocument_Test_Line_subform" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Range_DocumentosdeCalidadDocument_Test_Line_Range" Association="NAV.DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Range">
+          <End Role="DocumentosdeCalidad" EntitySet="DocumentosdeCalidad" />
+          <End Role="DocumentosdeCalidadDocument_Test_Line_Range" EntitySet="DocumentosdeCalidadDocument_Test_Line_Range" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Descrip_DocumentosdeCalidadDocument_Test_Line_Descrip" Association="NAV.DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Descrip">
+          <End Role="DocumentosdeCalidad" EntitySet="DocumentosdeCalidad" />
+          <End Role="DocumentosdeCalidadDocument_Test_Line_Descrip" EntitySet="DocumentosdeCalidadDocument_Test_Line_Descrip" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Boolean_DocumentosdeCalidadDocument_Test_Line_Boolean" Association="NAV.DocumentosdeCalidad_DocumentosdeCalidadDocument_Test_Line_Boolean">
+          <End Role="DocumentosdeCalidad" EntitySet="DocumentosdeCalidad" />
+          <End Role="DocumentosdeCalidadDocument_Test_Line_Boolean" EntitySet="DocumentosdeCalidadDocument_Test_Line_Boolean" />
+        </AssociationSet>
+        <AssociationSet Name="InvoicePurchase_InvoicePurchasePurchLines_InvoicePurchasePurchLines" Association="NAV.InvoicePurchase_InvoicePurchasePurchLines">
+          <End Role="InvoicePurchase" EntitySet="InvoicePurchase" />
+          <End Role="InvoicePurchasePurchLines" EntitySet="InvoicePurchasePurchLines" />
+        </AssociationSet>
+        <AssociationSet Name="NotaCompra_NotaCompraPurchLines_NotaCompraPurchLines" Association="NAV.NotaCompra_NotaCompraPurchLines">
+          <End Role="NotaCompra" EntitySet="NotaCompra" />
+          <End Role="NotaCompraPurchLines" EntitySet="NotaCompraPurchLines" />
+        </AssociationSet>
+        <AssociationSet Name="PedidoVenta_PedidoVentaSalesLines_PedidoVentaSalesLines" Association="NAV.PedidoVenta_PedidoVentaSalesLines">
+          <End Role="PedidoVenta" EntitySet="PedidoVenta" />
+          <End Role="PedidoVentaSalesLines" EntitySet="PedidoVentaSalesLines" />
+        </AssociationSet>
+        <AssociationSet Name="Company_A_F_Diario_A_F_Diario" Association="NAV.Company_A_F_Diario">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="A_F_Diario" EntitySet="A_F_Diario" />
+        </AssociationSet>
+        <AssociationSet Name="Company_A_F_Diario_activos_A_F_Diario_activos" Association="NAV.Company_A_F_Diario_activos">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="A_F_Diario_activos" EntitySet="A_F_Diario_activos" />
+        </AssociationSet>
+        <AssociationSet Name="Company_A_F_Diario_general_A_F_Diario_general" Association="NAV.Company_A_F_Diario_general">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="A_F_Diario_general" EntitySet="A_F_Diario_general" />
+        </AssociationSet>
+        <AssociationSet Name="Company_Activo_Activo" Association="NAV.Company_Activo">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="Activo" EntitySet="Activo" />
+        </AssociationSet>
+        <AssociationSet Name="Company_ActivoDepreciationBook_ActivoDepreciationBook" Association="NAV.Company_ActivoDepreciationBook">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="ActivoDepreciationBook" EntitySet="ActivoDepreciationBook" />
+        </AssociationSet>
+        <AssociationSet Name="Company_AFDIARIO_AFDIARIO" Association="NAV.Company_AFDIARIO">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="AFDIARIO" EntitySet="AFDIARIO" />
+        </AssociationSet>
+        <AssociationSet Name="Company_Avance_observado_Avance_observado" Association="NAV.Company_Avance_observado">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="Avance_observado" EntitySet="Avance_observado" />
+        </AssociationSet>
+        <AssociationSet Name="Company_DiarioPago_DiarioPago" Association="NAV.Company_DiarioPago">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="DiarioPago" EntitySet="DiarioPago" />
+        </AssociationSet>
+        <AssociationSet Name="Company_DiarioProducto_DiarioProducto" Association="NAV.Company_DiarioProducto">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="DiarioProducto" EntitySet="DiarioProducto" />
+        </AssociationSet>
+        <AssociationSet Name="Company_DocumentosdeCalidad_DocumentosdeCalidad" Association="NAV.Company_DocumentosdeCalidad">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="DocumentosdeCalidad" EntitySet="DocumentosdeCalidad" />
+        </AssociationSet>
+        <AssociationSet Name="Company_DocumentosdeCalidadDocument_Test_Line_subform_DocumentosdeCalidadDocument_Test_Line_subform" Association="NAV.Company_DocumentosdeCalidadDocument_Test_Line_subform">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="DocumentosdeCalidadDocument_Test_Line_subform" EntitySet="DocumentosdeCalidadDocument_Test_Line_subform" />
+        </AssociationSet>
+        <AssociationSet Name="Company_DocumentosdeCalidadDocument_Test_Line_Range_DocumentosdeCalidadDocument_Test_Line_Range" Association="NAV.Company_DocumentosdeCalidadDocument_Test_Line_Range">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="DocumentosdeCalidadDocument_Test_Line_Range" EntitySet="DocumentosdeCalidadDocument_Test_Line_Range" />
+        </AssociationSet>
+        <AssociationSet Name="Company_DocumentosdeCalidadDocument_Test_Line_Descrip_DocumentosdeCalidadDocument_Test_Line_Descrip" Association="NAV.Company_DocumentosdeCalidadDocument_Test_Line_Descrip">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="DocumentosdeCalidadDocument_Test_Line_Descrip" EntitySet="DocumentosdeCalidadDocument_Test_Line_Descrip" />
+        </AssociationSet>
+        <AssociationSet Name="Company_DocumentosdeCalidadDocument_Test_Line_Boolean_DocumentosdeCalidadDocument_Test_Line_Boolean" Association="NAV.Company_DocumentosdeCalidadDocument_Test_Line_Boolean">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="DocumentosdeCalidadDocument_Test_Line_Boolean" EntitySet="DocumentosdeCalidadDocument_Test_Line_Boolean" />
+        </AssociationSet>
+        <AssociationSet Name="Company_Fichaprodservicio_Fichaprodservicio" Association="NAV.Company_Fichaprodservicio">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="Fichaprodservicio" EntitySet="Fichaprodservicio" />
+        </AssociationSet>
+        <AssociationSet Name="Company_FichaProducto_FichaProducto" Association="NAV.Company_FichaProducto">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="FichaProducto" EntitySet="FichaProducto" />
+        </AssociationSet>
+        <AssociationSet Name="Company_InvoicePurchase_InvoicePurchase" Association="NAV.Company_InvoicePurchase">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="InvoicePurchase" EntitySet="InvoicePurchase" />
+        </AssociationSet>
+        <AssociationSet Name="Company_InvoicePurchasePurchLines_InvoicePurchasePurchLines" Association="NAV.Company_InvoicePurchasePurchLines">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="InvoicePurchasePurchLines" EntitySet="InvoicePurchasePurchLines" />
+        </AssociationSet>
+        <AssociationSet Name="Company_NotaCompra_NotaCompra" Association="NAV.Company_NotaCompra">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="NotaCompra" EntitySet="NotaCompra" />
+        </AssociationSet>
+        <AssociationSet Name="Company_NotaCompraPurchLines_NotaCompraPurchLines" Association="NAV.Company_NotaCompraPurchLines">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="NotaCompraPurchLines" EntitySet="NotaCompraPurchLines" />
+        </AssociationSet>
+        <AssociationSet Name="Company_PedidoVenta_PedidoVenta" Association="NAV.Company_PedidoVenta">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="PedidoVenta" EntitySet="PedidoVenta" />
+        </AssociationSet>
+        <AssociationSet Name="Company_PedidoVentaSalesLines_PedidoVentaSalesLines" Association="NAV.Company_PedidoVentaSalesLines">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="PedidoVentaSalesLines" EntitySet="PedidoVentaSalesLines" />
+        </AssociationSet>
+        <AssociationSet Name="Company_PlantillaProduccion_PlantillaProduccion" Association="NAV.Company_PlantillaProduccion">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="PlantillaProduccion" EntitySet="PlantillaProduccion" />
+        </AssociationSet>
+        <AssociationSet Name="Company_Dimenactivo_Dimenactivo" Association="NAV.Company_Dimenactivo">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="Dimenactivo" EntitySet="Dimenactivo" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
