@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 namespace Cabana.Campo.RAAgricola.WS
 {
     /// <summary>
-    /// Descripción breve de WSRAAgricola_N2018
+    /// Descripción breve de WSRAAgricola_N2018ff
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
